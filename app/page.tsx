@@ -3,6 +3,7 @@ import CurriculumSection from "@/components/CurriculumSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import FaqSection from "@/components/FaqSection";
 import EventsSection from "@/components/EventsSection";
+import EboardMembers from "@/components/EboardMembers";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <CurriculumSection />
       <EventsSection />
       <ProjectsSection />
+      <EboardMembers />
       <FaqSection />
     </main>
   );
