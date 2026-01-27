@@ -10,8 +10,9 @@ export default function AboutSection() {
         </h1>
 
         <p className="text-lg text-gray-300 max-w-2xl">
-          DataSC is a student-led organization dedicated to exploring data science
-          through learning, collaboration, and hands-on experience.
+        No exclusivity, No BS.
+        Creating an approachable and diverse environment for Data Science exploration at USC.
+        DataSC fosters an environment where individuals across subjects and experience levels learn Data Science and collaboratively engage in cross-disciplinary topics. From ground-up curriculum to hands-on projects, industry speaker sessions with leaders from NVIDIA, Microsoft, Google, and Meta, to career support and genuinely fun social events. Whether you're a complete beginner or experienced practitioner, there's a place for you in our community of data enthusiasts.
         </p>
       </div>
       <div className="mt-auto pt-12 flex justify-center">
