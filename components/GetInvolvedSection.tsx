@@ -55,7 +55,7 @@ export default function GetInvolvedSection() {
         </div>
         <div className="mt-12">
           <h3 className="text-sm uppercase tracking-wide text-white/80">
-            Application Forms
+            Application Forms for Spring 2026
           </h3>
           <div className="mt-4 grid gap-4 sm:grid-cols-2">
             {applicationForms.map((form) => (
