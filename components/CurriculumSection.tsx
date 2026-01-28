@@ -4,17 +4,14 @@ export default function CurriculumSection() {
       title: "Foundations",
       description:
         "Intro to Python, data wrangling, and statistical fundamentals.",
-      topics: ["Python", "Pandas", "Numpy", "Matplotlib", "Seaborn"],
     },
     {
       title: "Machine Learning",
       description: "Supervised learning, model evaluation, and feature work.",
-      topics: ["Scikit-learn", "Modeling", "Evaluation"],
     },
     {
       title: "Applied Data",
       description: "Projects, storytelling, and real-world problem solving.",
-      topics: ["Projects", "Visualization", "Collaboration"],
     },
   ];
 
@@ -37,16 +34,6 @@ export default function CurriculumSection() {
             >
               <h3 className="text-lg font-semibold">{track.title}</h3>
               <p className="mt-3 text-sm text-white/70">{track.description}</p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {track.topics.map((topic) => (
-                  <span
-                    key={topic}
-                    className="rounded-full border border-white/10 px-3 py-1 text-xs uppercase tracking-[0.2em] text-white/70"
-                  >
-                    {topic}
-                  </span>
-                ))}
-              </div>
             </div>
           ))}
         </div>
@@ -62,7 +49,7 @@ export default function CurriculumSection() {
           </a>
         </div>
       </div>
-      <div className="mt-auto pt-12 flex justify-center">
+      <div className="mt-auto pt-4 pb-2 flex justify-center">
         <a
           href="#projects"
           className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white/60 transition hover:border-white/50 hover:text-white"

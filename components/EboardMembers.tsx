@@ -73,7 +73,7 @@ export default function EboardMembers() {
           ))}
         </div>
       </div>
-      <div className="mt-auto pt-12 flex justify-center">
+      <div className="mt-auto pt-4 pb-2 flex justify-center">
         <a
           href="#faq"
           className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white/60 transition hover:border-white/50 hover:text-white"

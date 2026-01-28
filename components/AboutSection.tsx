@@ -15,11 +15,11 @@ export default function AboutSection() {
         DataSC fosters an environment where individuals across subjects and experience levels learn Data Science and collaboratively engage in cross-disciplinary topics. From ground-up curriculum to hands-on projects, industry speaker sessions with leaders from NVIDIA, Microsoft, Google, and Meta, to career support and genuinely fun social events. Whether you're a complete beginner or experienced practitioner, there's a place for you in our community of data enthusiasts.
         </p>
       </div>
-      <div className="mt-auto pt-12 flex justify-center">
+      <div className="mt-auto pt-4 pb-2 flex justify-center">
         <a
-          href="#curriculum"
+          href="#eboard"
           className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white/60 transition hover:border-white/50 hover:text-white"
-          aria-label="Scroll to Curriculum section"
+          aria-label="Scroll to Eboard section"
         >
           <svg
             aria-hidden="true"

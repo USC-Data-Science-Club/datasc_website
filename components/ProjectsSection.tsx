@@ -10,7 +10,7 @@ export default function ProjectsSection() {
       description:
         "A Kaggle project focused on financial market prediction using cutting-edge ML techniques.",
       lead: "Ojas Nimase",
-      members: ["Colin Quan Leung", "Jaden Lin", "Michelle Zhu", "TJ"],
+      members: ["Colin Quan Leung", "Jaden Lin", "Toluwaju Williams", "Michelle Zhu"],
       photo: "",
     },
     {
@@ -123,7 +123,7 @@ export default function ProjectsSection() {
           )}
         </div>
       </div>
-      <div className="mt-auto pt-12 flex justify-center">
+      <div className="mt-auto pt-4 pb-2 flex justify-center">
         <a
           href="#eboard"
           className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white/60 transition hover:border-white/50 hover:text-white"
