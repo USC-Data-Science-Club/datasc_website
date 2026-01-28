@@ -9,7 +9,6 @@ export default function Navbar() {
         <div className="flex items-center gap-8 text-white/80">
           <a href="#about" className="hover:text-white">About</a>
           <a href="#curriculum" className="hover:text-white">Curriculum</a>
-          <a href="#events" className="hover:text-white">Events</a>
           <a href="#projects" className="hover:text-white">Projects</a>
           <a href="#eboard" className="hover:text-white">Eboard</a>
           <a href="#faq" className="hover:text-white">FAQ</a>

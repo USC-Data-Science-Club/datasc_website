@@ -3,11 +3,13 @@ export default function EboardMembers() {
     { name: "Claire", role: "President" },
     { name: "Nathan", role: "President" },
     { name: "Ojas Nimase", role: "Curriculum Co-Director", image: "/Ojas.jpeg", major: "Mathematics", linkedin: "https://www.linkedin.com/in/ojasnimase/" },
-    { name: "Emily Chen", role: "Curriculum Director" },
+    { name: "Natalie Lam Johnson", role: "VP of Operations", image: "/Natalie.jpeg", major: "AI for Business", linkedin: "http://www.linkedin.com/in/natalie-lam-johnson" },
     { name: "Michael Park", role: "Events Director" },
     { name: "Priya Patel", role: "Outreach Director" },
     { name: "Michelle Zhu", role: "Web Dev Lead", image: "/Michelle.jpg", major: "Computer Science", linkedin: "https://www.linkedin.com/in/zhu-michelle/" },
-    { name: "Rachel Nguyen", role: "Marketing Director" },
+    { name: "Colin Quan Leung", role: "Project Lead", image: "/Colin.jpeg", major: "Applied Data Science", linkedin: "https://www.linkedin.com/in/colin-leung-1059ab210" },
+    { name: "Dominic", role: "Project Lead", image: "/Colin.jpeg", major: "Applied Data Science", linkedin: "https://www.linkedin.com/in/colin-leung-1059ab210" },
+    { name: "N", role: "Project Lead", image: "/Colin.jpeg", major: "Applied Data Science", linkedin: "https://www.linkedin.com/in/colin-leung-1059ab210" },
   ];
 
   return (
@@ -57,7 +59,12 @@ export default function EboardMembers() {
                   </p>
                 )}
                 {member.linkedin && (
-                  <a href={member.linkedin} className="text-xs uppercase tracking-[0.2em]">LinkedIn</a>
+                  <a
+                    href={member.linkedin}
+                    className="text-xs uppercase tracking-[0.2em] underline decoration-white/60 underline-offset-4"
+                  >
+                    LinkedIn
+                  </a>
                 )}
               </div>
             </div>

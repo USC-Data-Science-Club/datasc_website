@@ -6,9 +6,9 @@ export default function CurriculumSection() {
       </div>
       <div className="mt-auto pt-12 flex justify-center">
         <a
-          href="#events"
+          href="#projects"
           className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white/60 transition hover:border-white/50 hover:text-white"
-          aria-label="Scroll to Events section"
+          aria-label="Scroll to Projects section"
         >
           <svg
             aria-hidden="true"
