@@ -5,40 +5,32 @@ import { useState } from "react";
 export default function ProjectsSection() {
   const fall25Projects = [
     {
-      icon: "📈",
-      title: "Hull Tactical",
+      image: "/hull_tactical.png",
+      title: "Hull Tactica Kaggle Competition",
       description:
         "A Kaggle project focused on financial market prediction using cutting-edge ML techniques.",
       lead: "Ojas Nimase",
-      members: ["Colin Quan Leung", "Jaden Lin", "Toluwaju Williams", "Michelle Zhu"],
-      photo: "",
     },
     {
-      icon: "🎵",
+      image: "/viola.png",
       title: "VIOLA",
       description:
         "A streamlined software that helps users locate, listen, and license songs efficiently.",
       lead: "TBD",
-      members: ["TBD", "TBD"],
-      photo: "",
     },
     {
-      icon: "🏙️",
+      image: "/shade.jpeg",
       title: "Equity-Guided Urban Heat Mitigation",
       description:
         "A spatial-ML framework for prioritizing shade interventions in LA city.",
       lead: "TBD",
-      members: ["TBD", "TBD"],
-      photo: "",
     },
     {
-      icon: "🎧",
+      image: "/spotify.png",
       title: "Spotify Song Recommender",
       description:
         "A Spotify-esque program that recommends music based on the user's interests.",
       lead: "TBD",
-      members: ["TBD", "TBD"],
-      photo: "",
     },
   ];
 
@@ -90,17 +82,17 @@ export default function ProjectsSection() {
                   key={project.title}
                   className="grid gap-6 md:grid-cols-[180px_1fr]"
                 >
-                  {project.photo ? (
-                    <img
-                      src={project.photo}
-                      alt={`${project.title} preview`}
-                      className="h-44 w-44 rounded-2xl object-cover border border-white/10"
-                    />
-                  ) : (
-                    <div className="flex h-44 w-44 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-4xl">
-                      <span aria-hidden="true">{project.icon}</span>
-                    </div>
-                  )}
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={`${project.title} preview`}
+                    className="h-44 w-44 rounded-2xl object-cover border border-white/10"
+                  />
+                ) : (
+                  <div className="flex h-44 w-44 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-xs uppercase tracking-[0.2em] text-white/50">
+                    Image
+                  </div>
+                )}
                   <div>
                     <h4 className="text-xl font-semibold">{project.title}</h4>
                     <p className="mt-3 text-sm text-white/70 leading-relaxed">
@@ -110,12 +102,6 @@ export default function ProjectsSection() {
                       Project Lead
                     </p>
                     <p className="text-sm text-white/80">{project.lead}</p>
-                    <p className="mt-3 text-xs uppercase tracking-[0.2em] text-white/60">
-                      Project Members
-                    </p>
-                    <p className="text-sm text-white/80">
-                      {project.members.join(", ")}
-                    </p>
                   </div>
                 </div>
               ))}

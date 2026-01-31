@@ -1,18 +1,9 @@
 export default function CurriculumSection() {
-  const tracks = [
-    {
-      title: "Foundations",
-      description:
-        "Intro to Python, data wrangling, and statistical fundamentals.",
-    },
-    {
-      title: "Machine Learning",
-      description: "Supervised learning, model evaluation, and feature work.",
-    },
-    {
-      title: "Applied Data",
-      description: "Projects, storytelling, and real-world problem solving.",
-    },
+  const weeks = [
+    { label: "Weeks 1–3", content: "Setup, data wrangling, and EDA" },
+    { label: "Weeks 4–6", content: "Regression, classification, and metrics" },
+    { label: "Weeks 7–9", content: "Projects, teamwork, and deployment basics" },
+    { label: "Weeks 10–12", content: "Presentations and portfolio polish" },
   ];
 
   return (
@@ -26,23 +17,30 @@ export default function CurriculumSection() {
           applied topics and project work, preparing students to tackle
           competitions or join a project team with real-world problems.
         </p>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {tracks.map((track) => (
-            <div
-              key={track.title}
-              className="rounded-2xl border border-white/10 bg-white/5 p-6"
-            >
-              <h3 className="text-lg font-semibold">{track.title}</h3>
-              <p className="mt-3 text-sm text-white/70">{track.description}</p>
-            </div>
-          ))}
+        <div className="mt-10 rounded-2xl border border-white/10 bg-white/5 p-6">
+          <p className="text-sm uppercase tracking-[0.2em] text-white/70">
+            Semester Flow
+          </p>
+          <div className="mt-4 grid gap-4 sm:grid-cols-2">
+            {weeks.map((week) => (
+              <div
+                key={week.label}
+                className="rounded-xl border border-white/10 bg-black/40 px-4 py-3"
+              >
+                <p className="text-xs uppercase tracking-[0.2em] text-[#FFC72C]">
+                  {week.label}
+                </p>
+                <p className="mt-2 text-sm text-white/70">{week.content}</p>
+              </div>
+            ))}
+          </div>
         </div>
         <div className="mt-12 rounded-2xl border border-white/10 bg-white/5 p-6">
           <p className="text-sm text-white/70">
             Looking for weekly curriculum updates?
           </p>
           <a
-            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            href="/curriculum-updates"
             className="mt-2 inline-flex text-xs uppercase tracking-[0.2em] text-[#FFC72C] underline decoration-[#990000] underline-offset-4"
           >
             View Weekly Curriculum Updates →
