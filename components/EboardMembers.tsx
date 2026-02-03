@@ -1,16 +1,17 @@
 export default function EboardMembers() {
   const members = [
-    { name: "Claire He", role: "Co-President", image: "/Claire.jpg", major: "Quantitative Biology & Business Administration", linkedin: "https://www.linkedin.com/company/datasc/" },
-    { name: "Nathan Nguyen", role: "Co-President", image: "/Nathan.jpeg", major: "Health and Human Sciences & Mathematics", linkedin: "https://www.linkedin.com/in/nathann3/" },
-    { name: "Selina Hui", role: "Vice President", image: "/Selina.jpeg", major: "Computational Neuroscience", linkedin: "https://www.linkedin.com/in/selina-wai-yan-hui/" },
-    { name: "Matthew Hall", role: "Head of Curriculum", image: "", major: "", linkedin: "" },
-    { name: "Ojas Nimase", role: "Director of Curriculum", image: "/Ojas.jpeg", major: "Mathematics", linkedin: "https://www.linkedin.com/in/ojasnimase/" },
-    { name: "Natalie Lam Johnson", role: "VP of Operations", image: "/Natalie.jpeg", major: "AI for Business", linkedin: "http://www.linkedin.com/in/natalie-lam-johnson" },
-    { name: "Lauren Lu", role: "Head of Marketing", image: "/Lauren.png", major: "Cognitive Science", linkedin: "https://www.linkedin.com/in/lauren-lu-b51180210/" },
-    { name: "Jaden Lin", role: "Director of Finance", major: "Industrial and Systems Engineering", linkedin: "https://www.linkedin.com/in/lauren-lu-3a2b19276/" },
+    { name: "Claire He", role: "Co-President", image: "/Claire.jpg", studying: "Quantitative Biology & Business Administration", linkedin: "https://www.linkedin.com/company/datasc/" },
+    { name: "Nathan Nguyen", role: "Co-President", image: "/Nathan.jpeg", studying: "Health and Human Sciences & Mathematics", linkedin: "https://www.linkedin.com/in/nathann3/" },
+    { name: "Selina Hui", role: "Vice President", image: "/Selina.jpeg", studying: "Computational Neuroscience", linkedin: "https://www.linkedin.com/in/selina-wai-yan-hui/" },
+    { name: "Matthew Hall", role: "Head of Curriculum", image: "", studying: "", linkedin: "" },
+    { name: "Ojas Nimase", role: "Director of Curriculum", image: "/Ojas.jpeg", studying: "Mathematics", linkedin: "https://www.linkedin.com/in/ojasnimase/" },
+    { name: "Natalie Lam Johnson", role: "VP of Operations", image: "/Natalie.jpeg", studying: "AI for Business", linkedin: "http://www.linkedin.com/in/natalie-lam-johnson" },
+    { name: "Lauren Lu", role: "Head of Marketing", image: "/Lauren.png", studying: "Cognitive Science", linkedin: "https://www.linkedin.com/in/lauren-lu-b51180210/" },
+    { name: "Jaden Lin", role: "Director of Finance", studying: "Industrial and Systems Engineering", linkedin: "https://www.linkedin.com/in/lauren-lu-3a2b19276/" },
     { name: "Michelle Zhu", role: "Web Dev Lead", image: "/Michelle.jpg", major: "Computer Science", linkedin: "https://www.linkedin.com/in/zhu-michelle/" },
-    { name: "Colin Quan Leung", role: "Project Lead", image: "/Colin.jpeg", major: "Applied Data Science", linkedin: "https://www.linkedin.com/in/colin-leung-1059ab210" },
-    { name: "Nolen Johnson", role: "Project Lead", image: "/Nolen.png", major: "Applied Data Science", linkedin: "https://www.linkedin.com/in/nolen-johnson/" },
+    { name: "Colin Quan Leung", role: "Project Lead", image: "/Colin.jpeg", studying: "Applied Data Science", linkedin: "https://www.linkedin.com/in/colin-leung-1059ab210" },
+    { name: "Nolen Johnson", role: "Project Lead", image: "/Nolen.png", studying: "Applied Data Science", linkedin: "https://www.linkedin.com/in/nolen-johnson/" },
+    { name: "Dominic Woetzel", role: "Project Lead", image: "/Dominic.jpeg", studying: "Computer Science", linkedin: "https://www.linkedin.com/in/dominic-woetzel/" },
   ];
 
   return (
@@ -54,9 +55,9 @@ export default function EboardMembers() {
                 </div>
               </div>
               <div className="mt-4 flex flex-col gap-1 text-white/50">
-                {member.major && (
+                {member.studying && (
                   <p className="text-xs uppercase tracking-[0.2em]">
-                    {member.major}
+                    {member.studying}
                   </p>
                 )}
                 {member.linkedin && (
