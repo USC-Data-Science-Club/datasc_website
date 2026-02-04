@@ -2,7 +2,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="min-h-screen px-6 pt-28 pb-24 max-w-5xl mx-auto flex flex-col"
+      className="min-h-screen px-6 pt-38 pb-24 max-w-5xl mx-auto flex flex-col"
     >
       <div className="relative flex flex-col items-center text-center">
         <div className="absolute inset-0 -z-10 flex items-center justify-center">

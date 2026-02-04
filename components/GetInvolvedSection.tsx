@@ -25,7 +25,7 @@ export default function GetInvolvedSection() {
   return (
     <section
       id="get-involved"
-      className="min-h-screen px-6 py-32 max-w-5xl mx-auto flex flex-col"
+      className="min-h-screen px-6 pt-24 pb-28 max-w-5xl mx-auto flex flex-col"
     >
       <div>
         <h2 className="text-4xl font-semibold">Get Involved</h2>

@@ -33,7 +33,7 @@ export default function FaqSection() {
   ];
 
   return (
-    <section id="faq" className="min-h-screen px-6 py-32 flex flex-col">
+    <section id="faq" className="min-h-screen px-6 pt-24 pb-28 flex flex-col">
       <div className="max-w-5xl mx-auto w-full">
         <h2 className="text-4xl font-semibold">FAQ</h2>
         <p className="mt-4 text-lg text-white/70 max-w-2xl">

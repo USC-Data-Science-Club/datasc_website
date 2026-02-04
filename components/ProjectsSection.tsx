@@ -42,7 +42,7 @@ export default function ProjectsSection() {
   const semesterTitle = semester === "F25" ? "Fall 2025" : "Spring 2026";
 
   return (
-    <section id="projects" className="min-h-screen px-6 py-32 flex flex-col">
+    <section id="projects" className="min-h-screen px-6 pt-24 pb-28 flex flex-col">
       <div className="max-w-6xl mx-auto w-full">
         <h2 className="text-5xl font-semibold tracking-tight">Projects</h2>
         <p className="mt-4 text-sm uppercase tracking-[0.2em] text-white/70">

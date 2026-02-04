@@ -15,7 +15,7 @@ export default function EboardMembers() {
   ];
 
   return (
-    <section id="eboard" className="min-h-screen px-6 py-32 flex flex-col">
+    <section id="eboard" className="min-h-screen px-6 pt-24 pb-28 flex flex-col">
       <div className="max-w-6xl mx-auto w-full">
         <div className="text-center">
           <h2 className="text-4xl md:text-5xl uppercase tracking-wide text-white/80">

@@ -50,7 +50,7 @@ export default function CurriculumSection() {
   ];
 
   return (
-    <section id="curriculum" className="min-h-screen px-6 py-32 flex flex-col">
+    <section id="curriculum" className="min-h-screen px-6 pt-24 pb-28 flex flex-col">
       <div>
         <h2 className="text-4xl font-semibold">Curriculum</h2>
         <p className="mt-4 text-lg text-white/70">
