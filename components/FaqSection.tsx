@@ -23,7 +23,7 @@ export default function FaqSection() {
     {
       question: "When do applications open?",
       answer:
-        "We typically open applications at the start of each semester. Follow our updates for dates.",
+        "We typically open applications at the start of each semester. Follow our updates for specificdates.",
     },
     {
       question: "How can I stay updated?",

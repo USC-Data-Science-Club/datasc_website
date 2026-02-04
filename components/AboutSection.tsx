@@ -2,17 +2,31 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="min-h-screen px-6 py-32 max-w-5xl mx-auto flex flex-col"
+      className="min-h-screen px-6 py-24 max-w-5xl mx-auto flex flex-col"
     >
-      <div>
-        <h1 className="text-5xl font-semibold mb-6">
+      <div className="relative flex flex-col items-center text-center">
+        <div className="absolute inset-0 -z-10 flex items-center justify-center">
+          <div className="h-72 w-72 rounded-full bg-[#990000]/10 blur-3xl" />
+        </div>
+        <img
+          src="/logo.png"
+          alt="DataSC logo"
+          className="h-32 w-32 sm:h-40 sm:w-40 opacity-90"
+        />
+        <p className="mt-6 text-sm uppercase tracking-[0.3em] text-white/60">
           About DataSC
+        </p>
+        <h1 className="mt-4 text-4xl font-semibold sm:text-5xl">
+          Build, learn, and ship with a data-driven community.
         </h1>
-
-        <p className="text-lg text-gray-300 max-w-2xl">
-        No exclusivity, No BS.
-        Creating an approachable and diverse environment for Data Science exploration at USC.
-        DataSC fosters an environment where individuals across subjects and experience levels learn Data Science and collaboratively engage in cross-disciplinary topics. From ground-up curriculum to hands-on projects, industry speaker sessions with leaders from NVIDIA, Microsoft, Google, and Meta, to career support and genuinely fun social events. Whether you're a complete beginner or experienced practitioner, there's a place for you in our community of data enthusiasts.
+        <p className="mt-6 max-w-3xl text-lg text-gray-300">
+          DataSC is USC&apos;s home for hands-on data science learning, built to be
+          welcoming, practical, and career-relevant. We bring together students
+          of every major and experience level through a structured curriculum,
+          real-world projects, industry speakers, and support for internships
+          and careers. If you want to build skills, meet people who care about
+          data, and work on problems that matter, you&apos;ll feel right at home
+          here.
         </p>
       </div>
       <div className="mt-auto pt-4 pb-2 flex justify-center">

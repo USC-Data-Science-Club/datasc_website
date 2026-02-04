@@ -36,19 +36,19 @@ export default function GetInvolvedSection() {
         <div className="mt-8 flex flex-wrap gap-4">
           <a
             href="https://mail.google.com/mail/?view=cm&fs=1&to=datasc@usc.edu"
-            className="rounded-full border border-white/30 px-5 py-2 text-xs uppercase tracking-wide text-white/90 hover:border-white/60 hover:text-white"
+            className="rounded-full border border-white/30 px-5 py-2 text-xs uppercase tracking-wide text-white/90 transition hover:border-[#990000] hover:text-[#FFC72C] hover:shadow-[0_0_12px_rgba(255,199,44,0.25)]"
           >
             Email Us
           </a>
           <a
             href="https://www.instagram.com/datasc.official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-            className="rounded-full border border-white/30 px-5 py-2 text-xs uppercase tracking-wide text-white/90 hover:border-white/60 hover:text-white"
+            className="rounded-full border border-white/30 px-5 py-2 text-xs uppercase tracking-wide text-white/90 transition hover:border-[#990000] hover:text-[#FFC72C] hover:shadow-[0_0_12px_rgba(255,199,44,0.25)]"
           >
             Follow on Instagram
           </a>
           <a
             href="https://www.linkedin.com/company/datasc/"
-            className="rounded-full border border-white/30 px-5 py-2 text-xs uppercase tracking-wide text-white/90 hover:border-white/60 hover:text-white"
+            className="rounded-full border border-white/30 px-5 py-2 text-xs uppercase tracking-wide text-white/90 transition hover:border-[#990000] hover:text-[#FFC72C] hover:shadow-[0_0_12px_rgba(255,199,44,0.25)]"
           >
             Connect on LinkedIn
           </a>

@@ -6,7 +6,7 @@ export default function ProjectsSection() {
   const fall25Projects = [
     {
       image: "/hull_tactical.png",
-      title: "Hull Tactica Kaggle Competition",
+      title: "Hull Tactical Kaggle Competition",
       description:
         "A Kaggle project focused on financial market prediction using cutting-edge ML techniques.",
       lead: "Ojas Nimase",
