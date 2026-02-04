@@ -51,7 +51,7 @@ export default function CurriculumSection() {
 
   return (
     <section id="curriculum" className="min-h-screen px-6 pt-24 pb-28 flex flex-col">
-      <div>
+      <div className="max-w-6xl mx-auto w-full">
         <h2 className="text-4xl font-semibold">Curriculum</h2>
         <p className="mt-4 text-lg text-white/70">
           The curriculum builds from data science foundations and Python/Pandas
