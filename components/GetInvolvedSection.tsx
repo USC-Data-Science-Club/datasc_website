@@ -1,11 +1,6 @@
 export default function GetInvolvedSection() {
   const applicationForms = [
     {
-      title: "General Eboard Application",
-      description: "Apply to be a part of the Eboard.",
-      link: "https://docs.google.com/forms/d/e/1FAIpQLSdZcjAO8rV_y1OcSEZ9_pHWWbI2nW51ZMviC0BcSmPZJpZwow/viewform",
-    },
-    {
       title: "General Member Application",
       description: "Join the community and get updates on events and projects.",
       link: "https://docs.google.com/forms/d/e/1FAIpQLScacxFr3e2Ip8oB_TgdSASegSoG-l3XzFme3ggaFC8T12sjXg/viewform",
