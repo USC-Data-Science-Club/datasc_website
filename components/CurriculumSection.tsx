@@ -1,9 +1,52 @@
 export default function CurriculumSection() {
   const weeks = [
-    { label: "Weeks 1–3", content: "Setup, data wrangling, and EDA" },
-    { label: "Weeks 4–6", content: "Regression, classification, and metrics" },
-    { label: "Weeks 7–9", content: "Projects, teamwork, and deployment basics" },
-    { label: "Weeks 10–12", content: "Presentations and portfolio polish" },
+    {
+      label: "Week 1",
+      content: "Intro to data science, ML pipeline, and Pandas basics.",
+    },
+    {
+      label: "Week 2",
+      content:
+        "Python data structures, NumPy basics, Pandas Series/DataFrames, and data I/O.",
+    },
+    {
+      label: "Week 3",
+      content:
+        "Data cleaning: missing values, types, normalization, duplicates/outliers, merges/reshapes.",
+    },
+    {
+      label: "Week 4",
+      content: "Visualization principles with Matplotlib/Seaborn.",
+    },
+    {
+      label: "Week 5",
+      content:
+        "Exploratory data analysis, descriptive stats, correlation, and feature engineering basics.",
+    },
+    {
+      label: "Week 6",
+      content:
+        "Intro to statistics: probability, sampling, hypothesis tests, confidence intervals.",
+    },
+    {
+      label: "Week 7",
+      content:
+        "Intro to ML, scikit-learn, linear regression, train-test split, and CV.",
+    },
+    {
+      label: "Week 8",
+      content:
+        "Classification with logistic regression and k-NN, plus evaluation metrics.",
+    },
+    {
+      label: "Week 9",
+      content: "Unsupervised learning: K-Means, PCA, and applications.",
+    },
+    {
+      label: "Week 10",
+      content:
+        "Capstone project: end-to-end analysis, modeling, and storytelling.",
+    },
   ];
 
   return (
@@ -11,17 +54,16 @@ export default function CurriculumSection() {
       <div>
         <h2 className="text-4xl font-semibold">Curriculum</h2>
         <p className="mt-4 text-lg text-white/70">
-          The curriculum starts with a practical foundation in tools, setup, and
-          core statistical and machine learning concepts, helping members build
-          confidence in managing data and tradeoffs. It then shifts toward
-          applied topics and project work, preparing students to tackle
-          competitions or join a project team with real-world problems.
+          The curriculum builds from data science foundations and Python/Pandas
+          skills into data cleaning, visualization, statistics, and core machine
+          learning workflows. The semester culminates in a capstone project that
+          combines EDA, modeling, and communication.
         </p>
         <div className="mt-10 rounded-2xl border border-white/10 bg-white/5 p-6">
           <p className="text-sm uppercase tracking-[0.2em] text-white/70">
             Semester Flow
           </p>
-          <div className="mt-4 grid gap-4 sm:grid-cols-2">
+          <div className="mt-4 grid gap-4 lg:grid-cols-2">
             {weeks.map((week) => (
               <div
                 key={week.label}

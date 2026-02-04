@@ -16,21 +16,21 @@ export default function ProjectsSection() {
       title: "VIOLA",
       description:
         "A streamlined software that helps users locate, listen, and license songs efficiently.",
-      lead: "TBD",
+      lead: "KT Kim",
     },
     {
       image: "/shade.jpeg",
       title: "Equity-Guided Urban Heat Mitigation",
       description:
         "A spatial-ML framework for prioritizing shade interventions in LA city.",
-      lead: "TBD",
+      lead: "Dominic Woetzel",
     },
     {
       image: "/spotify.png",
       title: "Spotify Song Recommender",
       description:
         "A Spotify-esque program that recommends music based on the user's interests.",
-      lead: "TBD",
+      lead: "Andrew Bae",
     },
   ];
 
@@ -49,7 +49,7 @@ export default function ProjectsSection() {
           What we've been up to
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
-          {(["F25", "S26"] as const).map((label) => (
+          {(["S26", "F25"] as const).map((label) => (
             <button
               key={label}
               type="button"
