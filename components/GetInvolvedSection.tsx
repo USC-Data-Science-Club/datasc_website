@@ -29,7 +29,7 @@ export default function GetInvolvedSection() {
     >
       <div>
         <h2 className="text-4xl font-semibold">Get Involved</h2>
-        <p className="mt-4 text-lg text-white/70 max-w-2xl">
+        <p className="mt-4 text-lg text-white/70 max-w-none">
           Join DataSC to build skills, collaborate on projects, and connect with
           peers and industry mentors.
         </p>

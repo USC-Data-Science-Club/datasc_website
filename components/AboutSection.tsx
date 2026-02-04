@@ -31,9 +31,9 @@ export default function AboutSection() {
       </div>
       <div className="mt-auto pt-4 pb-2 flex justify-center">
         <a
-          href="#eboard"
+          href="#curriculum"
           className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white/60 transition hover:border-white/50 hover:text-white"
-          aria-label="Scroll to Eboard section"
+          aria-label="Scroll to Curriculum section"
         >
           <svg
             aria-hidden="true"
