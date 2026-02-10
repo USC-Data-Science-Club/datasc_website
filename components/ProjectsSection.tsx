@@ -36,7 +36,7 @@ export default function ProjectsSection() {
 
   const spring26Projects: typeof fall25Projects = [
     {
-      image: "/rna.jpg",
+      image: "/RNA.jpg",
       title: "Stanford RNA 3D Folding Part 2 Competition",
       description:
         "A Kaggle competition focused on predicting RNA 3D structures.",
