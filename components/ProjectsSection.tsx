@@ -34,12 +34,34 @@ export default function ProjectsSection() {
     },
   ];
 
-  const spring26Projects: typeof fall25Projects = [];
-  const [semester, setSemester] = useState<"F25" | "S26">("F25");
+  const spring26Projects: typeof fall25Projects = [
+    {
+      image: "/rna.jpg",
+      title: "Stanford RNA 3D Folding Part 2 Competition",
+      description:
+        "A Kaggle competition focused on predicting RNA 3D structures.",
+      lead: "Dominic Woetzel",
+    },
+    {
+      image: "/health.jpg",
+      title: "Mapping LA Healthcare Access Gaps",
+      description:
+        "A spatial analytics project identifying gaps in LA healthcare access.",
+      lead: "Olena Khetan",
+    },
+    {
+      image: "/NBA.jpeg",
+      title: "NBA Performance Prediction",
+      description:
+        "A sports analytics project forecasting NBA player performance.",
+      lead: "Colin Quan Leung & Nolen Johnson",
+    },
+  ];
+  const [semester, setSemester] = useState<"F25" | "S26">("S26");
 
   const currentProjects =
-    semester === "F25" ? fall25Projects : spring26Projects;
-  const semesterTitle = semester === "F25" ? "Fall 2025" : "Spring 2026";
+    semester === "S26" ? spring26Projects : fall25Projects;
+  const semesterTitle = semester === "S26" ? "Spring 2026" : "Fall 2025";
 
   return (
     <section id="projects" className="min-h-screen px-6 pt-24 pb-28 flex flex-col">
@@ -71,42 +93,36 @@ export default function ProjectsSection() {
             {semesterTitle}
           </h3>
           <div className="mt-2 h-0.5 w-24 bg-gradient-to-r from-[#990000] to-[#FFC72C]" />
-          {currentProjects.length === 0 ? (
-            <p className="mt-6 text-sm text-white/60">
-              {semesterTitle} projects will be announced soon.
-            </p>
-          ) : (
-            <div className="mt-10 space-y-10">
-              {currentProjects.map((project) => (
-                <div
-                  key={project.title}
-                  className="grid gap-6 md:grid-cols-[180px_1fr]"
-                >
-                {project.image ? (
-                  <img
-                    src={project.image}
-                    alt={`${project.title} preview`}
-                    className="h-44 w-44 rounded-2xl object-cover border border-white/10"
-                  />
-                ) : (
-                  <div className="flex h-44 w-44 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-xs uppercase tracking-[0.2em] text-white/50">
-                    Image
-                  </div>
-                )}
-                  <div>
-                    <h4 className="text-xl font-semibold">{project.title}</h4>
-                    <p className="mt-3 text-sm text-white/70 leading-relaxed">
-                      {project.description}
-                    </p>
-                    <p className="mt-4 text-xs uppercase tracking-[0.2em] text-white/60">
-                      Project Lead
-                    </p>
-                    <p className="text-sm text-white/80">{project.lead}</p>
-                  </div>
+          <div className="mt-10 space-y-10">
+            {currentProjects.map((project) => (
+              <div
+                key={project.title}
+                className="grid gap-6 md:grid-cols-[180px_1fr]"
+              >
+              {project.image ? (
+                <img
+                  src={project.image}
+                  alt={`${project.title} preview`}
+                  className="h-44 w-44 rounded-2xl object-cover border border-white/10"
+                />
+              ) : (
+                <div className="flex h-44 w-44 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-xs uppercase tracking-[0.2em] text-white/50">
+                  Image
                 </div>
-              ))}
-            </div>
-          )}
+              )}
+                <div>
+                  <h4 className="text-xl font-semibold">{project.title}</h4>
+                  <p className="mt-3 text-sm text-white/70 leading-relaxed">
+                    {project.description}
+                  </p>
+                  <p className="mt-4 text-xs uppercase tracking-[0.2em] text-white/60">
+                    Project Lead
+                  </p>
+                  <p className="text-sm text-white/80">{project.lead}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <div className="mt-auto pt-4 pb-2 flex justify-center">
