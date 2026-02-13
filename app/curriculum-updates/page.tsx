@@ -4,7 +4,7 @@ export default function CurriculumUpdatesPage() {
       <div className="max-w-4xl mx-auto w-full">
         <a
           href="/#curriculum"
-          className="text-xs uppercase tracking-[0.2em] text-white/60"
+          className="text-xs uppercase tracking-[0.2em] text-white/60 underline underline-offset-4"
         >
           ← Back to Curriculum
         </a>
@@ -15,35 +15,53 @@ export default function CurriculumUpdatesPage() {
           We share weekly collab notebook updates here. Check back for new
           notes, recordings, and practice materials.
         </p>
-        {/* <div className="mt-10 space-y-4">
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-            <p className="text-sm uppercase tracking-[0.2em] text-white/60">
-              Week 1
-            </p>
-            <p className="mt-2 text-lg font-semibold">Getting Set Up</p>
-            <p className="mt-2 text-sm text-white/70">
-              Environment setup, tooling, and first data exploration notebook.
-            </p>
-          </div>
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-            <p className="text-sm uppercase tracking-[0.2em] text-white/60">
-              Week 2
-            </p>
-            <p className="mt-2 text-lg font-semibold">Data Cleaning & EDA</p>
-            <p className="mt-2 text-sm text-white/70">
-              Cleaning workflows, missing data strategies, and basic plots.
-            </p>
-          </div>
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-            <p className="text-sm uppercase tracking-[0.2em] text-white/60">
-              Week 3
-            </p>
-            <p className="mt-2 text-lg font-semibold">Intro to Modeling</p>
-            <p className="mt-2 text-sm text-white/70">
-              Regression basics, evaluation metrics, and model pitfalls.
-            </p>
-          </div>
-        </div> */}
+        <div className="mt-12 space-y-8">
+          <section className="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <h2 className="text-2xl font-semibold">Week 1</h2>
+            <div className="mt-4 space-y-4 text-sm text-white/80">
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-white/50">
+                  Slides
+                </p>
+                <a
+                  className="mt-2 inline-block text-white/80 underline underline-offset-4 hover:text-white"
+                  href="https://docs.google.com/presentation/d/1vz71LWBwj1Ce5VGl5v4vySU2_oeU6fiiRFIHn4FsJyQ/edit?slide=id.p#slide=id.p"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View slides
+                </a>
+              </div>
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-white/50">
+                  HW
+                </p>
+                <a
+                  className="mt-2 inline-block text-white/80 underline underline-offset-4 hover:text-white"
+                  href="https://colab.research.google.com/drive/1ufmaPRWY4wI0dpS2t6MC0DqCOFf390KG?authuser=2"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View homework
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+        <section className="mt-12 rounded-3xl border border-white/10 bg-white/5 p-6">
+          <h2 className="text-2xl font-semibold">Feedback Form</h2>
+          <p className="mt-2 text-sm text-white/70">
+            Share anonymous feedback about the curriculum and the club.
+          </p>
+          <a
+            className="mt-4 inline-block text-white/80 underline underline-offset-4 hover:text-white"
+            href="https://forms.gle/SgHZgH6oeeHmkaFx8"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open feedback form
+          </a>
+        </section>
       </div>
     </main>
   );
