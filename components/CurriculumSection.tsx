@@ -87,6 +87,13 @@ export default function CurriculumSection() {
           >
             View Weekly Curriculum Updates →
           </a>
+          <br />
+          <a
+            href="/leaderboard"
+            className="mt-2 inline-flex text-xs uppercase tracking-[0.2em] text-[#FFC72C] underline decoration-[#990000] underline-offset-4"
+          >
+            View Kahoot Leaderboard →
+          </a>
         </div>
       </div>
       <div className="mt-auto pt-4 pb-2 flex justify-center">
