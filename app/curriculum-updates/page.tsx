@@ -12,6 +12,11 @@ export default function CurriculumUpdatesPage() {
       homework: "https://colab.research.google.com/drive/1ufmaPRWY4wI0dpS2t6MC0DqCOFf390KG?authuser=2",
       additional_resources: "https://www.kaggle.com/groups/datasc-curriculum-spring-2026",
     },
+    {
+      week: 4,
+      slides: "https://docs.google.com/presentation/d/1yVTQ3yxbdsuORM8U4z62Pcu87Fh_3gbSVc9X9m5Yqb0/edit?usp=sharing",
+
+    }
   ];
   return (
     <main className="min-h-screen bg-black text-white px-6 py-32">
@@ -51,17 +56,21 @@ export default function CurriculumUpdatesPage() {
                   </a>
                 </div>
                 <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-white/50">
-                    HW
-                  </p>
-                  <a
-                    className="mt-2 inline-block text-white/80 underline underline-offset-4 hover:text-white"
-                    href={update.homework}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    View homework
-                  </a>
+                  {update.homework ? (
+                    <>
+                      <p className="text-xs uppercase tracking-[0.2em] text-white/50">
+                        HW
+                      </p>
+                      <a
+                        className="mt-2 inline-block text-white/80 underline underline-offset-4 hover:text-white"
+                        href={update.homework}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        View homework
+                      </a>
+                    </>
+                  ) : null}
                 </div>
                 {update.additional_resources?.trim() ? (
                   <div>
