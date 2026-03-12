@@ -33,8 +33,8 @@ export default function LeaderboardPage() {
             <div className="relative mt-10 flex flex-col items-center gap-8 md:flex-row md:items-end md:justify-center">
               {[
                 { rank: 2, name: "Jay", highlight: false },
-                { rank: 1, name: "Arjun", highlight: true },
-                { rank: 3, name: "Emin", highlight: false },
+                { rank: 3, name: "Arjun", highlight: false},
+                { rank: 1, name: "Emin", highlight: true },
               ].map((entry) => {
                 const trophyClass =
                   entry.rank === 1
