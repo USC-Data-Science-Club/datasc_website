@@ -1,3 +1,17 @@
+// Update only this list — ranks, trophies, and podium order are derived automatically.
+// First name = 1st place, second = 2nd place, third = 3rd place.
+const top3 = ["Emin", "Jay", "Arjun"];
+
+// Desktop podium display order: 2nd | 1st | 3rd
+// Mobile display order: 1st, 2nd, 3rd (set via CSS order)
+const PODIUM_ORDER = [1, 0, 2];
+
+const trophyStyles = [
+  "bg-[#FFC72C]/20 text-[#FFC72C] border-[#FFC72C]/40",
+  "bg-white/15 text-white/80 border-white/30",
+  "bg-[#C47A3C]/20 text-[#C47A3C] border-[#C47A3C]/40",
+];
+
 export default function LeaderboardPage() {
   return (
     <main className="min-h-screen bg-black text-white px-6 py-32">
@@ -31,29 +45,26 @@ export default function LeaderboardPage() {
             </div>
 
             <div className="relative mt-10 flex flex-col items-center gap-8 md:flex-row md:items-end md:justify-center">
-              {[
-                { rank: 2, name: "Jay", highlight: false },
-                { rank: 3, name: "Arjun", highlight: false},
-                { rank: 1, name: "Emin", highlight: true },
-              ].map((entry) => {
-                const trophyClass =
-                  entry.rank === 1
-                    ? "bg-[#FFC72C]/20 text-[#FFC72C] border-[#FFC72C]/40"
-                    : entry.rank === 2
-                      ? "bg-white/15 text-white/80 border-white/30"
-                      : "bg-[#C47A3C]/20 text-[#C47A3C] border-[#C47A3C]/40";
+              {PODIUM_ORDER.map((rankIndex) => {
+                const rank = rankIndex + 1;
+                const name = top3[rankIndex];
+                const isFirst = rank === 1;
+
+                // On mobile show 1st on top, 2nd second, 3rd last
+                const mobileOrder =
+                  rank === 1 ? "order-first md:order-none" :
+                  rank === 2 ? "order-2 md:order-none" :
+                  "order-3 md:order-none";
 
                 return (
                   <div
-                    key={entry.rank}
-                    className={`flex w-full max-w-[220px] flex-col items-center gap-4 rounded-3xl border border-white/10 bg-black/40 px-6 py-6 text-center ${
-                      entry.highlight
-                        ? "md:-translate-y-6 md:bg-white/10"
-                        : ""
+                    key={rank}
+                    className={`flex w-full max-w-[220px] flex-col items-center gap-4 rounded-3xl border border-white/10 bg-black/40 px-6 py-6 text-center ${mobileOrder} ${
+                      isFirst ? "md:-translate-y-6 md:bg-white/10" : ""
                     }`}
                   >
                     <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white/10 text-xl font-semibold">
-                      {entry.name
+                      {name
                         .split(" ")
                         .map((part) => part[0])
                         .join("")
@@ -61,12 +72,12 @@ export default function LeaderboardPage() {
                     </div>
                     <div>
                       <p className="text-xs uppercase tracking-[0.2em] text-white/50">
-                        Rank {entry.rank}
+                        Rank {rank}
                       </p>
-                      <h3 className="mt-2 text-lg font-semibold">{entry.name}</h3>
+                      <h3 className="mt-2 text-lg font-semibold">{name}</h3>
                     </div>
                     <div
-                      className={`flex h-10 w-10 items-center justify-center rounded-full border text-lg ${trophyClass}`}
+                      className={`flex h-10 w-10 items-center justify-center rounded-full border text-lg ${trophyStyles[rankIndex]}`}
                     >
                       🏆
                     </div>
