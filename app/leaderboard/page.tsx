@@ -1,6 +1,6 @@
 // Update only this list — ranks, trophies, and podium order are derived automatically.
 // First name = 1st place, second = 2nd place, third = 3rd place.
-const top3 = ["Emin", "Jay", "Arjun"];
+const top3 = ["Jay", "emin", "Isabella"];
 
 // Desktop podium display order: 2nd | 1st | 3rd
 // Mobile display order: 1st, 2nd, 3rd (set via CSS order)
