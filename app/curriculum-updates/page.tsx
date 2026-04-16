@@ -3,24 +3,20 @@ export default function CurriculumUpdatesPage() {
     {
       week: 1,
       slides: "https://docs.google.com/presentation/d/1vz71LWBwj1Ce5VGl5v4vySU2_oeU6fiiRFIHn4FsJyQ/edit?slide=id.p#slide=id.p",
-      homework: "https://colab.research.google.com/drive/1ufmaPRWY4wI0dpS2t6MC0DqCOFf390KG?authuser=2",
       additional_resources: "",
     },
     {
       week: 2,
       slides: "https://docs.google.com/presentation/d/1jlp63zbqsX2zVv_uRaocN4GWeH0Sefi8/edit?slide=id.p1#slide=id.p1",
-      homework: "https://colab.research.google.com/drive/1ufmaPRWY4wI0dpS2t6MC0DqCOFf390KG?authuser=2",
       additional_resources: "https://www.kaggle.com/groups/datasc-curriculum-spring-2026",
     },
     {
       week: 4,
       slides: "https://docs.google.com/presentation/d/1yVTQ3yxbdsuORM8U4z62Pcu87Fh_3gbSVc9X9m5Yqb0/edit?usp=sharing",
-      homework: "https://colab.research.google.com/drive/1ufmaPRWY4wI0dpS2t6MC0DqCOFf390KG?authuser=2",
     },
     {
       week: 5,
       slides: "https://docs.google.com/presentation/d/1s0QMeClvEyzqjnEbXIasnvtGyXJk96tJ/edit?usp=sharing&ouid=115585438195965334407&rtpof=true&sd=true",
-      homework: "https://colab.research.google.com/drive/1ufmaPRWY4wI0dpS2t6MC0DqCOFf390KG?authuser=2",
     },
     {
       week: 7,
