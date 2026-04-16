@@ -23,10 +23,20 @@ export default function CurriculumUpdatesPage() {
       homework: "https://colab.research.google.com/drive/1ufmaPRWY4wI0dpS2t6MC0DqCOFf390KG?authuser=2",
     },
     {
-      week: 6,
+      week: 7,
+      slides: "https://docs.google.com/presentation/d/1-n8Rckm0XbgRoNHbpmpHkwVEwK3foqhw/edit?slide=id.p1#slide=id.p1",
+      additional_resources: "https://colab.research.google.com/drive/1luy_fJgpiCZIUhKDClOEJMutSXOiGAx9",
+    },
+    {
+      week: 8,
+      slides: "https://docs.google.com/presentation/d/1cYcRwXpFjY7w5jBM5jFx7t32QtAgxQr_/edit?slide=id.p1#slide=id.p1",
+      additional_resources: "https://colab.research.google.com/drive/1ApmshufJmzAmeWfxI3fY3iAJEnZAnWEm",
+    },
+    {
+      week: 9,
       slides: "https://docs.google.com/presentation/d/1qZv6aBbutgnw2Qf85UVMP1VNp6l232lB/edit?slide=id.p1#slide=id.p1",
       homework: "https://colab.research.google.com/drive/1ufmaPRWY4wI0dpS2t6MC0DqCOFf390KG?authuser=2",
-    }
+    },
   ];
   return (
     <main className="min-h-screen bg-black text-white px-6 py-32">
