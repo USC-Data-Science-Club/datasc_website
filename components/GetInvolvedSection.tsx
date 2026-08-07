@@ -64,8 +64,8 @@ export default function GetInvolvedSection() {
                 rel="noopener noreferrer"
                 className="rounded-xl border border-ink/8 bg-ink/3 p-5 transition hover:border-gold-raw/30 hover:bg-ink/5"
               >
-                <p className="text-sm font-semibold text-ink">{form.title}</p>
-                <p className="mt-2 text-[13px] text-ink/55">{form.description}</p>
+                <p className="text-lg font-semibold text-ink">{form.title}</p>
+                <p className="mt-2 text-base text-ink/55">{form.description}</p>
               </a>
             ))}
           </div>
