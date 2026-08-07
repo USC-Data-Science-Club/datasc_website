@@ -48,7 +48,7 @@ export default function EboardMembers() {
     {
       name:     "Connor",
       role:     "Finance",
-      image:    "/Board Headshots/cropped/Connor_Mao_Headshot.jpg",
+      image:    "/Board Headshots/cropped/Connor_Mao.jpg",
       studying: "Computer Science",
       linkedin: "https://www.linkedin.com/in/connor-mao/",
     },
