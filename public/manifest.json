@@ -1,0 +1,17 @@
+{
+  "name": "DataSC - USC's Data Science Club",
+  "short_name": "DataSC",
+  "description": "USC's home for hands-on data science learning",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#990000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

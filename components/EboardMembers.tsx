@@ -1,46 +1,147 @@
+import GridBackdrop from "./ui/GridBackdrop";
+import ScrollArrow from "./ui/ScrollArrow";
+
 export default function EboardMembers() {
   const members = [
-    { name: "Claire He", role: "Co-President", image: "/Claire.JPG", studying: "Quantitative Biology & Business Administration", linkedin: "https://www.linkedin.com/company/datasc/" },
-    { name: "Nathan Nguyen", role: "Co-President", image: "/Nathan.jpeg", studying: "Health and Human Sciences & Mathematics", linkedin: "https://www.linkedin.com/in/nathann3/" },
-    { name: "Selina Hui", role: "Vice President", image: "/Selina.jpeg", studying: "Computational Neuroscience", linkedin: "https://www.linkedin.com/in/selina-wai-yan-hui/" },
-    { name: "Matthew Hall", role: "Head of Curriculum", image: "/Matthew.jpeg", studying: "Applied Mathematics & Data Science", linkedin: "https://www.linkedin.com/in/matthew-hall-350a19b1/" },
-    { name: "Ojas Nimase", role: "Director of Curriculum", image: "/Ojas.jpeg", studying: "Mathematics & Computer Science", linkedin: "https://www.linkedin.com/in/ojasnimase/" },
-    { name: "Jaden Lin", role: "Director of Finance", studying: "Industrial and Systems Engineering", linkedin: "http://www.linkedin.com/in/jadenwlin" },
-    { name: "Natalie Lam Johnson", role: "VP of Operations", image: "/Natalie.jpeg", studying: "Artificial Intelligence for Business", linkedin: "http://www.linkedin.com/in/natalie-lam-johnson" },
-    { name: "Lauren Lu", role: "Head of Marketing", image: "/Lauren.png", studying: "Cognitive Science", linkedin: "https://www.linkedin.com/in/lauren-lu-3a2b19276/" },
-    { name: "Michelle Zhu", role: "Web Dev Lead", image: "/Michelle.jpg", studying: "Computer Science", linkedin: "https://www.linkedin.com/in/zhu-michelle/" },
-    { name: "Colin Quan Leung", role: "Project Lead", image: "/Colin.jpeg", studying: "Applied Data Science", linkedin: "https://www.linkedin.com/in/colin-leung-1059ab210" },
-    { name: "Nolen Johnson", role: "Project Lead", image: "/Nolen.png", studying: "Applied Data Science", linkedin: "https://www.linkedin.com/in/nolen-johnson/" },
-    { name: "Dominic Woetzel", role: "Project Lead", image: "/Dominic.jpeg", studying: "Computer Science", linkedin: "https://www.linkedin.com/in/dominic-woetzel/" },
+    {
+      name:     "Natalie",
+      role:     "Co-President",
+      image:    "/Board Headshots/cropped/Natalie.jpg",
+      studying: "Artificial Intelligence for Business",
+      linkedin: "http://www.linkedin.com/in/natalie-lam-johnson",
+    },
+    {
+      name:     "Jaden",
+      role:     "Co-President",
+      image:    "/Board Headshots/cropped/Jaden.jpg",
+      studying: "Industrial and Systems Engineering",
+      linkedin: "http://www.linkedin.com/in/jadenwlin",
+    },
+    {
+      name:     "Ojas",
+      role:     "External Vice President",
+      image:    "/Board Headshots/cropped/Ojas.jpg",
+      studying: "Mathematics & Computer Science",
+      linkedin: "https://www.linkedin.com/in/ojasnimase/",
+    },
+    {
+      name:     "Theo",
+      role:     "Social Chair",
+      image:    "/Board Headshots/cropped/Theo.jpg",
+      studying: "Industrial and Systems Engineering",
+      linkedin: "https://www.linkedin.com/in/theo-chutitad-singkarin-410357390/",
+    },
+    {
+      name:     "Anvitha",
+      role:     "Director of Operations",
+      image:    "/Board Headshots/cropped/Anvitha_Komarraju_Headshot.jpg",
+      studying: "Computer Science",
+      linkedin: "https://www.linkedin.com/in/anvithakomarraju/",
+    },
+    // {
+    //   name:     "Selina",
+    //   role:     "Admin",
+    //   image:    "/Board Headshots/cropped/Selina.jpg",
+    //   studying: "Computational Neuroscience",
+    //   linkedin: "https://www.linkedin.com/in/selina-wai-yan-hui/",
+    // },
+    {
+      name:     "Connor",
+      role:     "Finance",
+      image:    "/Board Headshots/cropped/Connor_Mao_Headshot.jpg",
+      studying: "Computer Science",
+      linkedin: "https://www.linkedin.com/in/connor-mao/",
+    },
+    {
+      name:     "Danica",
+      role:     "Sponsorship & Outreach",
+      image:    "/Board Headshots/cropped/Danica.jpg",
+      studying: "Applied Data Science",
+      linkedin: "https://www.linkedin.com/in/danica-pham-bb1a51268/",
+    },
+    {
+      name:     "Anh",
+      role:     "Sponsorship & Outreach",
+      image:    "/Board Headshots/cropped/Anh.jpg",
+      studying: "Business/Managerial Economics",
+      linkedin: "https://www.linkedin.com/in/anh-phan-ka11/",
+    },
+    {
+      name:     "Lauren",
+      role:     "Marketing",
+      image:    "/Board Headshots/cropped/Lauren.jpg",
+      studying: "Cognitive Science",
+      linkedin: "https://www.linkedin.com/in/lauren-lu-3a2b19276/",
+    },
+    {
+      name:     "Michelle",
+      role:     "Web Dev Lead",
+      image:    "/Board Headshots/cropped/Michelle.jpg",
+      studying: "Computer Science & Business Administration",
+      linkedin: "https://www.linkedin.com/in/zhu-michelle/",
+    },
+    {
+      name:     "Matthew",
+      role:     "Senior Curriculum Lead",
+      image:    "/Board Headshots/cropped/Matthew.jpg",
+      studying: "Applied Mathematics",
+      linkedin: "https://www.linkedin.com/in/matthew-hall-350a19b1/",
+    },
+    {
+      name:     "Nathan",
+      role:     "Senior Curriculum Lead",
+      image:    "/Board Headshots/cropped/Nathan.jpg",
+      studying: "Health & Human Sciences, Mathematics",
+      linkedin: "https://www.linkedin.com/in/nathann3/",
+    },
+    {
+      name:     "Emin",
+      role:     "Curriculum Lead",
+      image:    "/Board Headshots/cropped/Emin.jpg",
+      studying: "Intelligence and Cyber Operations",
+      linkedin: "https://www.linkedin.com/in/emin-cilingiroglu-843159361/",
+    },
+    {
+      name:     "Aaron",
+      role:     "Project Lead",
+      image:    "/Board Headshots/cropped/Aaron.jpg",
+      studying: "Computational & Applied Mathematics",
+      linkedin: "https://www.linkedin.com/in/aaron-lo-a08441378/",
+    },
   ];
 
   return (
-    <section id="eboard" className="min-h-screen px-6 pt-24 pb-28 flex flex-col">
-      <div className="max-w-6xl mx-auto w-full">
+    <section id="eboard" className="relative flex min-h-screen flex-col px-6 pt-24 pb-28">
+      <GridBackdrop />
+      <div className="relative mx-auto w-full max-w-6xl">
         <div className="text-center">
-          <h2 className="text-4xl md:text-5xl uppercase tracking-wide text-white/80">
+          <p className="mb-3 font-mono text-xs uppercase tracking-[0.15em] text-gold">
+            {"// team.roster"}
+          </p>
+          <h2 className="text-4xl uppercase tracking-wide text-ink/90 md:text-5xl">
             Meet the Eboard
           </h2>
-          <p className="mt-4 text-lg text-white/70">
+          <p className="mt-4 text-lg text-ink/70">
             Leading the way to empower students in data science.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {members.map((member) => (
             <div
               key={member.name}
-              className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur"
+              className="relative overflow-hidden rounded-xl border border-ink/8 bg-ink/3 p-5"
             >
-              <div className="flex items-center gap-4">
+              <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-maroon to-gold-raw" />
+              <div className="flex items-center gap-3.5">
                 {member.image ? (
                   <img
                     src={member.image}
                     alt={`${member.name} headshot`}
-                    className="h-14 w-14 rounded-full object-cover border border-white/20"
+                    className="h-13 w-13 rounded-full border-2 border-gold-raw/40 object-cover"
                   />
                 ) : (
-                  <div className="h-14 w-14 rounded-full bg-white/10 flex items-center justify-center text-sm font-semibold text-white/80">
+                  <div className="flex h-13 w-13 items-center justify-center rounded-full border-2 border-gold-raw/40 bg-ink/8 text-sm font-semibold text-gold">
                     {member.name
                       .split(" ")
                       .map((part) => part[0])
@@ -48,24 +149,22 @@ export default function EboardMembers() {
                   </div>
                 )}
                 <div>
-                  <p className="text-sm uppercase tracking-wide font-semibold">
-                    {member.name}
-                  </p>
-                  <p className="text-sm text-white/60">{member.role}</p>
+                  <p className="text-[13px] font-semibold tracking-wide">{member.name}</p>
+                  <p className="mt-0.5 font-mono text-xs text-gold/70">{member.role}</p>
                 </div>
               </div>
-              <div className="mt-4 flex flex-col gap-1 text-white/50">
+              <div className="mt-3.5 flex flex-col gap-1 text-ink/45">
                 {member.studying && (
-                  <p className="text-xs uppercase tracking-[0.2em]">
+                  <p className="font-mono text-[10px] tracking-[0.05em]">
                     {member.studying}
                   </p>
                 )}
                 {member.linkedin && (
                   <a
                     href={member.linkedin}
-                    className="text-xs uppercase tracking-[0.2em] underline decoration-white/60 underline-offset-4"
+                    className="font-mono text-[10px] tracking-[0.05em] text-ink/50 underline decoration-ink/30 underline-offset-4 transition hover:text-gold-raw"
                   >
-                    LinkedIn
+                    → linkedin
                   </a>
                 )}
               </div>
@@ -73,25 +172,8 @@ export default function EboardMembers() {
           ))}
         </div>
       </div>
-      <div className="mt-auto pt-4 pb-2 flex justify-center">
-        <a
-          href="#faq"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white/60 transition hover:border-white/50 hover:text-white"
-          aria-label="Scroll to FAQ section"
-        >
-          <svg
-            aria-hidden="true"
-            viewBox="0 0 24 24"
-            className="h-5 w-5"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M6 9l6 6 6-6" />
-          </svg>
-        </a>
+      <div className="relative mt-auto flex justify-center pb-2 pt-4">
+        <ScrollArrow href="#socials" label="Scroll to Socials section" />
       </div>
     </section>
   );

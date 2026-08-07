@@ -1,6 +1,8 @@
- "use client";
+"use client";
 
 import { useState } from "react";
+import GridBackdrop from "./ui/GridBackdrop";
+import ScrollArrow from "./ui/ScrollArrow";
 
 export default function ProjectsSection() {
   const fall25Projects = [
@@ -64,86 +66,67 @@ export default function ProjectsSection() {
   const semesterTitle = semester === "S26" ? "Spring 2026" : "Fall 2025";
 
   return (
-    <section id="projects" className="min-h-screen px-6 pt-24 pb-28 flex flex-col">
-      <div className="max-w-6xl mx-auto w-full">
+    <section id="projects" className="relative flex min-h-screen flex-col px-6 pt-24 pb-28">
+      <GridBackdrop />
+      <div className="relative mx-auto w-full max-w-6xl">
         <h2 className="text-5xl font-semibold tracking-tight">Projects</h2>
-        <p className="mt-4 text-sm uppercase tracking-[0.2em] text-white/70">
-          What we've been up to
+        <p className="mt-4 font-mono text-[13px] uppercase tracking-[0.1em] text-ink/60">
+          {"// what we've been up to"}
         </p>
-        <div className="mt-6 flex flex-wrap gap-3">
+        <div className="mt-6 inline-flex gap-1 rounded-lg border border-ink/10 bg-ink/3 p-1">
           {(["S26", "F25"] as const).map((label) => (
             <button
               key={label}
               type="button"
               onClick={() => setSemester(label)}
-              className={`rounded-full border px-4 py-1 text-xs uppercase tracking-[0.2em] transition ${
+              className={`rounded-md px-4 py-1.5 font-mono text-xs tracking-[0.1em] transition ${
                 semester === label
-                  ? "border-[#990000] text-[#FFC72C]"
-                  : "border-white/20 text-white/60 hover:border-white/40"
+                  ? "bg-gradient-to-br from-maroon to-maroon-dark text-gold-raw shadow-[0_0_16px_rgba(153,0,0,0.5)]"
+                  : "text-ink/50 hover:text-ink/80"
               }`}
             >
               {label}
             </button>
           ))}
         </div>
-        <div className="mt-8 h-px w-full bg-white/10" />
 
         <div className="mt-12">
-          <h3 className="text-xl font-semibold tracking-wide text-white">
-            {semesterTitle}
-          </h3>
-          <div className="mt-2 h-0.5 w-24 bg-gradient-to-r from-[#990000] to-[#FFC72C]" />
-          <div className="mt-10 space-y-10">
+          <h3 className="text-xl font-semibold tracking-wide">{semesterTitle}</h3>
+          <div className="mt-2 h-0.5 w-24 bg-gradient-to-r from-maroon to-gold-raw" />
+          <div className="mt-10 space-y-5">
             {currentProjects.map((project) => (
               <div
                 key={project.title}
-                className="grid gap-6 md:grid-cols-[180px_1fr]"
+                className="grid gap-6 rounded-xl border border-ink/8 bg-ink/[0.02] p-5 md:grid-cols-[180px_1fr]"
               >
-              {project.image ? (
-                <img
-                  src={project.image}
-                  alt={`${project.title} preview`}
-                  className="h-44 w-44 rounded-2xl object-cover border border-white/10"
-                />
-              ) : (
-                <div className="flex h-44 w-44 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-xs uppercase tracking-[0.2em] text-white/50">
-                  Image
-                </div>
-              )}
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={`${project.title} preview`}
+                    className="h-44 w-44 rounded-lg border border-gold-raw/25 object-cover"
+                  />
+                ) : (
+                  <div className="flex h-44 w-44 items-center justify-center rounded-lg border border-ink/10 bg-ink/5 font-mono text-xs uppercase tracking-[0.2em] text-ink/50">
+                    Image
+                  </div>
+                )}
                 <div>
                   <h4 className="text-xl font-semibold">{project.title}</h4>
-                  <p className="mt-3 text-sm text-white/70 leading-relaxed">
+                  <p className="mt-3 text-sm leading-relaxed text-ink/70">
                     {project.description}
                   </p>
-                  <p className="mt-4 text-xs uppercase tracking-[0.2em] text-white/60">
-                    Project Lead
+                  <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.1em] text-ink/45">
+                    LEAD ›
                   </p>
-                  <p className="text-sm text-white/80">{project.lead}</p>
+                  <p className="text-sm text-ink/85">{project.lead}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </div>
-      <div className="mt-auto pt-4 pb-2 flex justify-center">
-        <a
-          href="#eboard"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white/60 transition hover:border-white/50 hover:text-white"
-          aria-label="Scroll to Eboard section"
-        >
-          <svg
-            aria-hidden="true"
-            viewBox="0 0 24 24"
-            className="h-5 w-5"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M6 9l6 6 6-6" />
-          </svg>
-        </a>
+      <div className="relative mt-auto flex justify-center pb-2 pt-4">
+        <ScrollArrow href="#eboard" label="Scroll to Eboard section" />
       </div>
     </section>
   );

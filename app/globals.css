@@ -1,4 +1,36 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --color-surface: #f7f6f2;
+  --color-ink: #141312;
+  --color-gold: #8a5a00;
+  --color-gold-raw: #ffc72c;
+  --color-maroon: #990000;
+  --color-maroon-dark: #7a0000;
+  --grid-line: rgba(20, 19, 18, 0.03);
+}
+
+.dark {
+  --color-surface: #050607;
+  --color-ink: #ffffff;
+  --color-gold: #ffc72c;
+  --color-gold-raw: #ffc72c;
+  --color-maroon: #990000;
+  --color-maroon-dark: #7a0000;
+  --grid-line: rgba(255, 255, 255, 0.03);
+}
+
+@theme inline {
+  --color-surface: var(--color-surface);
+  --color-ink: var(--color-ink);
+  --color-gold: var(--color-gold);
+  --color-gold-raw: var(--color-gold-raw);
+  --color-maroon: var(--color-maroon);
+  --color-maroon-dark: var(--color-maroon-dark);
+  --font-sans: var(--font-geist);
+  --font-mono: var(--font-jetbrains-mono);
+}
 
 @layer base {
   html {
@@ -6,6 +38,21 @@
   }
 
   body {
-    @apply bg-black text-white;
+    @apply bg-surface text-ink;
+    font-family: var(--font-sans), -apple-system, system-ui, sans-serif;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@layer utilities {
+  .bg-grid-pattern {
+    background-image: linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 40px 40px;
   }
 }

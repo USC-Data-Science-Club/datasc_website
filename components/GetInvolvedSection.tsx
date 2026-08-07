@@ -1,3 +1,5 @@
+import GridBackdrop from "./ui/GridBackdrop";
+
 export default function GetInvolvedSection() {
   const applicationForms = [
     {
@@ -20,49 +22,48 @@ export default function GetInvolvedSection() {
   return (
     <section
       id="get-involved"
-      className="min-h-screen px-6 pt-24 pb-28 max-w-6xl mx-auto flex flex-col"
+      className="relative flex min-h-screen flex-col px-6 pt-24 pb-28"
     >
-      <div>
+      <GridBackdrop />
+      <div className="relative mx-auto w-full max-w-6xl">
         <h2 className="text-4xl font-semibold">Get Involved</h2>
-        <p className="mt-4 text-lg text-white/70 max-w-none">
+        <p className="mt-4 text-lg text-ink/70">
           Join DataSC to build skills, collaborate on projects, and connect with
           peers and industry mentors.
         </p>
-        <div className="mt-8 flex flex-wrap gap-4">
+        <div className="mt-8 flex flex-wrap gap-3">
           <a
             href="https://mail.google.com/mail/?view=cm&fs=1&to=datasc@usc.edu"
-            className="rounded-full border border-white/30 px-5 py-2 text-xs uppercase tracking-wide text-white/90 transition hover:border-[#990000] hover:text-[#FFC72C] hover:shadow-[0_0_12px_rgba(255,199,44,0.25)]"
+            className="rounded-md border border-gold-raw/30 bg-gold-raw/5 px-5 py-2 font-mono text-xs uppercase tracking-wide text-gold transition hover:border-gold-raw/60 hover:bg-gold-raw/10"
           >
-            Email Us
+            [ email_us ]
           </a>
           <a
             href="https://www.instagram.com/datasc.official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-            className="rounded-full border border-white/30 px-5 py-2 text-xs uppercase tracking-wide text-white/90 transition hover:border-[#990000] hover:text-[#FFC72C] hover:shadow-[0_0_12px_rgba(255,199,44,0.25)]"
+            className="rounded-md border border-gold-raw/30 bg-gold-raw/5 px-5 py-2 font-mono text-xs uppercase tracking-wide text-gold transition hover:border-gold-raw/60 hover:bg-gold-raw/10"
           >
-            Follow on Instagram
+            [ instagram ]
           </a>
           <a
             href="https://www.linkedin.com/company/datasc/"
-            className="rounded-full border border-white/30 px-5 py-2 text-xs uppercase tracking-wide text-white/90 transition hover:border-[#990000] hover:text-[#FFC72C] hover:shadow-[0_0_12px_rgba(255,199,44,0.25)]"
+            className="rounded-md border border-gold-raw/30 bg-gold-raw/5 px-5 py-2 font-mono text-xs uppercase tracking-wide text-gold transition hover:border-gold-raw/60 hover:bg-gold-raw/10"
           >
-            Connect on LinkedIn
+            [ linkedin ]
           </a>
         </div>
         <div className="mt-12">
-          <h3 className="text-sm uppercase tracking-wide text-white/80">
-            Application Forms for Spring 2026
-          </h3>
+          <p className="font-mono text-xs uppercase tracking-[0.1em] text-ink/50">
+            {"// application forms — spring 2026"}
+          </p>
           <div className="mt-4 grid gap-4 sm:grid-cols-2">
             {applicationForms.map((form) => (
               <a
                 key={form.title}
                 href={form.link}
-                className="rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:border-white/30 hover:bg-white/10"
+                className="rounded-xl border border-ink/8 bg-ink/3 p-5 transition hover:border-gold-raw/30 hover:bg-ink/5"
               >
-                <p className="text-sm uppercase tracking-wide text-white/80">
-                  {form.title}
-                </p>
-                <p className="mt-2 text-sm text-white/60">{form.description}</p>
+                <p className="text-sm font-semibold text-ink">{form.title}</p>
+                <p className="mt-2 text-[13px] text-ink/55">{form.description}</p>
               </a>
             ))}
           </div>

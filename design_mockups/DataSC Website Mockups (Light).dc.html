@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#f7f6f2}
+a{color:inherit}
+::-webkit-scrollbar{width:8px;height:8px}
+</style>
+</helmet>
+
+<div style="font-family:'Geist',-apple-system,system-ui,sans-serif;background:#f7f6f2;min-height:100vh;padding:56px 48px 120px;position:relative">
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(15,15,15,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(15,15,15,0.025) 1px,transparent 1px);background-size:44px 44px;pointer-events:none"></div>
+
+  <div style="max-width:900px;margin:0 auto 64px;position:relative">
+    <p style="margin:0;display:flex;align-items:center;gap:8px;font:600 11px/1 'JetBrains Mono',monospace;letter-spacing:0.1em;color:#8a5a00;text-transform:uppercase"><span style="width:6px;height:6px;border-radius:50%;background:#FFC72C;box-shadow:0 0 8px #FFC72C"></span>Modern tech restyle — same content</p>
+    <h1 style="margin:10px 0 0;font:700 34px/1.2 'Geist',sans-serif;color:#141312">DataSC Website — mocked up</h1>
+    <p style="margin:14px 0 0;font:400 15px/1.6 system-ui,sans-serif;color:rgba(15,15,15,0.55);max-width:720px">
+      Same copy, images, and structure as the live site — reworked with a tech-forward visual system: grid backgrounds, glass panels, terminal-style chrome, gradient accents. Two new designs at the bottom fill in the "Coming Soon" pages (sample data).
+    </p>
+  </div>
+
+  <!-- ============ NAVBAR ============ -->
+  <div style="max-width:1400px;margin:0 auto 72px;position:relative">
+    <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:20px">
+      <span style="font:600 11px 'JetBrains Mono',monospace;padding:4px 10px;background:linear-gradient(135deg,#990000,#FFC72C);color:#000;border-radius:4px">01</span>
+      <h3 style="margin:0;font:700 20px system-ui;color:#141312">Navbar</h3>
+      <span style="font:400 13px 'JetBrains Mono',monospace;color:rgba(15,15,15,0.4)">// sticky, glass</span>
+    </div>
+    <div style="display:flex;gap:40px;align-items:flex-start;flex-wrap:wrap">
+      <div>
+        <p style="margin:0 0 10px;font:500 11px system-ui;color:rgba(15,15,15,0.4);text-transform:uppercase;letter-spacing:0.08em">Desktop · 1280</p>
+        <x-import component-from-global-scope="ChromeWindow" from="./browser-window.jsx" width="{{ 1280 }}" height="{{ 96 }}" url="datasc.usc.edu" hint-size="1280,96">
+          <div style="background:#f7f6f2;height:96px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid rgba(15,15,15,0.08)">
+            <div style="max-width:1280px;width:100%;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 24px;box-sizing:border-box">
+              <a style="display:flex;align-items:center;gap:12px;text-decoration:none"><img src="assets/logo.png" style="height:28px;width:28px"/><span style="font-size:18px;font-weight:600;color:#141312">DataSC</span><span style="font:500 10px 'JetBrains Mono',monospace;color:rgba(138,90,0,0.7);border:1px solid rgba(255,199,44,0.3);border-radius:4px;padding:2px 6px">v2.6</span></a>
+              <div style="display:flex;align-items:center;gap:32px;font-size:13px;font-family:'JetBrains Mono',monospace;color:rgba(15,15,15,0.7)">
+                <a style="text-decoration:none;color:inherit">about</a>
+                <a style="text-decoration:none;color:inherit">curriculum</a>
+                <a style="text-decoration:none;color:inherit">projects</a>
+                <a style="text-decoration:none;color:inherit">eboard</a>
+                <a style="text-decoration:none;color:inherit">faq</a>
+              </div>
+              <a style="border-radius:6px;background:linear-gradient(135deg,#990000,#7a0000);border:1px solid rgba(255,199,44,0.4);padding:9px 18px;font-size:11px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:0.05em;color:#FFC72C;text-decoration:none;white-space:nowrap">[ get_involved ]</a>
+            </div>
+          </div>
+        </x-import>
+      </div>
+      <div>
+        <p style="margin:0 0 10px;font:500 11px system-ui;color:rgba(15,15,15,0.4);text-transform:uppercase;letter-spacing:0.08em">Mobile · 390</p>
+        <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" width="{{ 390 }}" height="{{ 280 }}" hint-size="390,280">
+          <div style="background:#f7f6f2;padding:70px 24px 16px;display:flex;flex-direction:column;gap:16px;box-sizing:border-box;border-bottom:1px solid rgba(15,15,15,0.08)">
+            <a style="display:flex;align-items:center;gap:12px;text-decoration:none"><img src="assets/logo.png" style="height:28px;width:28px"/><span style="font-size:18px;font-weight:600;color:#141312">DataSC</span><span style="font:500 9px 'JetBrains Mono',monospace;color:rgba(138,90,0,0.7);border:1px solid rgba(255,199,44,0.3);border-radius:4px;padding:2px 5px">v2.6</span></a>
+            <div style="display:flex;flex-wrap:wrap;gap:16px;font-size:12px;font-family:'JetBrains Mono',monospace;color:rgba(15,15,15,0.7)">
+              <a style="text-decoration:none;color:inherit">about</a>
+              <a style="text-decoration:none;color:inherit">curriculum</a>
+              <a style="text-decoration:none;color:inherit">projects</a>
+              <a style="text-decoration:none;color:inherit">eboard</a>
+              <a style="text-decoration:none;color:inherit">faq</a>
+            </div>
+            <a style="align-self:flex-start;border-radius:6px;background:linear-gradient(135deg,#990000,#7a0000);border:1px solid rgba(255,199,44,0.4);padding:9px 16px;font-size:11px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;color:#FFC72C;text-decoration:none">[ get_involved ]</a>
+          </div>
+        </x-import>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ ABOUT ============ -->
+  <div style="max-width:1400px;margin:0 auto 72px;position:relative">
+    <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:20px">
+      <span style="font:600 11px 'JetBrains Mono',monospace;padding:4px 10px;background:linear-gradient(135deg,#990000,#FFC72C);color:#000;border-radius:4px">02</span>
+      <h3 style="margin:0;font:700 20px system-ui;color:#141312">About (hero)</h3>
+    </div>
+    <div style="display:flex;gap:40px;align-items:flex-start;flex-wrap:wrap">
+      <div>
+        <p style="margin:0 0 10px;font:500 11px system-ui;color:rgba(15,15,15,0.4);text-transform:uppercase;letter-spacing:0.08em">Desktop · 1280</p>
+        <x-import component-from-global-scope="ChromeWindow" from="./browser-window.jsx" width="{{ 1280 }}" height="{{ 800 }}" url="datasc.usc.edu/#about" hint-size="1280,800">
+          <div style="background:radial-gradient(circle at 15% 0%,rgba(153,0,0,0.22),transparent 45%),radial-gradient(circle at 85% 100%,rgba(255,199,44,0.12),transparent 45%),#f7f6f2;min-height:800px;box-sizing:border-box;display:flex;flex-direction:column;padding:144px 24px 96px;max-width:1152px;margin:0 auto;position:relative;background-image:linear-gradient(rgba(15,15,15,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(15,15,15,0.03) 1px,transparent 1px);background-size:40px 40px">
+            <div style="position:relative;display:flex;flex-direction:column;align-items:center;text-align:center">
+              <div style="position:relative;padding:18px">
+                <span style="position:absolute;top:0;left:0;width:20px;height:20px;border-top:2px solid #FFC72C;border-left:2px solid #FFC72C"></span>
+                <span style="position:absolute;top:0;right:0;width:20px;height:20px;border-top:2px solid #FFC72C;border-right:2px solid #FFC72C"></span>
+                <span style="position:absolute;bottom:0;left:0;width:20px;height:20px;border-bottom:2px solid #FFC72C;border-left:2px solid #FFC72C"></span>
+                <span style="position:absolute;bottom:0;right:0;width:20px;height:20px;border-bottom:2px solid #FFC72C;border-right:2px solid #FFC72C"></span>
+                <img src="assets/logo.png" style="height:130px;width:130px;opacity:0.95"/>
+              </div>
+              <p style="margin:24px 0 0;font-size:12px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:0.25em;color:#8a5a00">$ whoami — about datasc</p>
+              <h1 style="margin:16px 0 0;font-size:50px;font-weight:700;line-height:1.1;background:linear-gradient(135deg,#141312,rgba(15,15,15,0.6));-webkit-background-clip:text;background-clip:text;color:transparent">Build, learn, and ship with a data-driven community.</h1>
+              <p style="margin:24px 0 0;max-width:720px;font-size:18px;line-height:1.7;color:#c7c9cc">DataSC is USC's home for hands-on data science learning, built to be welcoming, practical, and career-relevant. We bring together students of every major and experience level through real-world projects, workshops, and community support.</p>
+            </div>
+            <div style="margin-top:auto;padding-top:16px;padding-bottom:8px;display:flex;justify-content:center">
+              <div style="height:40px;width:40px;border-radius:8px;border:1px solid rgba(255,199,44,0.3);background:rgba(255,199,44,0.05);display:flex;align-items:center;justify-content:center;color:#8a5a00">↓</div>
+            </div>
+          </div>
+        </x-import>
+      </div>
+      <div>
+        <p style="margin:0 0 10px;font:500 11px system-ui;color:rgba(15,15,15,0.4);text-transform:uppercase;letter-spacing:0.08em">Mobile · 390</p>
+        <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" width="{{ 390 }}" height="{{ 844 }}" hint-size="390,844">
+          <div style="background:radial-gradient(circle at 20% 0%,rgba(153,0,0,0.22),transparent 45%),#f7f6f2;min-height:100%;box-sizing:border-box;display:flex;flex-direction:column;padding:64px 24px 48px;background-image:linear-gradient(rgba(15,15,15,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(15,15,15,0.03) 1px,transparent 1px);background-size:32px 32px">
+            <div style="position:relative;display:flex;flex-direction:column;align-items:center;text-align:center">
+              <img src="assets/logo.png" style="height:110px;width:110px;opacity:0.95"/>
+              <p style="margin:22px 0 0;font-size:11px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:0.25em;color:#8a5a00">$ whoami</p>
+              <h1 style="margin:16px 0 0;font-size:32px;font-weight:700;line-height:1.15;background:linear-gradient(135deg,#141312,rgba(15,15,15,0.6));-webkit-background-clip:text;background-clip:text;color:transparent">Build, learn, and ship with a data-driven community.</h1>
+              <p style="margin:20px 0 0;font-size:16px;line-height:1.6;color:#c7c9cc">DataSC is USC's home for hands-on data science learning, built to be welcoming, practical, and career-relevant.</p>
+            </div>
+            <div style="margin-top:auto;padding-top:24px;display:flex;justify-content:center">
+              <div style="height:40px;width:40px;border-radius:8px;border:1px solid rgba(255,199,44,0.3);background:rgba(255,199,44,0.05);display:flex;align-items:center;justify-content:center;color:#8a5a00">↓</div>
+            </div>
+          </div>
+        </x-import>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ CURRICULUM ============ -->
+  <div style="max-width:1400px;margin:0 auto 72px;position:relative">
+    <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:20px">
+      <span style="font:600 11px 'JetBrains Mono',monospace;padding:4px 10px;background:linear-gradient(135deg,#990000,#FFC72C);color:#000;border-radius:4px">03</span>
+      <h3 style="margin:0;font:700 20px system-ui;color:#141312">Curriculum</h3>
+    </div>
+    <div style="display:flex;gap:40px;align-items:flex-start;flex-wrap:wrap">
+      <div>
+        <p style="margin:0 0 10px;font:500 11px system-ui;color:rgba(15,15,15,0.4);text-transform:uppercase;letter-spacing:0.08em">Desktop · 1280</p>
+        <x-import component-from-global-scope="ChromeWindow" from="./browser-window.jsx" width="{{ 1280 }}" height="{{ 900 }}" url="datasc.usc.edu/#curriculum" hint-size="1280,900">
+          <div style="background:#f7f6f2;min-height:900px;box-sizing:border-box;padding:96px 24px 112px;max-width:1152px;margin:0 auto">
+            <p style="margin:0;font:600 11px 'JetBrains Mono',monospace;color:#8a5a00;letter-spacing:0.15em;text-transform:uppercase">// syllabus.json</p>
+            <h2 style="margin:10px 0 0;font-size:36px;font-weight:600;color:#141312">Curriculum</h2>
+            <p style="margin:16px 0 0;font-size:18px;line-height:1.6;color:rgba(15,15,15,0.7);max-width:900px">The curriculum builds from data science foundations and Python/Pandas skills into data cleaning, visualization, statistics, and core machine learning workflows. The semester culminates in a capstone project.</p>
+            <div style="margin-top:40px;border-radius:12px;border:1px solid rgba(15,15,15,0.1);background:rgba(15,15,15,0.03);backdrop-filter:blur(12px);padding:0;overflow:hidden">
+              <div style="display:flex;align-items:center;gap:8px;padding:12px 20px;border-bottom:1px solid rgba(15,15,15,0.08)">
+                <span style="width:9px;height:9px;border-radius:50%;background:#990000"></span><span style="width:9px;height:9px;border-radius:50%;background:#FFC72C"></span><span style="width:9px;height:9px;border-radius:50%;background:rgba(15,15,15,0.3)"></span>
+                <span style="margin-left:8px;font:500 11px 'JetBrains Mono',monospace;color:rgba(15,15,15,0.5)">semester_flow.log</span>
+              </div>
+              <div style="padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:16px">
+                <div style="border-radius:8px;border:1px solid rgba(15,15,15,0.08);border-left:2px solid #FFC72C;background:rgba(0,0,0,0.03);padding:16px"><p style="margin:0;font-size:11px;font-family:'JetBrains Mono',monospace;letter-spacing:0.1em;color:#8a5a00">WEEK_01</p><p style="margin:8px 0 0;font-size:14px;color:rgba(15,15,15,0.7)">Intro to data science, ML pipeline, and Pandas basics.</p></div>
+                <div style="border-radius:8px;border:1px solid rgba(15,15,15,0.08);border-left:2px solid #FFC72C;background:rgba(0,0,0,0.03);padding:16px"><p style="margin:0;font-size:11px;font-family:'JetBrains Mono',monospace;letter-spacing:0.1em;color:#8a5a00">WEEK_02</p><p style="margin:8px 0 0;font-size:14px;color:rgba(15,15,15,0.7)">Python data structures, NumPy basics, Pandas Series/DataFrames, and data I/O.</p></div>
+                <div style="border-radius:8px;border:1px solid rgba(15,15,15,0.08);border-left:2px solid #FFC72C;background:rgba(0,0,0,0.03);padding:16px"><p style="margin:0;font-size:11px;font-family:'JetBrains Mono',monospace;letter-spacing:0.1em;color:#8a5a00">WEEK_03</p><p style="margin:8px 0 0;font-size:14px;color:rgba(15,15,15,0.7)">Data cleaning: missing values, types, normalization, duplicates/outliers, merges/reshapes.</p></div>
+                <div style="border-radius:8px;border:1px solid rgba(15,15,15,0.08);border-left:2px solid #FFC72C;background:rgba(0,0,0,0.03);padding:16px"><p style="margin:0;font-size:11px;font-family:'JetBrains Mono',monospace;letter-spacing:0.1em;color:#8a5a00">WEEK_04</p><p style="margin:8px 0 0;font-size:14px;color:rgba(15,15,15,0.7)">Visualization principles with Matplotlib/Seaborn.</p></div>
+              </div>
+            </div>
+            <div style="margin-top:48px;border-radius:12px;border:1px solid rgba(15,15,15,0.1);background:rgba(15,15,15,0.03);padding:24px">
+              <p style="margin:0;font-size:14px;color:rgba(15,15,15,0.7)">Looking for weekly curriculum updates?</p>
+              <a style="margin-top:10px;display:inline-flex;font-size:12px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:0.05em;color:#8a5a00;text-decoration:none">→ view_weekly_updates()</a><br/>
+              <a style="margin-top:8px;display:inline-flex;font-size:12px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:0.05em;color:#8a5a00;text-decoration:none">→ view_kahoot_leaderboard()</a>
+            </div>
+          </div>
+        </x-import>
+      </div>
+      <div>
+        <p style="margin:0 0 10px;font:500 11px system-ui;color:rgba(15,15,15,0.4);text-transform:uppercase;letter-spacing:0.08em">Mobile · 390</p>
+        <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" width="{{ 390 }}" height="{{ 844 }}" hint-size="390,844">
+          <div style="background:#f7f6f2;min-height:100%;box-sizing:border-box;padding:64px 20px 48px">
+            <p style="margin:0;font:600 10px 'JetBrains Mono',monospace;color:#8a5a00;letter-spacing:0.15em;text-transform:uppercase">// syllabus.json</p>
+            <h2 style="margin:8px 0 0;font-size:30px;font-weight:600;color:#141312">Curriculum</h2>
+            <p style="margin:14px 0 0;font-size:16px;line-height:1.6;color:rgba(15,15,15,0.7)">Foundations, Python/Pandas, cleaning, visualization, stats, and ML — capped by a capstone project.</p>
+            <div style="margin-top:28px;border-radius:12px;border:1px solid rgba(15,15,15,0.1);background:rgba(15,15,15,0.03);overflow:hidden">
+              <div style="display:flex;align-items:center;gap:6px;padding:10px 16px;border-bottom:1px solid rgba(15,15,15,0.08)">
+                <span style="width:8px;height:8px;border-radius:50%;background:#990000"></span><span style="width:8px;height:8px;border-radius:50%;background:#FFC72C"></span><span style="margin-left:6px;font:500 10px 'JetBrains Mono',monospace;color:rgba(15,15,15,0.5)">semester_flow.log</span>
+              </div>
+              <div style="padding:16px;display:flex;flex-direction:column;gap:12px">
+                <div style="border-radius:8px;border:1px solid rgba(15,15,15,0.08);border-left:2px solid #FFC72C;background:rgba(0,0,0,0.03);padding:14px"><p style="margin:0;font-size:10px;font-family:'JetBrains Mono',monospace;letter-spacing:0.1em;color:#8a5a00">WEEK_01</p><p style="margin:6px 0 0;font-size:13px;color:rgba(15,15,15,0.7)">Intro to data science, ML pipeline, and Pandas basics.</p></div>
+                <div style="border-radius:8px;border:1px solid rgba(15,15,15,0.08);border-left:2px solid #FFC72C;background:rgba(0,0,0,0.03);padding:14px"><p style="margin:0;font-size:10px;font-family:'JetBrains Mono',monospace;letter-spacing:0.1em;color:#8a5a00">WEEK_02</p><p style="margin:6px 0 0;font-size:13px;color:rgba(15,15,15,0.7)">Python, NumPy, Pandas Series/DataFrames, and data I/O.</p></div>
+              </div>
+            </div>
+            <div style="margin-top:32px;border-radius:12px;border:1px solid rgba(15,15,15,0.1);background:rgba(15,15,15,0.03);padding:18px">
+              <p style="margin:0;font-size:13px;color:rgba(15,15,15,0.7)">Looking for weekly curriculum updates?</p>
+              <a style="margin-top:8px;display:inline-flex;font-size:11px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;color:#8a5a00;text-decoration:none">→ view_weekly_updates()</a><br/>
+              <a style="margin-top:6px;display:inline-flex;font-size:11px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;color:#8a5a00;text-decoration:none">→ view_kahoot_leaderboard()</a>
+            </div>
+          </div>
+        </x-import>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ PROJECTS ============ -->
+  <div style="max-width:1400px;margin:0 auto 72px;position:relative">
+    <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:20px">
+      <span style="font:600 11px 'JetBrains Mono',monospace;padding:4px 10px;background:linear-gradient(135deg,#990000,#FFC72C);color:#000;border-radius:4px">04</span>
+      <h3 style="margin:0;font:700 20px system-ui;color:#141312">Projects</h3>
+      <span style="font:400 13px 'JetBrains Mono',monospace;color:rgba(15,15,15,0.4)">// Spring 2026 selected</span>
+    </div>
+    <div style="display:flex;gap:40px;align-items:flex-start;flex-wrap:wrap">
+      <div>
+        <p style="margin:0 0 10px;font:500 11px system-ui;color:rgba(15,15,15,0.4);text-transform:uppercase;letter-spacing:0.08em">Desktop · 1280</p>
+        <x-import component-from-global-scope="ChromeWindow" from="./browser-window.jsx" width="{{ 1280 }}" height="{{ 1000 }}" url="datasc.usc.edu/#projects" hint-size="1280,1000">
+          <div style="background:#f7f6f2;min-height:1000px;box-sizing:border-box;padding:96px 24px 112px;max-width:1152px;margin:0 auto">
+            <h2 style="margin:0;font-size:48px;font-weight:600;letter-spacing:-0.02em;color:#141312">Projects</h2>
+            <p style="margin:16px 0 0;font-size:13px;font-family:'JetBrains Mono',monospace;letter-spacing:0.1em;color:rgba(15,15,15,0.6)">// what we've been up to</p>
+            <div style="margin-top:24px;display:inline-flex;gap:4px;border:1px solid rgba(15,15,15,0.1);border-radius:8px;padding:4px;background:rgba(15,15,15,0.03)">
+              <div style="border-radius:6px;background:linear-gradient(135deg,#990000,#7a0000);box-shadow:0 0 16px rgba(153,0,0,0.5);padding:6px 18px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.1em;color:#FFC72C">S26</div>
+              <div style="border-radius:6px;padding:6px 18px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.1em;color:rgba(15,15,15,0.5)">F25</div>
+            </div>
+            <div style="margin-top:40px">
+              <h3 style="margin:0;font-size:20px;font-weight:600;letter-spacing:0.02em;color:#141312">Spring 2026</h3>
+              <div style="margin-top:8px;height:2px;width:96px;background:linear-gradient(to right,#990000,#FFC72C)"></div>
+              <div style="margin-top:40px;display:flex;flex-direction:column;gap:20px">
+                <div style="display:grid;grid-template-columns:180px 1fr;gap:24px;border-radius:12px;border:1px solid rgba(15,15,15,0.08);background:rgba(15,15,15,0.02);padding:20px">
+                  <img src="assets/RNA.jpg" style="height:176px;width:176px;border-radius:10px;object-fit:cover;border:1px solid rgba(255,199,44,0.25)"/>
+                  <div><h4 style="margin:0;font-size:20px;font-weight:600;color:#141312">Stanford RNA 3D Folding Part 2 Competition</h4><p style="margin:12px 0 0;font-size:14px;line-height:1.6;color:rgba(15,15,15,0.7)">A Kaggle competition focused on predicting RNA 3D structures.</p><p style="margin:16px 0 0;font-size:11px;font-family:'JetBrains Mono',monospace;letter-spacing:0.1em;color:rgba(15,15,15,0.45)">LEAD ›</p><p style="margin:0;font-size:14px;color:rgba(15,15,15,0.85)">Dominic Woetzel</p></div>
+                </div>
+                <div style="display:grid;grid-template-columns:180px 1fr;gap:24px;border-radius:12px;border:1px solid rgba(15,15,15,0.08);background:rgba(15,15,15,0.02);padding:20px">
+                  <img src="assets/health.jpg" style="height:176px;width:176px;border-radius:10px;object-fit:cover;border:1px solid rgba(255,199,44,0.25)"/>
+                  <div><h4 style="margin:0;font-size:20px;font-weight:600;color:#141312">Mapping LA Healthcare Access Gaps</h4><p style="margin:12px 0 0;font-size:14px;line-height:1.6;color:rgba(15,15,15,0.7)">A spatial analytics project identifying gaps in LA healthcare access.</p><p style="margin:16px 0 0;font-size:11px;font-family:'JetBrains Mono',monospace;letter-spacing:0.1em;color:rgba(15,15,15,0.45)">LEAD ›</p><p style="margin:0;font-size:14px;color:rgba(15,15,15,0.85)">Olena Khetan</p></div>
+                </div>
+                <div style="display:grid;grid-template-columns:180px 1fr;gap:24px;border-radius:12px;border:1px solid rgba(15,15,15,0.08);background:rgba(15,15,15,0.02);padding:20px">
+                  <img src="assets/NBA.jpeg" style="height:176px;width:176px;border-radius:10px;object-fit:cover;border:1px solid rgba(255,199,44,0.25)"/>
+                  <div><h4 style="margin:0;font-size:20px;font-weight:600;color:#141312">NBA Performance Prediction</h4><p style="margin:12px 0 0;font-size:14px;line-height:1.6;color:rgba(15,15,15,0.7)">A sports analytics project forecasting NBA player performance.</p><p style="margin:16px 0 0;font-size:11px;font-family:'JetBrains Mono',monospace;letter-spacing:0.1em;color:rgba(15,15,15,0.45)">LEAD ›</p><p style="margin:0;font-size:14px;color:rgba(15,15,15,0.85)">Colin Quan Leung &amp; Nolen Johnson</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </x-import>
+      </div>
+      <div>
+        <p style="margin:0 0 10px;font:500 11px system-ui;color:rgba(15,15,15,0.4);text-transform:uppercase;letter-spacing:0.08em">Mobile · 390</p>
+        <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" width="{{ 390 }}" height="{{ 900 }}" hint-size="390,900">
+          <div style="background:#f7f6f2;min-height:100%;box-sizing:border-box;padding:64px 20px 48px">
+            <h2 style="margin:0;font-size:36px;font-weight:600;color:#141312">Projects</h2>
+            <p style="margin:12px 0 0;font-size:12px;font-family:'JetBrains Mono',monospace;color:rgba(15,15,15,0.6)">// what we've been up to</p>
+            <div style="margin-top:20px;display:inline-flex;gap:4px;border:1px solid rgba(15,15,15,0.1);border-radius:8px;padding:4px;background:rgba(15,15,15,0.03)">
+              <div style="border-radius:6px;background:linear-gradient(135deg,#990000,#7a0000);padding:6px 16px;font-size:11px;font-family:'JetBrains Mono',monospace;color:#FFC72C">S26</div>
+              <div style="border-radius:6px;padding:6px 16px;font-size:11px;font-family:'JetBrains Mono',monospace;color:rgba(15,15,15,0.5)">F25</div>
+            </div>
+            <div style="margin-top:32px">
+              <h3 style="margin:0;font-size:18px;font-weight:600;color:#141312">Spring 2026</h3>
+              <div style="margin-top:8px;height:2px;width:80px;background:linear-gradient(to right,#990000,#FFC72C)"></div>
+              <div style="margin-top:28px;display:flex;flex-direction:column;gap:20px">
+                <div style="border-radius:12px;border:1px solid rgba(15,15,15,0.08);background:rgba(15,15,15,0.02);padding:16px">
+                  <img src="assets/RNA.jpg" style="height:176px;width:100%;border-radius:10px;object-fit:cover;border:1px solid rgba(255,199,44,0.25)"/>
+                  <h4 style="margin:16px 0 0;font-size:18px;font-weight:600;color:#141312">Stanford RNA 3D Folding Part 2 Competition</h4><p style="margin:10px 0 0;font-size:13px;line-height:1.6;color:rgba(15,15,15,0.7)">A Kaggle competition focused on predicting RNA 3D structures.</p><p style="margin:14px 0 0;font-size:11px;font-family:'JetBrains Mono',monospace;color:rgba(15,15,15,0.45)">LEAD ›</p><p style="margin:0;font-size:13px;color:rgba(15,15,15,0.85)">Dominic Woetzel</p>
+                </div>
+                <div style="border-radius:12px;border:1px solid rgba(15,15,15,0.08);background:rgba(15,15,15,0.02);padding:16px">
+                  <img src="assets/health.jpg" style="height:176px;width:100%;border-radius:10px;object-fit:cover;border:1px solid rgba(255,199,44,0.25)"/>
+                  <h4 style="margin:16px 0 0;font-size:18px;font-weight:600;color:#141312">Mapping LA Healthcare Access Gaps</h4><p style="margin:10px 0 0;font-size:13px;line-height:1.6;color:rgba(15,15,15,0.7)">A spatial analytics project identifying gaps in LA healthcare access.</p><p style="margin:14px 0 0;font-size:11px;font-family:'JetBrains Mono',monospace;color:rgba(15,15,15,0.45)">LEAD ›</p><p style="margin:0;font-size:13px;color:rgba(15,15,15,0.85)">Olena Khetan</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </x-import>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ EBOARD ============ -->
+  <div style="max-width:1400px;margin:0 auto 72px;position:relative">
+    <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:20px">
+      <span style="font:600 11px 'JetBrains Mono',monospace;padding:4px 10px;background:linear-gradient(135deg,#990000,#FFC72C);color:#000;border-radius:4px">05</span>
+      <h3 style="margin:0;font:700 20px system-ui;color:#141312">Eboard</h3>
+      <span style="font:400 13px 'JetBrains Mono',monospace;color:rgba(15,15,15,0.4)">// 14 members, scrollable</span>
+    </div>
+    <div style="display:flex;gap:40px;align-items:flex-start;flex-wrap:wrap">
+      <div>
+        <p style="margin:0 0 10px;font:500 11px system-ui;color:rgba(15,15,15,0.4);text-transform:uppercase;letter-spacing:0.08em">Desktop · 1280</p>
+        <x-import component-from-global-scope="ChromeWindow" from="./browser-window.jsx" width="{{ 1280 }}" height="{{ 800 }}" url="datasc.usc.edu/#eboard" hint-size="1280,800">
+          <div style="background:#f7f6f2;min-height:800px;box-sizing:border-box;padding:96px 24px 112px;max-width:1152px;margin:0 auto">
+            <div style="text-align:center">
+              <p style="margin:0 0 12px;font:600 11px 'JetBrains Mono',monospace;color:#8a5a00;letter-spacing:0.15em">// team.roster</p>
+              <h2 style="margin:0;font-size:48px;text-transform:uppercase;letter-spacing:0.02em;color:rgba(15,15,15,0.9)">Meet the Eboard</h2>
+              <p style="margin:16px 0 0;font-size:18px;color:rgba(15,15,15,0.7)">Leading the way to empower students in data science.</p>
+            </div>
+            <div style="margin-top:48px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px">
+              <sc-for list="{{ members }}" as="m" hint-placeholder-count="14">
+                <div style="border-radius:12px;border:1px solid rgba(15,15,15,0.08);background:rgba(15,15,15,0.03);padding:20px;position:relative;overflow:hidden">
+                  <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,#990000,#FFC72C)"></div>
+                  <div style="display:flex;align-items:center;gap:14px">
+                    <sc-if value="{{ m.hasImage }}" hint-placeholder-val="{{ true }}">
+                      <img src="{{ m.image }}" style="height:52px;width:52px;border-radius:9999px;object-fit:cover;border:2px solid rgba(255,199,44,0.4)"/>
+                    </sc-if>
+                    <sc-if value="{{ m.noImage }}" hint-placeholder-val="{{ false }}">
+                      <div style="height:52px;width:52px;border-radius:9999px;background:rgba(15,15,15,0.08);border:2px solid rgba(255,199,44,0.4);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:#8a5a00">{{ m.initials }}</div>
+                    </sc-if>
+                    <div>
+                      <p style="margin:0;font-size:13px;letter-spacing:0.02em;font-weight:600;color:#141312">{{ m.name }}</p>
+                      <p style="margin:2px 0 0;font-size:12px;font-family:'JetBrains Mono',monospace;color:rgba(138,90,0,0.7)">{{ m.role }}</p>
+                    </div>
+                  </div>
+                  <div style="margin-top:14px;display:flex;flex-direction:column;gap:4px;color:rgba(15,15,15,0.45)">
+                    <p style="margin:0;font-size:10px;font-family:'JetBrains Mono',monospace;letter-spacing:0.05em">{{ m.studying }}</p>
+                    <a style="font-size:10px;font-family:'JetBrains Mono',monospace;letter-spacing:0.05em;color:rgba(15,15,15,0.5);text-decoration:none">→ linkedin</a>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </x-import>
+      </div>
+      <div>
+        <p style="margin:0 0 10px;font:500 11px system-ui;color:rgba(15,15,15,0.4);text-transform:uppercase;letter-spacing:0.08em">Mobile · 390</p>
+        <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" width="{{ 390 }}" height="{{ 844 }}" hint-size="390,844">
+          <div style="background:#f7f6f2;min-height:100%;box-sizing:border-box;padding:64px 20px 48px">
+            <div style="text-align:center">
+              <p style="margin:0 0 10px;font:600 10px 'JetBrains Mono',monospace;color:#8a5a00;letter-spacing:0.15em">// team.roster</p>
+              <h2 style="margin:0;font-size:34px;text-transform:uppercase;letter-spacing:0.02em;color:rgba(15,15,15,0.9)">Meet the Eboard</h2>
+              <p style="margin:14px 0 0;font-size:15px;color:rgba(15,15,15,0.7)">Leading the way to empower students in data science.</p>
+            </div>
+            <div style="margin-top:28px;display:flex;flex-direction:column;gap:14px">
+              <sc-for list="{{ members }}" as="m" hint-placeholder-count="14">
+                <div style="border-radius:12px;border:1px solid rgba(15,15,15,0.08);background:rgba(15,15,15,0.03);padding:16px;position:relative;overflow:hidden">
+                  <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,#990000,#FFC72C)"></div>
+                  <div style="display:flex;align-items:center;gap:12px">
+                    <sc-if value="{{ m.hasImage }}" hint-placeholder-val="{{ true }}">
+                      <img src="{{ m.image }}" style="height:48px;width:48px;border-radius:9999px;object-fit:cover;border:2px solid rgba(255,199,44,0.4)"/>
+                    </sc-if>
+                    <sc-if value="{{ m.noImage }}" hint-placeholder-val="{{ false }}">
+                      <div style="height:48px;width:48px;border-radius:9999px;background:rgba(15,15,15,0.08);border:2px solid rgba(255,199,44,0.4);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:#8a5a00">{{ m.initials }}</div>
+                    </sc-if>
+                    <div>
+                      <p style="margin:0;font-size:13px;font-weight:600;color:#141312">{{ m.name }}</p>
+                      <p style="margin:2px 0 0;font-size:11px;font-family:'JetBrains Mono',monospace;color:rgba(138,90,0,0.7)">{{ m.role }}</p>
+                    </div>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </x-import>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FAQ ============ -->
+  <div style="max-width:1400px;margin:0 auto 72px;position:relative">
+    <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:20px">
+      <span style="font:600 11px 'JetBrains Mono',monospace;padding:4px 10px;background:linear-gradient(135deg,#990000,#FFC72C);color:#000;border-radius:4px">06</span>
+      <h3 style="margin:0;font:700 20px system-ui;color:#141312">FAQ</h3>
+    </div>
+    <div style="display:flex;gap:40px;align-items:flex-start;flex-wrap:wrap">
+      <div>
+        <p style="margin:0 0 10px;font:500 11px system-ui;color:rgba(15,15,15,0.4);text-transform:uppercase;letter-spacing:0.08em">Desktop · 1280</p>
+        <x-import component-from-global-scope="ChromeWindow" from="./browser-window.jsx" width="{{ 1280 }}" height="{{ 780 }}" url="datasc.usc.edu/#faq" hint-size="1280,780">
+          <div style="background:#f7f6f2;min-height:780px;box-sizing:border-box;padding:96px 24px 112px;max-width:1152px;margin:0 auto">
+            <h2 style="margin:0;font-size:36px;font-weight:600;color:#141312">FAQ</h2>
+            <p style="margin:16px 0 0;font-size:18px;color:rgba(15,15,15,0.7);max-width:640px">Answers to the most common questions about joining and participating in DataSC.</p>
+            <div style="margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:16px">
+              <div style="border-radius:12px;border:1px solid rgba(15,15,15,0.08);background:rgba(15,15,15,0.03);padding:24px"><p style="margin:0;display:flex;gap:8px;font-size:13px;color:rgba(15,15,15,0.9)"><span style="font-family:'JetBrains Mono',monospace;color:#8a5a00">Q·</span>Who can join DataSC?</p><p style="margin:12px 0 0;font-size:14px;color:rgba(15,15,15,0.65);padding-left:22px">Anyone at USC is welcome, regardless of major or experience level.</p></div>
+              <div style="border-radius:12px;border:1px solid rgba(15,15,15,0.08);background:rgba(15,15,15,0.03);padding:24px"><p style="margin:0;display:flex;gap:8px;font-size:13px;color:rgba(15,15,15,0.9)"><span style="font-family:'JetBrains Mono',monospace;color:#8a5a00">Q·</span>Do I need prior data science experience?</p><p style="margin:12px 0 0;font-size:14px;color:rgba(15,15,15,0.65);padding-left:22px">No. We teach fundamentals and provide pathways for beginners and advanced members.</p></div>
+              <div style="border-radius:12px;border:1px solid rgba(15,15,15,0.08);background:rgba(15,15,15,0.03);padding:24px"><p style="margin:0;display:flex;gap:8px;font-size:13px;color:rgba(15,15,15,0.9)"><span style="font-family:'JetBrains Mono',monospace;color:#8a5a00">Q·</span>What do members do each semester?</p><p style="margin:12px 0 0;font-size:14px;color:rgba(15,15,15,0.65);padding-left:22px">You can follow the curriculum, join project teams, attend workshops, or help lead initiatives.</p></div>
+              <div style="border-radius:12px;border:1px solid rgba(15,15,15,0.08);background:rgba(15,15,15,0.03);padding:24px"><p style="margin:0;display:flex;gap:8px;font-size:13px;color:rgba(15,15,15,0.9)"><span style="font-family:'JetBrains Mono',monospace;color:#8a5a00">Q·</span>How do project teams work?</p><p style="margin:12px 0 0;font-size:14px;color:rgba(15,15,15,0.65);padding-left:22px">Teams are formed by interest and skill balance, and work on scoped, real-world problems.</p></div>
+              <div style="border-radius:12px;border:1px solid rgba(15,15,15,0.08);background:rgba(15,15,15,0.03);padding:24px"><p style="margin:0;display:flex;gap:8px;font-size:13px;color:rgba(15,15,15,0.9)"><span style="font-family:'JetBrains Mono',monospace;color:#8a5a00">Q·</span>When do applications open?</p><p style="margin:12px 0 0;font-size:14px;color:rgba(15,15,15,0.65);padding-left:22px">We typically open applications at the start of each semester. Follow our updates for specific dates.</p></div>
+              <div style="border-radius:12px;border:1px solid rgba(15,15,15,0.08);background:rgba(15,15,15,0.03);padding:24px"><p style="margin:0;display:flex;gap:8px;font-size:13px;color:rgba(15,15,15,0.9)"><span style="font-family:'JetBrains Mono',monospace;color:#8a5a00">Q·</span>How can I stay updated?</p><p style="margin:12px 0 0;font-size:14px;color:rgba(15,15,15,0.65);padding-left:22px">Follow our social channels and check our website for the latest updates.</p></div>
+            </div>
+          </div>
+        </x-import>
+      </div>
+      <div>
+        <p style="margin:0 0 10px;font:500 11px system-ui;color:rgba(15,15,15,0.4);text-transform:uppercase;letter-spacing:0.08em">Mobile · 390</p>
+        <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" width="{{ 390 }}" height="{{ 1100 }}" hint-size="390,1100">
+          <div style="background:#f7f6f2;min-height:100%;box-sizing:border-box;padding:64px 20px 48px">
+            <h2 style="margin:0;font-size:30px;font-weight:600;color:#141312">FAQ</h2>
+            <p style="margin:14px 0 0;font-size:16px;color:rgba(15,15,15,0.7)">Answers to the most common questions about joining and participating in DataSC.</p>
+            <div style="margin-top:24px;display:flex;flex-direction:column;gap:14px">
+              <div style="border-radius:12px;border:1px solid rgba(15,15,15,0.08);background:rgba(15,15,15,0.03);padding:18px"><p style="margin:0;display:flex;gap:8px;font-size:12px;color:rgba(15,15,15,0.9)"><span style="font-family:'JetBrains Mono',monospace;color:#8a5a00">Q·</span>Who can join DataSC?</p><p style="margin:10px 0 0;font-size:13px;color:rgba(15,15,15,0.65);padding-left:20px">Anyone at USC is welcome, regardless of major or experience level.</p></div>
+              <div style="border-radius:12px;border:1px solid rgba(15,15,15,0.08);background:rgba(15,15,15,0.03);padding:18px"><p style="margin:0;display:flex;gap:8px;font-size:12px;color:rgba(15,15,15,0.9)"><span style="font-family:'JetBrains Mono',monospace;color:#8a5a00">Q·</span>Do I need prior data science experience?</p><p style="margin:10px 0 0;font-size:13px;color:rgba(15,15,15,0.65);padding-left:20px">No. We teach fundamentals and provide pathways for beginners and advanced members.</p></div>
+              <div style="border-radius:12px;border:1px solid rgba(15,15,15,0.08);background:rgba(15,15,15,0.03);padding:18px"><p style="margin:0;display:flex;gap:8px;font-size:12px;color:rgba(15,15,15,0.9)"><span style="font-family:'JetBrains Mono',monospace;color:#8a5a00">Q·</span>What do members do each semester?</p><p style="margin:10px 0 0;font-size:13px;color:rgba(15,15,15,0.65);padding-left:20px">You can follow the curriculum, join project teams, attend workshops, or help lead initiatives.</p></div>
+            </div>
+          </div>
+        </x-import>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ GET INVOLVED ============ -->
+  <div style="max-width:1400px;margin:0 auto 72px;position:relative">
+    <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:20px">
+      <span style="font:600 11px 'JetBrains Mono',monospace;padding:4px 10px;background:linear-gradient(135deg,#990000,#FFC72C);color:#000;border-radius:4px">07</span>
+      <h3 style="margin:0;font:700 20px system-ui;color:#141312">Get Involved</h3>
+    </div>
+    <div style="display:flex;gap:40px;align-items:flex-start;flex-wrap:wrap">
+      <div>
+        <p style="margin:0 0 10px;font:500 11px system-ui;color:rgba(15,15,15,0.4);text-transform:uppercase;letter-spacing:0.08em">Desktop · 1280</p>
+        <x-import component-from-global-scope="ChromeWindow" from="./browser-window.jsx" width="{{ 1280 }}" height="{{ 780 }}" url="datasc.usc.edu/#get-involved" hint-size="1280,780">
+          <div style="background:#f7f6f2;min-height:780px;box-sizing:border-box;padding:96px 24px 112px;max-width:1152px;margin:0 auto">
+            <h2 style="margin:0;font-size:36px;font-weight:600;color:#141312">Get Involved</h2>
+            <p style="margin:16px 0 0;font-size:18px;color:rgba(15,15,15,0.7)">Join DataSC to build skills, collaborate on projects, and connect with peers and industry mentors.</p>
+            <div style="margin-top:32px;display:flex;flex-wrap:wrap;gap:12px">
+              <div style="border-radius:6px;border:1px solid rgba(255,199,44,0.3);background:rgba(255,199,44,0.05);padding:9px 20px;font-size:11px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;color:#8a5a00">[ email_us ]</div>
+              <div style="border-radius:6px;border:1px solid rgba(255,199,44,0.3);background:rgba(255,199,44,0.05);padding:9px 20px;font-size:11px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;color:#8a5a00">[ instagram ]</div>
+              <div style="border-radius:6px;border:1px solid rgba(255,199,44,0.3);background:rgba(255,199,44,0.05);padding:9px 20px;font-size:11px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;color:#8a5a00">[ linkedin ]</div>
+            </div>
+            <div style="margin-top:48px">
+              <p style="margin:0;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.1em;color:rgba(15,15,15,0.5)">// application forms — spring 2026</p>
+              <div style="margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:16px">
+                <div style="border-radius:12px;border:1px solid rgba(15,15,15,0.08);background:rgba(15,15,15,0.03);padding:20px"><p style="margin:0;font-size:14px;font-weight:600;color:#141312">General Member Application</p><p style="margin:8px 0 0;font-size:13px;color:rgba(15,15,15,0.55)">Join the community and get updates on events and projects.</p></div>
+                <div style="border-radius:12px;border:1px solid rgba(15,15,15,0.08);background:rgba(15,15,15,0.03);padding:20px"><p style="margin:0;font-size:14px;font-weight:600;color:#141312">Project Lead Application</p><p style="margin:8px 0 0;font-size:13px;color:rgba(15,15,15,0.55)">Apply to lead a hands-on, semester-long project team.</p></div>
+                <div style="border-radius:12px;border:1px solid rgba(15,15,15,0.08);background:rgba(15,15,15,0.03);padding:20px"><p style="margin:0;font-size:14px;font-weight:600;color:#141312">Returning Members Form</p><p style="margin:8px 0 0;font-size:13px;color:rgba(15,15,15,0.55)">Fill out this form to update your information.</p></div>
+              </div>
+            </div>
+          </div>
+        </x-import>
+      </div>
+      <div>
+        <p style="margin:0 0 10px;font:500 11px system-ui;color:rgba(15,15,15,0.4);text-transform:uppercase;letter-spacing:0.08em">Mobile · 390</p>
+        <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" width="{{ 390 }}" height="{{ 1000 }}" hint-size="390,1000">
+          <div style="background:#f7f6f2;min-height:100%;box-sizing:border-box;padding:64px 20px 48px">
+            <h2 style="margin:0;font-size:30px;font-weight:600;color:#141312">Get Involved</h2>
+            <p style="margin:14px 0 0;font-size:16px;color:rgba(15,15,15,0.7)">Join DataSC to build skills, collaborate on projects, and connect with peers and industry mentors.</p>
+            <div style="margin-top:24px;display:flex;flex-wrap:wrap;gap:10px">
+              <div style="border-radius:6px;border:1px solid rgba(255,199,44,0.3);background:rgba(255,199,44,0.05);padding:9px 16px;font-size:10px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;color:#8a5a00">[ email_us ]</div>
+              <div style="border-radius:6px;border:1px solid rgba(255,199,44,0.3);background:rgba(255,199,44,0.05);padding:9px 16px;font-size:10px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;color:#8a5a00">[ instagram ]</div>
+              <div style="border-radius:6px;border:1px solid rgba(255,199,44,0.3);background:rgba(255,199,44,0.05);padding:9px 16px;font-size:10px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;color:#8a5a00">[ linkedin ]</div>
+            </div>
+            <div style="margin-top:32px">
+              <p style="margin:0;font-size:11px;font-family:'JetBrains Mono',monospace;color:rgba(15,15,15,0.5)">// forms — spring 2026</p>
+              <div style="margin-top:14px;display:flex;flex-direction:column;gap:12px">
+                <div style="border-radius:12px;border:1px solid rgba(15,15,15,0.08);background:rgba(15,15,15,0.03);padding:18px"><p style="margin:0;font-size:13px;font-weight:600;color:#141312">General Member Application</p><p style="margin:6px 0 0;font-size:12px;color:rgba(15,15,15,0.55)">Join the community and get updates on events and projects.</p></div>
+                <div style="border-radius:12px;border:1px solid rgba(15,15,15,0.08);background:rgba(15,15,15,0.03);padding:18px"><p style="margin:0;font-size:13px;font-weight:600;color:#141312">Project Lead Application</p><p style="margin:6px 0 0;font-size:12px;color:rgba(15,15,15,0.55)">Apply to lead a hands-on, semester-long project team.</p></div>
+              </div>
+            </div>
+          </div>
+        </x-import>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <div style="max-width:1400px;margin:0 auto 72px;position:relative">
+    <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:20px">
+      <span style="font:600 11px 'JetBrains Mono',monospace;padding:4px 10px;background:linear-gradient(135deg,#990000,#FFC72C);color:#000;border-radius:4px">08</span>
+      <h3 style="margin:0;font:700 20px system-ui;color:#141312">Footer</h3>
+    </div>
+    <div style="display:flex;gap:40px;align-items:flex-start;flex-wrap:wrap">
+      <div>
+        <p style="margin:0 0 10px;font:500 11px system-ui;color:rgba(15,15,15,0.4);text-transform:uppercase;letter-spacing:0.08em">Desktop · 1280</p>
+        <x-import component-from-global-scope="ChromeWindow" from="./browser-window.jsx" width="{{ 1280 }}" height="{{ 420 }}" url="datasc.usc.edu" hint-size="1280,420">
+          <div style="background:#f7f6f2;min-height:420px;box-sizing:border-box;border-top:1px solid rgba(15,15,15,0.08);padding:48px 24px;background-image:linear-gradient(rgba(15,15,15,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(15,15,15,0.02) 1px,transparent 1px);background-size:40px 40px">
+            <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:32px">
+              <div>
+                <div style="display:flex;align-items:center;gap:12px"><img src="assets/logo.png" style="height:32px;width:32px"/><span style="font-size:20px;font-weight:600;color:#141312">DataSC</span></div>
+                <p style="margin-top:16px;font-size:14px;color:rgba(15,15,15,0.55)">USC's home for hands-on data science learning, built to be welcoming, practical, and career-relevant.</p>
+              </div>
+              <div><h3 style="margin:0;font-size:12px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:0.1em;color:rgba(138,90,0,0.8)">quick_links</h3><div style="margin-top:16px;display:flex;flex-direction:column;gap:8px;font-size:14px;color:rgba(15,15,15,0.6)"><span>About</span><span>Projects</span><span>Eboard</span><span>FAQ</span></div></div>
+              <div><h3 style="margin:0;font-size:12px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:0.1em;color:rgba(138,90,0,0.8)">follow_us</h3><div style="margin-top:16px;display:flex;flex-direction:column;gap:8px;font-size:14px;color:rgba(15,15,15,0.6)"><span>Instagram</span><span>LinkedIn</span><span>Email Us</span></div></div>
+              <div><h3 style="margin:0;font-size:12px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:0.1em;color:rgba(138,90,0,0.8)">contact</h3><div style="margin-top:16px;display:flex;flex-direction:column;gap:8px;font-size:14px;color:rgba(15,15,15,0.6)"><span>USC University Park</span><span>Los Angeles, CA 90089</span><span>datasc@usc.edu</span></div></div>
+            </div>
+            <div style="margin-top:48px;padding-top:32px;border-top:1px solid rgba(15,15,15,0.08);text-align:center;font-size:13px;font-family:'JetBrains Mono',monospace;color:rgba(15,15,15,0.4)">© 2026 DataSC at USC. All rights reserved._</div>
+          </div>
+        </x-import>
+      </div>
+      <div>
+        <p style="margin:0 0 10px;font:500 11px system-ui;color:rgba(15,15,15,0.4);text-transform:uppercase;letter-spacing:0.08em">Mobile · 390</p>
+        <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" width="{{ 390 }}" height="{{ 700 }}" hint-size="390,700">
+          <div style="background:#f7f6f2;min-height:100%;box-sizing:border-box;border-top:1px solid rgba(15,15,15,0.08);padding:40px 20px">
+            <div style="display:flex;flex-direction:column;gap:28px">
+              <div>
+                <div style="display:flex;align-items:center;gap:12px"><img src="assets/logo.png" style="height:32px;width:32px"/><span style="font-size:20px;font-weight:600;color:#141312">DataSC</span></div>
+                <p style="margin-top:14px;font-size:13px;color:rgba(15,15,15,0.55)">USC's home for hands-on data science learning.</p>
+              </div>
+              <div><h3 style="margin:0;font-size:11px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;color:rgba(138,90,0,0.8)">quick_links</h3><div style="margin-top:10px;display:flex;flex-direction:column;gap:8px;font-size:13px;color:rgba(15,15,15,0.6)"><span>About</span><span>Projects</span><span>Eboard</span><span>FAQ</span></div></div>
+              <div><h3 style="margin:0;font-size:11px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;color:rgba(138,90,0,0.8)">contact</h3><div style="margin-top:10px;display:flex;flex-direction:column;gap:8px;font-size:13px;color:rgba(15,15,15,0.6)"><span>USC University Park</span><span>datasc@usc.edu</span></div></div>
+            </div>
+            <div style="margin-top:32px;padding-top:24px;border-top:1px solid rgba(15,15,15,0.08);text-align:center;font-size:11px;font-family:'JetBrains Mono',monospace;color:rgba(15,15,15,0.4)">© 2026 DataSC at USC._</div>
+          </div>
+        </x-import>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:900px;margin:0 auto 40px;position:relative">
+    <p style="margin:0;display:flex;align-items:center;gap:8px;font:600 11px/1 'JetBrains Mono',monospace;letter-spacing:0.1em;color:#8a5a00;text-transform:uppercase"><span style="width:6px;height:6px;border-radius:50%;background:#FFC72C;box-shadow:0 0 8px #FFC72C"></span>New designs · sample data</p>
+    <h2 style="margin:10px 0 0;font:700 26px 'Geist',sans-serif;color:#141312">Filling in the two "Coming Soon" pages</h2>
+    <p style="margin:14px 0 0;font:400 15px/1.6 system-ui,sans-serif;color:rgba(15,15,15,0.55);max-width:720px">Same tech-forward visual system. Content below is placeholder/sample — swap in real weeks and scores.</p>
+  </div>
+
+  <!-- ============ CURRICULUM UPDATES ============ -->
+  <div style="max-width:1400px;margin:0 auto 72px;position:relative">
+    <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:20px">
+      <span style="font:600 11px 'JetBrains Mono',monospace;padding:4px 10px;background:#FFC72C;color:#000;border-radius:4px">09</span>
+      <h3 style="margin:0;font:700 20px system-ui;color:#141312">Curriculum Updates</h3>
+      <span style="font:400 13px 'JetBrains Mono',monospace;color:rgba(15,15,15,0.4)">// card grid, sample</span>
+    </div>
+    <div style="display:flex;gap:40px;align-items:flex-start;flex-wrap:wrap">
+      <div>
+        <p style="margin:0 0 10px;font:500 11px system-ui;color:rgba(15,15,15,0.4);text-transform:uppercase;letter-spacing:0.08em">Desktop · 1280</p>
+        <x-import component-from-global-scope="ChromeWindow" from="./browser-window.jsx" width="{{ 1280 }}" height="{{ 900 }}" url="datasc.usc.edu/curriculum-updates" hint-size="1280,900">
+          <div style="background:#f7f6f2;min-height:900px;box-sizing:border-box;padding:128px 24px 96px;max-width:1024px;margin:0 auto">
+            <a style="font-size:12px;font-family:'JetBrains Mono',monospace;color:rgba(15,15,15,0.5);text-decoration:none">← back_to_home()</a>
+            <h1 style="margin:16px 0 0;font-size:44px;font-weight:600;letter-spacing:-0.02em;color:#141312">Curriculum Updates</h1>
+            <p style="margin:16px 0 0;font-size:18px;color:rgba(15,15,15,0.7)">Weekly collab notebooks, slides, and practice materials.</p>
+            <div style="margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:20px">
+              <sc-for list="{{ weeks }}" as="w" hint-placeholder-count="4">
+                <div style="border-radius:12px;border:1px solid rgba(15,15,15,0.08);background:rgba(15,15,15,0.03);padding:24px;position:relative;overflow:hidden">
+                  <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,#990000,#FFC72C)"></div>
+                  <p style="margin:0;font-size:11px;font-family:'JetBrains Mono',monospace;letter-spacing:0.1em;color:#8a5a00">{{ w.label }}</p>
+                  <h4 style="margin:10px 0 0;font-size:18px;font-weight:600;color:#141312">{{ w.title }}</h4>
+                  <p style="margin:10px 0 0;font-size:13px;line-height:1.6;color:rgba(15,15,15,0.6)">{{ w.summary }}</p>
+                  <div style="margin-top:16px;display:flex;gap:16px">
+                    <span style="font-size:11px;font-family:'JetBrains Mono',monospace;color:#8a5a00">slides ↗</span>
+                    <span style="font-size:11px;font-family:'JetBrains Mono',monospace;color:#8a5a00">notebook ↗</span>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </x-import>
+      </div>
+      <div>
+        <p style="margin:0 0 10px;font:500 11px system-ui;color:rgba(15,15,15,0.4);text-transform:uppercase;letter-spacing:0.08em">Mobile · 390</p>
+        <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" width="{{ 390 }}" height="{{ 1050 }}" hint-size="390,1050">
+          <div style="background:#f7f6f2;min-height:100%;box-sizing:border-box;padding:80px 20px 48px">
+            <a style="font-size:11px;font-family:'JetBrains Mono',monospace;color:rgba(15,15,15,0.5);text-decoration:none">← back_to_home()</a>
+            <h1 style="margin:14px 0 0;font-size:32px;font-weight:600;color:#141312">Curriculum Updates</h1>
+            <p style="margin:14px 0 0;font-size:15px;color:rgba(15,15,15,0.7)">Weekly collab notebooks, slides, and practice materials.</p>
+            <div style="margin-top:24px;display:flex;flex-direction:column;gap:16px">
+              <sc-for list="{{ weeks }}" as="w" hint-placeholder-count="4">
+                <div style="border-radius:12px;border:1px solid rgba(15,15,15,0.08);background:rgba(15,15,15,0.03);padding:20px;position:relative;overflow:hidden">
+                  <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,#990000,#FFC72C)"></div>
+                  <p style="margin:0;font-size:11px;font-family:'JetBrains Mono',monospace;letter-spacing:0.1em;color:#8a5a00">{{ w.label }}</p>
+                  <h4 style="margin:8px 0 0;font-size:16px;font-weight:600;color:#141312">{{ w.title }}</h4>
+                  <p style="margin:8px 0 0;font-size:13px;line-height:1.6;color:rgba(15,15,15,0.6)">{{ w.summary }}</p>
+                  <div style="margin-top:14px;display:flex;gap:14px">
+                    <span style="font-size:11px;font-family:'JetBrains Mono',monospace;color:#8a5a00">slides ↗</span>
+                    <span style="font-size:11px;font-family:'JetBrains Mono',monospace;color:#8a5a00">notebook ↗</span>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </x-import>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ LEADERBOARD ============ -->
+  <div style="max-width:1400px;margin:0 auto;position:relative">
+    <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:20px">
+      <span style="font:600 11px 'JetBrains Mono',monospace;padding:4px 10px;background:#FFC72C;color:#000;border-radius:4px">10</span>
+      <h3 style="margin:0;font:700 20px system-ui;color:#141312">Leaderboard</h3>
+      <span style="font:400 13px 'JetBrains Mono',monospace;color:rgba(15,15,15,0.4)">// podium + table, sample</span>
+    </div>
+    <div style="display:flex;gap:40px;align-items:flex-start;flex-wrap:wrap">
+      <div>
+        <p style="margin:0 0 10px;font:500 11px system-ui;color:rgba(15,15,15,0.4);text-transform:uppercase;letter-spacing:0.08em">Desktop · 1280</p>
+        <x-import component-from-global-scope="ChromeWindow" from="./browser-window.jsx" width="{{ 1280 }}" height="{{ 1230 }}" url="datasc.usc.edu/leaderboard" hint-size="1280,1230">
+          <div style="background:#f7f6f2;min-height:1230px;box-sizing:border-box;padding:128px 24px 96px;max-width:1024px;margin:0 auto">
+            <a style="font-size:12px;font-family:'JetBrains Mono',monospace;color:rgba(15,15,15,0.5);text-decoration:none">← back_to_curriculum()</a>
+            <h1 style="margin:16px 0 0;font-size:44px;font-weight:600;letter-spacing:-0.02em;color:#141312">Leaderboard</h1>
+            <p style="margin:16px 0 0;font-size:18px;color:rgba(15,15,15,0.7)">Track weekly Kahoot progress and friendly competition across the curriculum.</p>
+
+            <div style="margin-top:48px;display:flex;align-items:flex-end;justify-content:center;gap:24px">
+              <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+                <div style="height:64px;width:64px;border-radius:9999px;background:rgba(15,15,15,0.06);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:600;color:#141312;border:2px solid #C0C0C0;box-shadow:0 0 16px rgba(192,192,192,0.3)">OJ</div>
+                <p style="margin:0;font-size:14px;font-weight:600;color:#141312">Ojas</p>
+                <p style="margin:0;font-size:12px;font-family:'JetBrains Mono',monospace;color:rgba(15,15,15,0.5)">2,340 pts</p>
+                <div style="width:120px;height:80px;border-radius:8px 8px 0 0;background:rgba(15,15,15,0.04);border:1px solid rgba(15,15,15,0.12);display:flex;align-items:flex-start;justify-content:center;padding-top:10px;font-size:20px;font-family:'JetBrains Mono',monospace;font-weight:700;color:#C0C0C0">02</div>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+                <div style="height:80px;width:80px;border-radius:9999px;background:rgba(255,199,44,0.15);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;color:#8a5a00;border:2px solid #FFC72C;box-shadow:0 0 24px rgba(255,199,44,0.5)">NL</div>
+                <p style="margin:0;font-size:16px;font-weight:600;color:#141312">Natalie</p>
+                <p style="margin:0;font-size:13px;font-family:'JetBrains Mono',monospace;color:rgba(15,15,15,0.5)">2,810 pts · 6🔥</p>
+                <div style="width:130px;height:120px;border-radius:8px 8px 0 0;background:rgba(255,199,44,0.08);border:1px solid rgba(255,199,44,0.4);display:flex;align-items:flex-start;justify-content:center;padding-top:12px;font-size:26px;font-family:'JetBrains Mono',monospace;font-weight:700;color:#8a5a00">01</div>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+                <div style="height:56px;width:56px;border-radius:9999px;background:rgba(15,15,15,0.06);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:600;color:#141312;border:2px solid #cd7f32;box-shadow:0 0 16px rgba(205,127,50,0.3)">TC</div>
+                <p style="margin:0;font-size:14px;font-weight:600;color:#141312">Theo</p>
+                <p style="margin:0;font-size:12px;font-family:'JetBrains Mono',monospace;color:rgba(15,15,15,0.5)">2,110 pts</p>
+                <div style="width:120px;height:56px;border-radius:8px 8px 0 0;background:rgba(15,15,15,0.03);border:1px solid rgba(15,15,15,0.1);display:flex;align-items:flex-start;justify-content:center;padding-top:8px;font-size:18px;font-family:'JetBrains Mono',monospace;font-weight:700;color:#cd7f32">03</div>
+              </div>
+            </div>
+
+            <div style="margin-top:56px;border-radius:12px;border:1px solid rgba(15,15,15,0.08);background:rgba(15,15,15,0.03);overflow:hidden">
+              <div style="display:grid;grid-template-columns:60px 1fr 300px;padding:16px 28px;font-size:11px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:0.1em;color:rgba(15,15,15,0.45);border-bottom:1px solid rgba(15,15,15,0.08)">
+                <span>rank</span><span>member</span><span>points</span>
+              </div>
+              <sc-for list="{{ leaderboard }}" as="row" hint-placeholder-count="10">
+                <div style="display:grid;grid-template-columns:60px 1fr 300px;padding:16px 28px;font-size:15px;color:#141312;border-bottom:1px solid rgba(15,15,15,0.05);align-items:center">
+                  <span style="font-family:'JetBrains Mono',monospace;color:rgba(15,15,15,0.5);font-size:13px">{{ row.rank }}</span>
+                  <span style="font-weight:500">{{ row.name }}</span>
+                  <div style="display:flex;align-items:center;gap:14px">
+                    <div style="flex:1;height:6px;border-radius:999px;background:rgba(15,15,15,0.06);overflow:hidden"><div style="height:100%;width:{{ row.pct }}%;background:linear-gradient(to right,#990000,#FFC72C);border-radius:999px"></div></div>
+                    <span style="width:60px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:13px;color:rgba(15,15,15,0.8)">{{ row.points }}</span>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </x-import>
+      </div>
+      <div>
+        <p style="margin:0 0 10px;font:500 11px system-ui;color:rgba(15,15,15,0.4);text-transform:uppercase;letter-spacing:0.08em">Mobile · 390</p>
+        <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" width="{{ 390 }}" height="{{ 1220 }}" hint-size="390,1220">
+          <div style="background:#f7f6f2;min-height:100%;box-sizing:border-box;padding:80px 20px 48px">
+            <a style="font-size:11px;font-family:'JetBrains Mono',monospace;color:rgba(15,15,15,0.5);text-decoration:none">← back_to_curriculum()</a>
+            <h1 style="margin:14px 0 0;font-size:32px;font-weight:600;color:#141312">Leaderboard</h1>
+            <p style="margin:14px 0 0;font-size:15px;color:rgba(15,15,15,0.7)">Track weekly Kahoot progress and friendly competition.</p>
+
+            <div style="margin-top:32px;display:flex;align-items:flex-end;justify-content:center;gap:14px">
+              <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+                <div style="height:52px;width:52px;border-radius:9999px;background:rgba(15,15,15,0.06);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:#141312;border:2px solid #C0C0C0">OJ</div>
+                <p style="margin:0;font-size:12px;font-weight:600;color:#141312">Ojas</p>
+                <div style="width:80px;height:56px;border-radius:8px 8px 0 0;background:rgba(15,15,15,0.04);border:1px solid rgba(15,15,15,0.12);display:flex;align-items:flex-start;justify-content:center;padding-top:6px;font-size:16px;font-family:'JetBrains Mono',monospace;font-weight:700;color:#C0C0C0">02</div>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+                <div style="height:64px;width:64px;border-radius:9999px;background:rgba(255,199,44,0.15);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;color:#8a5a00;border:2px solid #FFC72C;box-shadow:0 0 20px rgba(255,199,44,0.4)">NL</div>
+                <p style="margin:0;font-size:13px;font-weight:600;color:#141312">Natalie</p>
+                <div style="width:88px;height:84px;border-radius:8px 8px 0 0;background:rgba(255,199,44,0.08);border:1px solid rgba(255,199,44,0.4);display:flex;align-items:flex-start;justify-content:center;padding-top:8px;font-size:20px;font-family:'JetBrains Mono',monospace;font-weight:700;color:#8a5a00">01</div>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+                <div style="height:46px;width:46px;border-radius:9999px;background:rgba(15,15,15,0.06);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:#141312;border:2px solid #cd7f32">TC</div>
+                <p style="margin:0;font-size:12px;font-weight:600;color:#141312">Theo</p>
+                <div style="width:80px;height:40px;border-radius:8px 8px 0 0;background:rgba(15,15,15,0.03);border:1px solid rgba(15,15,15,0.1);display:flex;align-items:flex-start;justify-content:center;padding-top:5px;font-size:14px;font-family:'JetBrains Mono',monospace;font-weight:700;color:#cd7f32">03</div>
+              </div>
+            </div>
+
+            <div style="margin-top:32px;border-radius:12px;border:1px solid rgba(15,15,15,0.08);background:rgba(15,15,15,0.03);overflow:hidden">
+              <div style="display:grid;grid-template-columns:32px 1fr 130px;padding:12px 16px;font-size:10px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:0.1em;color:rgba(15,15,15,0.45);border-bottom:1px solid rgba(15,15,15,0.08)">
+                <span>#</span><span>member</span><span>pts</span>
+              </div>
+              <sc-for list="{{ leaderboard }}" as="row" hint-placeholder-count="10">
+                <div style="display:grid;grid-template-columns:32px 1fr 130px;padding:12px 16px;font-size:13px;color:#141312;border-bottom:1px solid rgba(15,15,15,0.05);align-items:center">
+                  <span style="font-family:'JetBrains Mono',monospace;color:rgba(15,15,15,0.5);font-size:11px">{{ row.rank }}</span>
+                  <span>{{ row.name }}</span>
+                  <div style="display:flex;align-items:center;gap:8px">
+                    <div style="flex:1;height:5px;border-radius:999px;background:rgba(15,15,15,0.06);overflow:hidden"><div style="height:100%;width:{{ row.pct }}%;background:linear-gradient(to right,#990000,#FFC72C);border-radius:999px"></div></div>
+                    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(15,15,15,0.8)">{{ row.points }}</span>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </x-import>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const roster = [
+      { name: "Natalie", role: "Co-President", image: "assets/eboard/Natalie.jpg", studying: "Artificial Intelligence for Business" },
+      { name: "Jaden", role: "Co-President", image: "", studying: "Industrial and Systems Engineering" },
+      { name: "Ojas", role: "External Vice President", image: "assets/eboard/Ojas.jpg", studying: "Mathematics & Computer Science" },
+      { name: "Theo", role: "Social Chair", image: "assets/eboard/Theo.jpg", studying: "Industrial and Systems Engineering" },
+      { name: "Anvitha", role: "Director of Operations", image: "assets/eboard/Anvitha.jpg", studying: "Computer Science" },
+      { name: "Connor", role: "Finance", image: "assets/eboard/Connor.jpg", studying: "Computer Science" },
+      { name: "Danica", role: "Sponsorship & Outreach", image: "assets/eboard/Danica.jpg", studying: "Applied Data Science" },
+      { name: "Anh", role: "Sponsorship & Outreach", image: "assets/eboard/Anh.jpg", studying: "Business/Managerial Economics" },
+      { name: "Lauren", role: "Marketing", image: "assets/eboard/Lauren.jpg", studying: "Cognitive Science" },
+      { name: "Michelle", role: "Web Dev Lead", image: "assets/eboard/Michelle.jpg", studying: "Computer Science & Business Administration" },
+      { name: "Matthew", role: "Senior Curriculum Lead", image: "assets/eboard/Matthew.jpg", studying: "Applied Mathematics" },
+      { name: "Nathan", role: "Senior Curriculum Lead", image: "assets/eboard/Nathan.jpg", studying: "Health & Human Sciences, Mathematics" },
+      { name: "Emin", role: "Curriculum Lead", image: "assets/eboard/Emin.jpg", studying: "Intelligence and Cyber Operations" },
+      { name: "Aaron", role: "Project Lead", image: "assets/eboard/Aaron.jpg", studying: "Computational & Applied Mathematics" },
+    ];
+    const members = roster.map(m => ({
+      ...m,
+      hasImage: !!m.image,
+      noImage: !m.image,
+      initials: m.name.split(" ").map(p => p[0]).join(""),
+    }));
+
+    const weeks = [
+      { label: "Week 1", title: "Kickoff: DS Foundations", summary: "Intro to data science, the ML pipeline, and Pandas basics." },
+      { label: "Week 2", title: "Python & Pandas Deep Dive", summary: "NumPy basics, Series/DataFrames, and data I/O." },
+      { label: "Week 3", title: "Cleaning Real Data", summary: "Missing values, types, normalization, duplicates/outliers, merges." },
+      { label: "Week 4", title: "Telling Stories with Plots", summary: "Visualization principles with Matplotlib and Seaborn." },
+    ];
+
+    const leaderboardRaw = [
+      { rank: 1, name: "Natalie", pts: 2810, streak: "6🔥" },
+      { rank: 2, name: "Ojas", pts: 2340, streak: "3🔥" },
+      { rank: 3, name: "Theo", pts: 2110, streak: "4🔥" },
+      { rank: 4, name: "Danica", pts: 1960, streak: "2🔥" },
+      { rank: 5, name: "Michelle", pts: 1875, streak: "5🔥" },
+      { rank: 6, name: "Matthew", pts: 1720, streak: "1🔥" },
+      { rank: 7, name: "Anh", pts: 1640, streak: "—" },
+      { rank: 8, name: "Aaron", pts: 1505, streak: "2🔥" },
+      { rank: 9, name: "Lauren", pts: 1420, streak: "1🔥" },
+      { rank: 10, name: "Connor", pts: 1310, streak: "—" },
+    ];
+    const maxPts = Math.max(...leaderboardRaw.map(r => r.pts));
+    const leaderboard = leaderboardRaw.map(r => ({
+      ...r,
+      points: r.pts.toLocaleString(),
+      pct: Math.round((r.pts / maxPts) * 100),
+    }));
+
+    return { members, weeks, leaderboard };
+  }
+}
+
+</script>
+</body>
+</html>

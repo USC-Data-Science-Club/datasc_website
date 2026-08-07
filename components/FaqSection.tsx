@@ -1,3 +1,6 @@
+import GridBackdrop from "./ui/GridBackdrop";
+import ScrollArrow from "./ui/ScrollArrow";
+
 export default function FaqSection() {
   const faqs = [
     {
@@ -28,15 +31,16 @@ export default function FaqSection() {
     {
       question: "How can I stay updated?",
       answer:
-        "Follow our social channels and check the weekly curriculum updates page.",
+        "Follow our social channels and check our website for the latest updates.",
     },
   ];
 
   return (
-    <section id="faq" className="min-h-screen px-6 pt-24 pb-28 flex flex-col">
-      <div className="max-w-6xl mx-auto w-full">
+    <section id="faq" className="relative flex min-h-screen flex-col px-6 pt-24 pb-28">
+      <GridBackdrop />
+      <div className="relative mx-auto w-full max-w-6xl">
         <h2 className="text-4xl font-semibold">FAQ</h2>
-        <p className="mt-4 text-lg text-white/70 max-w-2xl">
+        <p className="mt-4 max-w-2xl text-lg text-ink/70">
           Answers to the most common questions about joining and participating in
           DataSC.
         </p>
@@ -44,35 +48,19 @@ export default function FaqSection() {
           {faqs.map((faq) => (
             <div
               key={faq.question}
-              className="rounded-2xl border border-white/10 bg-white/5 p-6"
+              className="rounded-xl border border-ink/8 bg-ink/3 p-6"
             >
-              <p className="text-sm uppercase tracking-[0.2em] text-white/70">
+              <p className="flex gap-2 text-[13px] text-ink/90">
+                <span className="font-mono text-gold">Q·</span>
                 {faq.question}
               </p>
-              <p className="mt-3 text-sm text-white/70">{faq.answer}</p>
+              <p className="mt-3 pl-[22px] text-sm text-ink/65">{faq.answer}</p>
             </div>
           ))}
         </div>
       </div>
-      <div className="mt-auto pt-4 pb-2 flex justify-center">
-        <a
-          href="#get-involved"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white/60 transition hover:border-white/50 hover:text-white"
-          aria-label="Scroll to Get Involved section"
-        >
-          <svg
-            aria-hidden="true"
-            viewBox="0 0 24 24"
-            className="h-5 w-5"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M6 9l6 6 6-6" />
-          </svg>
-        </a>
+      <div className="relative mt-auto flex justify-center pb-2 pt-4">
+        <ScrollArrow href="#get-involved" label="Scroll to Get Involved section" />
       </div>
     </section>
   );

@@ -1,0 +1,2 @@
+FROM frob/qwen3-coder-next:80b-a3b-q4_K_M
+PARAMETER num_ctx 65536

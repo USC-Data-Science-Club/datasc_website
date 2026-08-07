@@ -1,3 +1,7 @@
+import GridBackdrop from "./ui/GridBackdrop";
+import ScrollArrow from "./ui/ScrollArrow";
+import WindowChrome from "./ui/WindowChrome";
+
 export default function CurriculumSection() {
   const weeks = [
     {
@@ -50,71 +54,57 @@ export default function CurriculumSection() {
   ];
 
   return (
-    <section id="curriculum" className="min-h-screen px-6 pt-24 pb-28 flex flex-col">
-      <div className="max-w-6xl mx-auto w-full">
-        <h2 className="text-4xl font-semibold">Curriculum</h2>
-        <p className="mt-4 text-lg text-white/70">
+    <section id="curriculum" className="relative flex min-h-screen flex-col px-6 pt-24 pb-28">
+      <GridBackdrop />
+      <div className="relative mx-auto w-full max-w-6xl">
+        <p className="font-mono text-xs uppercase tracking-[0.15em] text-gold">
+          {"// syllabus.json"}
+        </p>
+        <h2 className="mt-2 text-4xl font-semibold">Curriculum</h2>
+        <p className="mt-4 max-w-3xl text-lg text-ink/70">
           The curriculum builds from data science foundations and Python/Pandas
           skills into data cleaning, visualization, statistics, and core machine
           learning workflows. The semester culminates in a capstone project that
           combines EDA, modeling, and communication.
         </p>
-        <div className="mt-10 rounded-2xl border border-white/10 bg-white/5 p-6">
-          <p className="text-sm uppercase tracking-[0.2em] text-white/70">
-            Semester Flow
-          </p>
-          <div className="mt-4 grid gap-4 lg:grid-cols-2">
+
+        <WindowChrome label="semester_flow.log" className="mt-10">
+          <div className="grid gap-4 p-6 lg:grid-cols-2">
             {weeks.map((week) => (
               <div
                 key={week.label}
-                className="rounded-xl border border-white/10 bg-black/40 px-4 py-3"
+                className="rounded-lg border border-ink/8 border-l-2 border-l-gold-raw bg-ink/[0.02] px-4 py-3"
               >
-                <p className="text-xs uppercase tracking-[0.2em] text-[#FFC72C]">
+                <p className="font-mono text-[11px] uppercase tracking-[0.1em] text-gold">
                   {week.label}
                 </p>
-                <p className="mt-2 text-sm text-white/70">{week.content}</p>
+                <p className="mt-2 text-sm text-ink/70">{week.content}</p>
               </div>
             ))}
           </div>
-        </div>
-        <div className="mt-12 rounded-2xl border border-white/10 bg-white/5 p-6">
-          <p className="text-sm text-white/70">
+        </WindowChrome>
+
+        <div className="mt-12 rounded-xl border border-ink/10 bg-ink/3 p-6">
+          <p className="text-sm text-ink/70">
             Looking for weekly curriculum updates?
           </p>
           <a
             href="/curriculum-updates"
-            className="mt-2 inline-flex text-xs uppercase tracking-[0.2em] text-[#FFC72C] underline decoration-[#990000] underline-offset-4"
+            className="mt-3 inline-flex font-mono text-xs uppercase tracking-[0.05em] text-gold transition hover:text-gold-raw"
           >
-            View Weekly Curriculum Updates →
+            → view_weekly_updates()
           </a>
           <br />
           <a
             href="/leaderboard"
-            className="mt-2 inline-flex text-xs uppercase tracking-[0.2em] text-[#FFC72C] underline decoration-[#990000] underline-offset-4"
+            className="mt-2 inline-flex font-mono text-xs uppercase tracking-[0.05em] text-gold transition hover:text-gold-raw"
           >
-            View Kahoot Leaderboard →
+            → view_kahoot_leaderboard()
           </a>
         </div>
       </div>
-      <div className="mt-auto pt-4 pb-2 flex justify-center">
-        <a
-          href="#projects"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white/60 transition hover:border-white/50 hover:text-white"
-          aria-label="Scroll to Projects section"
-        >
-          <svg
-            aria-hidden="true"
-            viewBox="0 0 24 24"
-            className="h-5 w-5"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M6 9l6 6 6-6" />
-          </svg>
-        </a>
+      <div className="relative mt-auto flex justify-center pb-2 pt-4">
+        <ScrollArrow href="#projects" label="Scroll to Projects section" />
       </div>
     </section>
   );
