@@ -50,11 +50,11 @@ export default function FaqSection() {
               key={faq.question}
               className="rounded-xl border border-ink/8 bg-ink/3 p-6"
             >
-              <p className="flex gap-2 text-[13px] text-ink/90">
+              <p className="flex gap-2 text-base text-ink/90">
                 <span className="font-mono text-gold">Q·</span>
                 {faq.question}
               </p>
-              <p className="mt-3 pl-[22px] text-sm text-ink/65">{faq.answer}</p>
+              <p className="mt-3 pl-[22px] text-base text-ink/65">{faq.answer}</p>
             </div>
           ))}
         </div>

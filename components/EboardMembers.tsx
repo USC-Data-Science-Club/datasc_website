@@ -155,7 +155,7 @@ export default function EboardMembers() {
               </div>
               <div className="mt-3.5 flex flex-col gap-1 text-ink/45">
                 {member.studying && (
-                  <p className="font-mono text-[10px] tracking-[0.05em]">
+                  <p className="font-mono text-[10px] tracking-[0.05em] text-ink/70">
                     {member.studying}
                   </p>
                 )}
