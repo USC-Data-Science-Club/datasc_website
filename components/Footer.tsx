@@ -25,6 +25,7 @@ export default function Footer() {
             </h3>
             <ul className="mt-4 space-y-2 text-sm text-ink/60">
               <li><a href="/#about" className="transition hover:text-gold-raw">About</a></li>
+              <li><a href="/#curriculum" className="transition hover:text-gold-raw">Curriculum</a></li>
               <li><a href="/#projects" className="transition hover:text-gold-raw">Projects</a></li>
               <li><a href="/#eboard" className="transition hover:text-gold-raw">Eboard</a></li>
               <li><a href="/#socials" className="transition hover:text-gold-raw">Socials</a></li>
@@ -59,7 +60,12 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:datasc@usc.edu" className="transition hover:text-gold-raw">
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=datasc@usc.edu"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="transition hover:text-gold-raw"
+                >
                   Email Us
                 </a>
               </li>

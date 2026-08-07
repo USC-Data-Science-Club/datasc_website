@@ -28,7 +28,7 @@ export default function AboutSection() {
           <h1 className="mt-4 max-w-4xl bg-gradient-to-br from-ink to-ink/60 bg-clip-text text-4xl font-bold leading-tight text-transparent sm:text-5xl">
             Build, learn, and ship with a data-driven community.
           </h1>
-          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-ink/70">
+          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-ink/70 text-justify">
             DataSC is USC's home for hands-on data science learning, built to be
             welcoming, practical, and career-relevant. We bring together students
             of every major and experience level through real-world projects,
