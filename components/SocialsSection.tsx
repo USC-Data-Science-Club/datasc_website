@@ -13,7 +13,7 @@ const PHOTOS: Photo[] = [
   { id: "event-4", url: "/Events/DSC07667.JPG" },
   { id: "event-5", url: "/Events/DSC07672.JPG" },
   { id: "event-6", url: "/Events/DSC07676.JPG" },
-  { id: "team-2027", url: "/2027.png" },
+  { id: "event-7", url: "/Events/DSC07649.JPG" },
 ];
 
 // Desktop (3-col): tiles 0 and 3 span 2 rows. Mobile (2-col): tiles 0 and 4 span 2 rows.
@@ -21,12 +21,6 @@ const TILE_SPAN_CLASSES: Record<number, string> = {
   0: "row-span-2",
   3: "lg:row-span-2",
   4: "row-span-2 lg:row-span-1",
-};
-
-// The 2027 team photo is a transparent cutout, not a full-bleed rectangle,
-// so it uses object-contain to display in full instead of getting cropped.
-const TILE_FIT_CLASSES: Record<number, string> = {
-  6: "object-contain",
 };
 
 export default function SocialsSection() {
@@ -48,9 +42,9 @@ export default function SocialsSection() {
               key={photo.id}
               src={photo.url}
               alt="DataSC event"
-              className={`h-full w-full rounded-xl transition hover:brightness-110 ${
-                TILE_FIT_CLASSES[index] ?? "object-cover"
-              } ${TILE_SPAN_CLASSES[index] ?? ""}`}
+              className={`h-full w-full rounded-xl object-cover transition hover:brightness-110 ${
+                TILE_SPAN_CLASSES[index] ?? ""
+              }`}
             />
           ))}
         </div>

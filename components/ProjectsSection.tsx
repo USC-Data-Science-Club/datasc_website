@@ -59,11 +59,13 @@ export default function ProjectsSection() {
       lead: "Colin Quan Leung & Nolen Johnson",
     },
   ];
-  const [semester, setSemester] = useState<"F25" | "S26">("S26");
+  const [semester, setSemester] = useState<"F25" | "S26" | "F26">("S26");
 
   const currentProjects =
-    semester === "S26" ? spring26Projects : fall25Projects;
-  const semesterTitle = semester === "S26" ? "Spring 2026" : "Fall 2025";
+    semester === "S26" ? spring26Projects : semester === "F25" ? fall25Projects : [];
+  const semesterTitle =
+    semester === "S26" ? "Spring 2026" : semester === "F25" ? "Fall 2025" : "Fall 2026";
+  const isComingSoon = semester === "F26";
 
   return (
     <section id="projects" className="relative flex min-h-screen flex-col px-6 pt-24 pb-28">
@@ -74,7 +76,7 @@ export default function ProjectsSection() {
           {"// what we've been up to"}
         </p>
         <div className="mt-6 inline-flex gap-1 rounded-lg border border-ink/10 bg-ink/3 p-1">
-          {(["S26", "F25"] as const).map((label) => (
+          {(["F26", "S26", "F25"] as const).map((label) => (
             <button
               key={label}
               type="button"
@@ -93,6 +95,16 @@ export default function ProjectsSection() {
         <div className="mt-12">
           <h3 className="text-xl font-semibold tracking-wide">{semesterTitle}</h3>
           <div className="mt-2 h-0.5 w-24 bg-gradient-to-r from-maroon to-gold-raw" />
+          {isComingSoon ? (
+            <div className="mt-10 flex flex-col items-center justify-center rounded-xl border border-dashed border-ink/15 bg-ink/[0.02] py-20 text-center">
+              <p className="font-mono text-xs uppercase tracking-[0.2em] text-ink/50">
+                Coming Soon
+              </p>
+              <p className="mt-3 max-w-sm text-sm text-ink/60">
+                Projects for {semesterTitle} haven&apos;t been announced yet. Check back later!
+              </p>
+            </div>
+          ) : (
           <div className="mt-10 space-y-5">
             {currentProjects.map((project) => (
               <div
@@ -123,6 +135,7 @@ export default function ProjectsSection() {
               </div>
             ))}
           </div>
+          )}
         </div>
       </div>
       <div className="relative mt-auto flex justify-center pb-2 pt-4">
