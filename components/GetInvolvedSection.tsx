@@ -60,6 +60,8 @@ export default function GetInvolvedSection() {
               <a
                 key={form.title}
                 href={form.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-xl border border-ink/8 bg-ink/3 p-5 transition hover:border-gold-raw/30 hover:bg-ink/5"
               >
                 <p className="text-sm font-semibold text-ink">{form.title}</p>
