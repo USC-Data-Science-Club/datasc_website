@@ -6,7 +6,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="relative flex min-h-screen flex-col overflow-hidden px-6 pt-36 pb-24"
+      className="relative flex min-h-screen flex-col overflow-hidden px-6 pt-44 pb-24"
       style={{
         backgroundImage:
           "radial-gradient(circle at 15% 0%, rgba(153,0,0,0.22), transparent 45%), radial-gradient(circle at 85% 100%, rgba(255,199,44,0.12), transparent 45%)",
