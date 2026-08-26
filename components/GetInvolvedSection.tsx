@@ -3,19 +3,26 @@ import GridBackdrop from "./ui/GridBackdrop";
 export default function GetInvolvedSection() {
   const applicationForms = [
     {
+      title: "Fall 2026 Interest Form",
+      description: "Receive updates about info sessions and our membership application form.",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSdisBltIsZSba-H3YurnIgIAUW1OH7SRkTnG6_gBVKdSEnofw/viewform?usp=dialog"
+    }, 
+    {
       title: "General Member Application",
       description: "Join the community and get updates on events and projects.",
-      link: "https://docs.google.com/forms/d/e/1FAIpQLScacxFr3e2Ip8oB_TgdSASegSoG-l3XzFme3ggaFC8T12sjXg/viewform",
+      link: null,
+      checkBackMessage: true,
     },
     {
       title: "Project Lead Application",
       description: "Apply to lead a hands-on, semester-long project team.",
-      link: "https://docs.google.com/forms/d/e/1FAIpQLScaF-XcL4QnZG-h0hvbzGcZAkRIhRKtiQWceg3SxQzHCG8g6A/viewform?usp=header",
+      link: null,
+      checkBackMessage: true,
     },
     {
       title: "Returning Members Form",
       description: "Fill out this form to update your information.",
-      link: "https://docs.google.com/forms/d/e/1FAIpQLSeQnHauxWmE2fT3we10L4LGM2rSNZ5Vh4LQ_3IIm6Aj0uqg4Q/viewform",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSePK43xOZRwLL_5tO_QKVKGUGc8_vxh3Pb0aAUu4rBPT5s3Kw/viewform?usp=dialog",
     },
   ];
 
@@ -26,7 +33,10 @@ export default function GetInvolvedSection() {
     >
       <GridBackdrop />
       <div className="relative mx-auto w-full max-w-6xl">
-        <h2 className="text-4xl font-semibold">Get Involved</h2>
+        <p className="font-mono text-xs uppercase tracking-[0.15em] text-gold">
+          {"// join_datasc"}
+        </p>
+        <h2 className="mt-2 text-4xl font-semibold">Get involved</h2>
         <p className="mt-4 text-lg text-ink/70">
           Join DataSC to build skills, collaborate on projects, and connect with
           peers and industry mentors.
@@ -53,21 +63,38 @@ export default function GetInvolvedSection() {
         </div>
         <div className="mt-12">
           <p className="font-mono text-xs uppercase tracking-[0.1em] text-ink/50">
-            {"// application forms — spring 2026"}
+            {"// application forms"}
           </p>
           <div className="mt-4 grid gap-4 sm:grid-cols-2">
-            {applicationForms.map((form) => (
-              <a
-                key={form.title}
-                href={form.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-xl border border-ink/8 bg-ink/3 p-5 transition hover:border-gold-raw/30 hover:bg-ink/5"
-              >
-                <p className="text-lg font-semibold text-ink">{form.title}</p>
-                <p className="mt-2 text-base text-ink/55">{form.description}</p>
-              </a>
-            ))}
+            {applicationForms.map((form) => {
+              const isCheckBackForm = form.checkBackMessage;
+              
+              if (isCheckBackForm) {
+                return (
+                  <div
+                    key={form.title}
+                    className="rounded-xl border border-ink/8 bg-ink/3 p-5 opacity-60"
+                  >
+                    <p className="text-lg font-semibold text-ink">{form.title}</p>
+                    <p className="mt-2 text-base text-ink/55">{form.description}</p>
+                    <p className="mt-3 font-mono text-xs text-gold-raw">check back for updates</p>
+                  </div>
+                );
+              }
+              
+              return (
+                <a
+                  key={form.title}
+                  href={form.link ?? undefined}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-xl border border-ink/8 bg-ink/3 p-5 transition hover:border-gold-raw/30 hover:bg-ink/5"
+                >
+                  <p className="text-lg font-semibold text-ink">{form.title}</p>
+                  <p className="mt-2 text-base text-ink/55">{form.description}</p>
+                </a>
+              );
+            })}
           </div>
         </div>
       </div>

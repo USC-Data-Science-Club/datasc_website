@@ -39,7 +39,10 @@ export default function FaqSection() {
     <section id="faq" className="relative flex min-h-screen flex-col px-6 pt-24 pb-28">
       <GridBackdrop />
       <div className="relative mx-auto w-full max-w-6xl">
-        <h2 className="text-4xl font-semibold">FAQ</h2>
+        <p className="font-mono text-xs uppercase tracking-[0.15em] text-gold">
+          {"// faq.md"}
+        </p>
+        <h2 className="mt-2 text-4xl font-semibold">FAQ</h2>
         <p className="mt-4 max-w-2xl text-lg text-ink/70">
           Answers to the most common questions about joining and participating in
           DataSC.
@@ -60,7 +63,7 @@ export default function FaqSection() {
         </div>
       </div>
       <div className="relative mt-auto flex justify-center pb-2 pt-4">
-        <ScrollArrow href="#get-involved" label="Scroll to Get Involved section" />
+        <ScrollArrow href="#timeline" label="Scroll to Timeline section" />
       </div>
     </section>
   );

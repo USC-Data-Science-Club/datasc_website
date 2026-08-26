@@ -4,6 +4,7 @@ import ProjectsSection from "@/components/ProjectsSection";
 import EboardMembers from "@/components/EboardMembers";
 import SocialsSection from "@/components/SocialsSection";
 import FaqSection from "@/components/FaqSection";
+import TimelineSection from "@/components/TimelineSection";
 import GetInvolvedSection from "@/components/GetInvolvedSection";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <EboardMembers />
       <SocialsSection />
       <FaqSection />
+      <TimelineSection />
       <GetInvolvedSection />
     </main>
   );

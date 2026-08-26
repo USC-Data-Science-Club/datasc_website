@@ -71,10 +71,10 @@ export default function ProjectsSection() {
     <section id="projects" className="relative flex min-h-screen flex-col px-6 pt-24 pb-28">
       <GridBackdrop />
       <div className="relative mx-auto w-full max-w-6xl">
-        <h2 className="text-5xl font-semibold tracking-tight">Projects</h2>
-        <p className="mt-4 font-mono text-[13px] uppercase tracking-[0.1em] text-ink/60">
+        <p className="font-mono text-xs uppercase tracking-[0.15em] text-gold">
           {"// what we've been up to"}
         </p>
+        <h2 className="mt-2 text-4xl font-semibold">Projects</h2>
         <div className="mt-6 inline-flex gap-1 rounded-lg border border-ink/10 bg-ink/3 p-1">
           {(["F26", "S26", "F25"] as const).map((label) => (
             <button

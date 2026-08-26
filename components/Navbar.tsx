@@ -18,6 +18,7 @@ export default function Navbar() {
           <a href="/#eboard" className="transition hover:text-gold">eboard</a>
           <a href="/#socials" className="transition hover:text-gold">socials</a>
           <a href="/#faq" className="transition hover:text-gold">faq</a>
+          <a href="/#timeline" className="transition hover:text-gold">timeline</a>
         </div>
         <div className="flex items-center gap-3 self-start sm:self-auto">
           <a
