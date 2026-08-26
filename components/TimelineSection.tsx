@@ -28,8 +28,8 @@ export default function TimelineSection() {
         </p>
         <h2 className="mt-2 text-4xl font-semibold">Fall semester timeline</h2>
         <p className="mt-4 text-lg text-ink/70">
-          Key dates for joining DataSC this semester. Exact dates are still
-          being finalized, so check back soon.
+          Key dates for joining DataSC this semester. Exact dates & locations are still
+          being finalized.
         </p>
 
         {/* Tablet / desktop: horizontal timeline */}
