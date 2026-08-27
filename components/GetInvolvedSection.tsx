@@ -48,6 +48,12 @@ export default function GetInvolvedSection() {
             [ email_us ]
           </a>
           <a
+            href="https://usc.enterprise.slack.com/archives/C0B9S4D8MT3"
+            className="rounded-md border border-gold-raw/30 bg-gold-raw/5 px-5 py-2 font-mono text-xs uppercase tracking-wide text-gold transition hover:border-gold-raw/60 hover:bg-gold-raw/10"
+          >
+            [ slack ]
+          </a>
+          <a
             href="https://www.instagram.com/datasc.official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
             className="rounded-md border border-gold-raw/30 bg-gold-raw/5 px-5 py-2 font-mono text-xs uppercase tracking-wide text-gold transition hover:border-gold-raw/60 hover:bg-gold-raw/10"
           >
