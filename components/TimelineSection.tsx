@@ -36,13 +36,8 @@ export default function TimelineSection() {
           <div className="relative flex justify-between">
             {TIMELINE_STEPS.map((item, index) => {
               const isFirst = index === 0;
-              const isLast = index === TIMELINE_STEPS.length - 1;
               const isTop = index % 2 === 0;
-              const alignClass = isFirst
-                ? "left-0 items-start text-left"
-                : isLast
-                  ? "right-0 items-end text-right"
-                  : "left-1/2 -translate-x-1/2 items-center text-center";
+              const alignClass = "left-1/2 -translate-x-1/2 items-center text-center";
 
               return (
                 <div
