@@ -8,11 +8,9 @@ interface TimelineStep {
 }
 
 const TIMELINE_STEPS: TimelineStep[] = [
-  { step: "Step 01", title: "Info Session #1", date: "TBD" },
-  { step: "Step 02", title: "Info Session #2", date: "TBD" },
-  { step: "Step 03", title: "Applications Due", date: "TBD" },
-  { step: "Step 04", title: "Mixer", date: "TBD" },
-  { step: "Step 05", title: "First GM", date: "TBD" },
+  { step: "Step 01", title: "Info Session (Zoom)", date: "Sept 2" },
+  { step: "Step 02", title: "Applications Due", date: "Sept 4" },
+  { step: "Step 03", title: "First GM", date: "TBD" },
 ];
 
 export default function TimelineSection() {

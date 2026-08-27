@@ -10,7 +10,7 @@ export default function GetInvolvedSection() {
     {
       title: "General Member Application",
       description: "Join the community and get updates on events and projects.",
-      link: null,
+      link: "https://forms.gle/fqtSuRbbPs11vVDu9ll",
       checkBackMessage: true,
     },
     {
