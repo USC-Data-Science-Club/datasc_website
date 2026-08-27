@@ -10,7 +10,7 @@ export default function GetInvolvedSection() {
     {
       title: "General Member Application",
       description: "Join the community and get updates on events and projects.",
-      link: "https://forms.gle/fqtSuRbbPs11vVDu9ll",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSdvSfxySIAgn_5RIP2baIGkU7gbMrc6Pk2jpAcmrE88BF12YQ/viewform",
     },
     {
       title: "Project Lead Application",
