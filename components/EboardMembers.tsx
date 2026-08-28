@@ -108,6 +108,20 @@ export default function EboardMembers() {
       studying: "Computational & Applied Mathematics",
       linkedin: "https://www.linkedin.com/in/aaron-lo-a08441378/",
     },
+    {
+      name:     "Dominic",
+      role:     "Project Lead",
+      image:    "/Board Headshots/cropped/Dominic.jpeg",
+      studying: "Computer Science",
+      linkedin: "https://www.linkedin.com/in/dominic-woetzel/",
+    },
+    {
+      name:     "Ian",
+      role:     "Project Lead",
+      image:    "/Board Headshots/cropped/Ian.jpg",
+      studying: "Applied Math",
+      linkedin: "https://www.linkedin.com/in/xinyan-x-aa5246327/",
+    },
   ];
 
   return (
