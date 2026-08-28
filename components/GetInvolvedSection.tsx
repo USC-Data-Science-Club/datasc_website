@@ -5,23 +5,26 @@ export default function GetInvolvedSection() {
     {
       title: "Fall 2026 Interest Form",
       description: "Receive updates about info sessions and our membership application form.",
-      link: "https://docs.google.com/forms/d/e/1FAIpQLSdisBltIsZSba-H3YurnIgIAUW1OH7SRkTnG6_gBVKdSEnofw/viewform?usp=dialog"
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSdisBltIsZSba-H3YurnIgIAUW1OH7SRkTnG6_gBVKdSEnofw/viewform?usp=dialog",
+      checkBackMessage: false,
     }, 
     {
       title: "General Member Application",
       description: "Join the community and get updates on events and projects.",
       link: "https://docs.google.com/forms/d/e/1FAIpQLSdvSfxySIAgn_5RIP2baIGkU7gbMrc6Pk2jpAcmrE88BF12YQ/viewform",
+      checkBackMessage: false,
     },
     {
       title: "Project Lead Application",
       description: "Apply to lead a hands-on, semester-long project team.",
-      link: null,
-      checkBackMessage: true,
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSd9yP3dke0mFdNmsVVk7UxOJnhF3tGqH3PNt9xOkeVLKnZMaw/viewform",
+      checkBackMessage: false,
     },
     {
       title: "Returning Members Form",
       description: "Fill out this form to update your information.",
       link: "https://docs.google.com/forms/d/e/1FAIpQLSePK43xOZRwLL_5tO_QKVKGUGc8_vxh3Pb0aAUu4rBPT5s3Kw/viewform?usp=dialog",
+      checkBackMessage: false,
     },
   ];
 
