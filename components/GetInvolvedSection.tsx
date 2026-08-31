@@ -5,25 +5,31 @@ export default function GetInvolvedSection() {
     {
       title: "Fall 2026 Interest Form",
       description: "Receive updates about info sessions and our membership application form.",
-      link: "https://docs.google.com/forms/d/e/1FAIpQLSdisBltIsZSba-H3YurnIgIAUW1OH7SRkTnG6_gBVKdSEnofw/viewform?usp=dialog",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSf8Oorg8FN5EMFNKU0a8o3HjBXTx_dDkUeSjhLUcKnqhOGeJQ/viewform?usp=header",
       checkBackMessage: false,
     }, 
     {
       title: "General Member Application",
       description: "Join the community and get updates on events and projects.",
-      link: "https://docs.google.com/forms/d/e/1FAIpQLSdvSfxySIAgn_5RIP2baIGkU7gbMrc6Pk2jpAcmrE88BF12YQ/viewform",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSfHdleGxTv9PgUR4K6v8fpkE4tjs5DPPLIJLlepkHUB1_9QKg/viewform?usp=header",
+      checkBackMessage: false,
+    },
+    {
+      title: "Curriculum Member Application",
+      description: "Apply for a curriculum position on our 2026-2027 E-Board team.",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSeqVll278BNkRIbC4vCR8h3WkW-oWb__bqpoJRAcqOD0nCTcg/viewform?usp=header",
       checkBackMessage: false,
     },
     {
       title: "Project Lead Application",
       description: "Apply to lead a hands-on, semester-long project team.",
-      link: "https://docs.google.com/forms/d/e/1FAIpQLSd9yP3dke0mFdNmsVVk7UxOJnhF3tGqH3PNt9xOkeVLKnZMaw/viewform",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLScx5TqgnaDG-pumGWPg11zZ_2gg5OI8RQyfqRlcUImKzIoYmg/viewform?usp=header",
       checkBackMessage: false,
     },
     {
       title: "Returning Members Form",
       description: "Fill out this form to update your information.",
-      link: "https://docs.google.com/forms/d/e/1FAIpQLSePK43xOZRwLL_5tO_QKVKGUGc8_vxh3Pb0aAUu4rBPT5s3Kw/viewform?usp=dialog",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLScVvVmuDyqhKtylwMYdJF87hV85LK2VqW1J3qrBNelE_jkQ1g/viewform?usp=header",
       checkBackMessage: false,
     },
   ];
@@ -57,7 +63,7 @@ export default function GetInvolvedSection() {
             [ slack ]
           </a>
           <a
-            href="https://www.instagram.com/datasc.official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            href="https://www.instagram.com/uscdatasc?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw=="
             className="rounded-md border border-gold-raw/30 bg-gold-raw/5 px-5 py-2 font-mono text-xs uppercase tracking-wide text-gold transition hover:border-gold-raw/60 hover:bg-gold-raw/10"
           >
             [ instagram ]

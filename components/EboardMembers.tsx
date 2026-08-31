@@ -122,6 +122,20 @@ export default function EboardMembers() {
       studying: "Applied Math",
       linkedin: "https://www.linkedin.com/in/xinyan-x-aa5246327/",
     },
+    {
+      name:     "Colin",
+      role:     "Senior Advisor",
+      image:    "/Board Headshots/cropped/Colin.jpeg",
+      studying: "Applied Data Science",
+      linkedin: "https://www.linkedin.com/in/colin-leung-1059ab210/",
+    },
+    {
+      name:     "Nolen",
+      role:     "Senior Advisor",
+      image:    "/Board Headshots/cropped/Nolen.jpeg",
+      studying: "Applied Data Science",
+      linkedin: "https://www.linkedin.com/in/nolen-johnson/",
+    },
   ];
 
   return (
