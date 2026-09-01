@@ -77,7 +77,7 @@ export default function EboardMembers() {
       name:     "Michelle",
       role:     "Web Dev Lead",
       image:    "/Board Headshots/cropped/Michelle.jpg",
-      studying: "Computer Science & Business Administration",
+      studying: "Computer Science & Business Administration, AI",
       linkedin: "https://www.linkedin.com/in/zhu-michelle/",
     },
     {
@@ -98,7 +98,7 @@ export default function EboardMembers() {
       name:     "Emin",
       role:     "Curriculum Lead",
       image:    "/Board Headshots/cropped/Emin.jpg",
-      studying: "Intelligence and Cyber Operations",
+      studying: "Intelligence & Cyber Operations",
       linkedin: "https://www.linkedin.com/in/emin-cilingiroglu-843159361/",
     },
     {
@@ -135,6 +135,13 @@ export default function EboardMembers() {
       image:    "/Board Headshots/cropped/Nolen.jpeg",
       studying: "Applied Data Science",
       linkedin: "https://www.linkedin.com/in/nolen-johnson/",
+    },
+    {
+      name:     "Selina",
+      role:     "Senior Advisor",
+      image:    "/Board Headshots/cropped/Selina.jpg",
+      studying: "Computational Neuroscience, AI",
+      linkedin: "https://www.linkedin.com/in/selina-wai-yan-hui/",
     },
   ];
 
