@@ -21,6 +21,12 @@ export default function GetInvolvedSection() {
       checkBackMessage: false,
     },
     {
+      title: "Project Member Application",
+      description: "Apply to join a semesterly project team.",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSfTu3y1_t7ORF_7-UxcEvpAEwyQYl1sMvhQLFzjuwl_Vlb0cA/viewform?usp=dialog",
+      checkBackMessage: false,
+    },
+    {
       title: "Project Lead Application",
       description: "Apply to lead a hands-on, semester-long project team.",
       link: "https://docs.google.com/forms/d/e/1FAIpQLScx5TqgnaDG-pumGWPg11zZ_2gg5OI8RQyfqRlcUImKzIoYmg/viewform?usp=header",
