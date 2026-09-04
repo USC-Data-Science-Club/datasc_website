@@ -69,6 +69,16 @@ export default function Footer() {
                   Email Us
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://usc.enterprise.slack.com/archives/C0B9S4D8MT3"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="transition hover:text-gold-raw"
+                >
+                  Slack
+                </a>
+              </li>
             </ul>
           </div>
 
