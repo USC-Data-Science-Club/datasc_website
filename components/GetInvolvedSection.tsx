@@ -15,7 +15,7 @@ export default function GetInvolvedSection() {
       checkBackMessage: false,
     },
     {
-      title: "Curriculum Member Application",
+      title: "Grad Recruitment Chair/Curriculum Member Application",
       description: "Apply for a curriculum position on our 2026-2027 E-Board team.",
       link: "https://docs.google.com/forms/d/e/1FAIpQLSeqVll278BNkRIbC4vCR8h3WkW-oWb__bqpoJRAcqOD0nCTcg/viewform?usp=header",
       checkBackMessage: false,
