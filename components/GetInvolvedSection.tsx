@@ -6,37 +6,37 @@ export default function GetInvolvedSection() {
       title: "Fall 2026 Interest Form",
       description: "Receive updates about info sessions and our membership application form.",
       link: "https://docs.google.com/forms/d/e/1FAIpQLSf8Oorg8FN5EMFNKU0a8o3HjBXTx_dDkUeSjhLUcKnqhOGeJQ/viewform?usp=header",
-      checkBackMessage: false,
-    }, 
+      closedMessage: null,
+    },
     {
       title: "General Member Application",
       description: "Join the community and get updates on events and projects.",
       link: "https://docs.google.com/forms/d/e/1FAIpQLSfHdleGxTv9PgUR4K6v8fpkE4tjs5DPPLIJLlepkHUB1_9QKg/viewform?usp=header",
-      checkBackMessage: false,
+      closedMessage: null,
     },
     {
       title: "Grad Recruitment Chair/Curriculum Member Application",
       description: "Apply for a curriculum position on our 2026-2027 E-Board team.",
       link: "https://docs.google.com/forms/d/e/1FAIpQLSeqVll278BNkRIbC4vCR8h3WkW-oWb__bqpoJRAcqOD0nCTcg/viewform?usp=header",
-      checkBackMessage: false,
+      closedMessage: null,
     },
     {
       title: "Project Member Application",
       description: "Apply to join a semesterly project team.",
       link: "https://docs.google.com/forms/d/e/1FAIpQLSfTu3y1_t7ORF_7-UxcEvpAEwyQYl1sMvhQLFzjuwl_Vlb0cA/viewform?usp=dialog",
-      checkBackMessage: false,
+      closedMessage: null,
     },
     {
       title: "Project Lead Application",
       description: "Apply to lead a hands-on, semester-long project team.",
       link: "https://docs.google.com/forms/d/e/1FAIpQLScx5TqgnaDG-pumGWPg11zZ_2gg5OI8RQyfqRlcUImKzIoYmg/viewform?usp=header",
-      checkBackMessage: false,
+      closedMessage: "applications closed",
     },
     {
       title: "Returning Members Form",
       description: "Fill out this form to update your information.",
       link: "https://docs.google.com/forms/d/e/1FAIpQLScVvVmuDyqhKtylwMYdJF87hV85LK2VqW1J3qrBNelE_jkQ1g/viewform?usp=header",
-      checkBackMessage: false,
+      closedMessage: null,
     },
   ];
 
@@ -87,9 +87,7 @@ export default function GetInvolvedSection() {
           </p>
           <div className="mt-4 grid gap-4 sm:grid-cols-2">
             {applicationForms.map((form) => {
-              const isCheckBackForm = form.checkBackMessage;
-              
-              if (isCheckBackForm) {
+              if (form.closedMessage) {
                 return (
                   <div
                     key={form.title}
@@ -97,7 +95,7 @@ export default function GetInvolvedSection() {
                   >
                     <p className="text-lg font-semibold text-ink">{form.title}</p>
                     <p className="mt-2 text-base text-ink/55">{form.description}</p>
-                    <p className="mt-3 font-mono text-xs text-gold-raw">check back for updates</p>
+                    <p className="mt-3 font-mono text-xs text-gold-raw">{form.closedMessage}</p>
                   </div>
                 );
               }

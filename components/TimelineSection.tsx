@@ -9,8 +9,10 @@ interface TimelineStep {
 
 const TIMELINE_STEPS: TimelineStep[] = [
   { step: "Step 01", title: "Info Session (Zoom)", date: "Sept 2" },
-  { step: "Step 02", title: "Applications Due", date: "Sept 4" },
-  { step: "Step 03", title: "First GM", date: "Sept 9" },
+  { step: "Step 02", title: "General Member Applications Due", date: "Sept 9" },
+  { step: "Step 03", title: "Curriculum Member Applications Due", date: "Sept 9" },
+  { step: "Step 04", title: "Project Team Member Applications Due", date: "Sept 9" },
+  { step: "Step 05", title: "First GM", date: "Sept 16" },
 ];
 
 export default function TimelineSection() {
@@ -26,8 +28,7 @@ export default function TimelineSection() {
         </p>
         <h2 className="mt-2 text-4xl font-semibold">Fall semester timeline</h2>
         <p className="mt-4 text-lg text-ink/70">
-          Key dates for joining DataSC this semester. Exact dates & locations are still
-          being finalized.
+          Key dates for joining DataSC this semester.
         </p>
 
         {/* Tablet / desktop: horizontal timeline */}
@@ -110,7 +111,7 @@ export default function TimelineSection() {
           </ul>
         </div>
       </div>
-      <div className="relative mt-auto flex justify-center pb-2 pt-4">
+      <div className="relative mt-auto flex justify-center pb-2 pt-10">
         <ScrollArrow href="#get-involved" label="Scroll to Get Involved section" />
       </div>
     </section>
