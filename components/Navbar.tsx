@@ -13,7 +13,7 @@ const nav = [
 export default function Navbar() {
   return (
     <>
-      <div className="bg-band text-xs tracking-[0.08em] text-band-muted">
+      <div className="border-b-2 border-gold bg-band text-xs tracking-[0.08em] text-band-muted">
         <div className="mx-auto flex max-w-[1180px] flex-wrap justify-between gap-2 px-7 py-2">
           <span className="uppercase">{semesterBanner}</span>
           <span>DATASC.ORG</span>
@@ -23,7 +23,7 @@ export default function Navbar() {
         <div className="mx-auto flex max-w-[1180px] flex-wrap items-center justify-between gap-4 px-7 py-4">
           <Link href="/" className="flex items-center gap-2.5 text-slate no-underline">
             <img src="/logo.png" alt="DataSC logo" className="h-[34px] w-[34px] object-contain" />
-            <span className="font-pixel text-[22px] text-cyan">DataSC</span>
+            <span className="font-pixel text-[22px] text-wordmark">DataSC</span>
           </Link>
           <nav aria-label="Main" className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
             {nav.map((item) => (

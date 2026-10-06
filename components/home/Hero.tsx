@@ -4,7 +4,7 @@ export default function Hero() {
       <div className="mx-auto flex max-w-[1180px] flex-wrap items-end gap-14 px-7 pt-[72px] pb-10">
         <div className="min-w-0 flex-[1_1_420px]">
           <img src="/logo.png" alt="" className="block h-24 w-24 object-contain" />
-          <p className="mt-5 font-pixel text-[56px] leading-none text-teal sm:text-[76px]">DataSC</p>
+          <p className="mt-5 font-pixel text-[56px] leading-none text-wordmark sm:text-[76px]">DataSC</p>
           <p className="mt-3.5 text-[13px] leading-normal tracking-[0.1em] text-gray">
             DATA SCIENCE CLUB OF
             <br />

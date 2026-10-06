@@ -28,7 +28,7 @@ export default function Projects() {
                   aria-pressed={semester === s.id}
                   className={
                     semester === s.id
-                      ? "border-b-2 border-teal font-medium text-slate"
+                      ? "border-b-2 border-gold font-medium text-slate"
                       : "text-gray hover:text-slate"
                   }
                 >
@@ -43,7 +43,12 @@ export default function Projects() {
         <div className="mt-8 border-t-2 border-slate">
           {projects[semester].map((p) => (
             <div key={p.title} className="flex flex-wrap items-center gap-x-6 gap-y-3 border-b border-mist py-[18px]">
-              {p.image ? (
+              {p.image && p.imageDark ? (
+                <>
+                  <img src={p.image} alt="" className="h-[76px] w-[76px] flex-[0_0_76px] object-cover dark:hidden" />
+                  <img src={p.imageDark} alt="" className="hidden h-[76px] w-[76px] flex-[0_0_76px] object-cover dark:block" />
+                </>
+              ) : p.image ? (
                 <img src={p.image} alt="" className="h-[76px] w-[76px] flex-[0_0_76px] object-cover" />
               ) : (
                 <div className="h-[76px] w-[76px] flex-[0_0_76px] bg-teal-light" aria-hidden="true" />

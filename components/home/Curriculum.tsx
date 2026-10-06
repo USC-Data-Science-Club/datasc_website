@@ -23,7 +23,7 @@ export default function Curriculum() {
         <ol className="m-0 min-w-0 flex-[999_1_520px] list-none border-t border-band-line p-0">
           {curriculum.map((topic, i) => (
             <li key={topic} className="flex gap-5 border-b border-band-line py-3">
-              <span className="flex-[0_0_64px] text-teal-light">Wk {String(i + 1).padStart(2, "0")}</span>
+              <span className="flex-[0_0_64px] text-cyan">Wk {String(i + 1).padStart(2, "0")}</span>
               <span>{topic}</span>
             </li>
           ))}

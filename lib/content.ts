@@ -49,6 +49,7 @@ export type Project = {
   description: string;
   lead: string;
   image?: string;
+  imageDark?: string; // optional alternate image for dark mode
 };
 
 export type Semester = "F26" | "S26" | "F25";
@@ -57,7 +58,7 @@ export const semesters: { id: Semester; label: string; blurb: string }[] = [
   {
     id: "F26",
     label: "Fall 2026",
-    blurb: "Nine teams this semester, each led by a student and running through mid-November.",
+    blurb: "Fall 2026 project teams.",
   },
   { id: "S26", label: "Spring 2026", blurb: "Spring 2026 project teams." },
   { id: "F25", label: "Fall 2025", blurb: "Fall 2025 project teams." },
@@ -106,18 +107,21 @@ export const projects: Record<Semester, Project[]> = {
       description: "Interpretable models on 253,000+ CDC survey responses.",
       lead: "Kyle Matsui",
       image: "/projects/f26-kyle.jpg",
+      imageDark: "/projects/f26-kyle-dark.jpg",
     },
     {
       title: "Group-based restaurant recommender",
       description: "Finding restaurants that fit a whole group's taste.",
       lead: "Trisha Tjokrosapoetro",
       image: "/projects/f26-trisha.jpg",
+      imageDark: "/projects/f26-trisha-dark.jpg",
     },
     {
       title: "Marketing strategy for USC Viterbi",
       description: "Which marketing helps USC Viterbi increase its reach?",
       lead: "Edison Zhong",
       image: "/projects/f26-edison.jpg",
+      imageDark: "/projects/f26-edison-dark.jpg",
     },
   ],
   S26: [
