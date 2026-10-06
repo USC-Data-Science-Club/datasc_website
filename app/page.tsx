@@ -1,23 +1,21 @@
-import AboutSection from "@/components/AboutSection";
-import CurriculumSection from "@/components/CurriculumSection";
-import ProjectsSection from "@/components/ProjectsSection";
-import EboardMembers from "@/components/EboardMembers";
-import SocialsSection from "@/components/SocialsSection";
-import FaqSection from "@/components/FaqSection";
-import TimelineSection from "@/components/TimelineSection";
-import GetInvolvedSection from "@/components/GetInvolvedSection";
+import Hero from "@/components/home/Hero";
+import Wednesdays from "@/components/home/Wednesdays";
+import Curriculum from "@/components/home/Curriculum";
+import Projects from "@/components/home/Projects";
+import Events from "@/components/home/Events";
+import Board from "@/components/home/Board";
+import Faq from "@/components/home/Faq";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      <AboutSection />
-      <CurriculumSection />
-      <ProjectsSection />
-      <EboardMembers />
-      <SocialsSection />
-      <FaqSection />
-      <TimelineSection />
-      <GetInvolvedSection />
+    <main>
+      <Hero />
+      <Wednesdays />
+      <Curriculum />
+      <Projects />
+      <Events />
+      <Board />
+      <Faq />
     </main>
   );
 }

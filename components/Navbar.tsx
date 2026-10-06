@@ -1,32 +1,41 @@
-import ThemeToggle from "./ThemeToggle";
+import Link from "next/link";
+import { links, semesterBanner } from "@/lib/content";
+
+const nav = [
+  { href: "/#wednesdays", label: "Wednesdays" },
+  { href: "/#curriculum", label: "Curriculum" },
+  { href: "/#projects", label: "Projects" },
+  { href: "/#events", label: "Events" },
+  { href: "/#board", label: "Board" },
+];
 
 export default function Navbar() {
   return (
-    <nav className="sticky top-0 z-50 border-b border-ink/10 bg-surface/70 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
-        <a href="/#about" className="flex items-center gap-3">
-          <img src="/logo.png" alt="DataSC Logo" className="h-7 w-7" />
-          <span className="text-lg font-semibold">DataSC</span>
-        </a>
-        <div className="flex flex-wrap items-center gap-4 font-mono text-xs text-ink/70 sm:gap-8 sm:text-[13px]">
-          <a href="/#about" className="transition hover:text-gold">about</a>
-          <a href="/#curriculum" className="transition hover:text-gold">curriculum</a>
-          <a href="/#projects" className="transition hover:text-gold">projects</a>
-          <a href="/#eboard" className="transition hover:text-gold">eboard</a>
-          <a href="/#socials" className="transition hover:text-gold">socials</a>
-          <a href="/#faq" className="transition hover:text-gold">faq</a>
-          <a href="/#timeline" className="transition hover:text-gold">timeline</a>
-        </div>
-        <div className="flex items-center gap-3 self-start sm:self-auto">
-          <a
-            href="/#get-involved"
-            className="whitespace-nowrap rounded-md border border-gold-raw/40 bg-gradient-to-br from-maroon to-maroon-dark px-4 py-2 font-mono text-[11px] uppercase tracking-wide text-gold-raw transition hover:brightness-110"
-          >
-            [ get_involved ]
-          </a>
-          <ThemeToggle />
+    <>
+      <div className="bg-slate text-xs tracking-[0.08em] text-mist">
+        <div className="mx-auto flex max-w-[1180px] flex-wrap justify-between gap-2 px-7 py-2">
+          <span className="uppercase">{semesterBanner}</span>
+          <span>DATASC.ORG</span>
         </div>
       </div>
-    </nav>
+      <header className="border-b border-mist">
+        <div className="mx-auto flex max-w-[1180px] flex-wrap items-center justify-between gap-4 px-7 py-4">
+          <Link href="/" className="flex items-center gap-2.5 text-slate no-underline">
+            <img src="/logo.png" alt="DataSC logo" className="h-[34px] w-[34px] object-contain" />
+            <span className="font-pixel text-[22px] text-cyan">DataSC</span>
+          </Link>
+          <nav aria-label="Main" className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
+            {nav.map((item) => (
+              <Link key={item.href} href={item.href} className="text-gray no-underline hover:text-slate">
+                {item.label}
+              </Link>
+            ))}
+            <a href={`mailto:${links.email}`} className="underline underline-offset-4">
+              {links.email}
+            </a>
+          </nav>
+        </div>
+      </header>
+    </>
   );
 }

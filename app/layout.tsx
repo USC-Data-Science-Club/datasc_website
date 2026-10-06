@@ -1,70 +1,48 @@
-import { Geist, JetBrains_Mono } from "next/font/google";
+import type { Metadata } from "next";
+import { Hanken_Grotesk, IBM_Plex_Mono, Silkscreen } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { ThemeProvider, THEME_INIT_SCRIPT } from "@/components/ThemeProvider";
 
-const geist = Geist({
-  subsets: ["latin"],
-  variable: "--font-geist",
-  weight: ["400", "500", "600", "700", "800"],
-});
+// Style guide: Minecraft (logo), Alte Haas Grotesk (headings), IBM Plex Mono (body).
+// Silkscreen and Hanken Grotesk are the closest free web fonts to the first two.
+const silkscreen = Silkscreen({ subsets: ["latin"], weight: "400", variable: "--font-silkscreen" });
+const hanken = Hanken_Grotesk({ subsets: ["latin"], weight: ["500", "600", "700"], variable: "--font-hanken" });
+const plexMono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-plex-mono" });
 
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jetbrains-mono",
-  weight: ["400", "500", "600", "700"],
-});
+const description =
+  "DataSC is the Data Science Club of the University of Southern California: a ten-week curriculum, semester-long project teams, and a community of students who like working with data.";
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export const metadata: Metadata = {
+  metadataBase: new URL("https://www.datasc.org"),
+  title: "DataSC — Data Science Club of USC",
+  description,
+  keywords: ["data science", "USC", "student club", "machine learning", "analytics", "USC data science"],
+  alternates: { canonical: "/" },
+  icons: { icon: "/logo.png", apple: "/logo.png" },
+  manifest: "/manifest.json",
+  openGraph: {
+    type: "website",
+    url: "https://www.datasc.org/",
+    title: "DataSC — Data Science Club of USC",
+    description,
+    images: ["/logo.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DataSC — Data Science Club of USC",
+    description,
+    images: ["/logo.png"],
+  },
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`dark ${geist.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
-      <head>
-        {/* Meta Tags */}
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="DataSC is USC's home for hands-on data science learning, built to be welcoming, practical, and career-relevant. Join our community of students passionate about data science." />
-        <meta name="keywords" content="data science, USC, student club, machine learning, analytics, programming, USC data science" />
-        <meta name="author" content="DataSC at USC" />
-
-        {/* Canonical */}
-        <link rel="canonical" href="https://www.datasc.org/" />
-
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.datasc.org/" />
-        <meta property="og:title" content="DataSC - USC's Data Science Club" />
-        <meta property="og:description" content="USC's home for hands-on data science learning, built to be welcoming, practical, and career-relevant." />
-        <meta property="og:image" content="/logo.png" />
-
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.datasc.org/" />
-        <meta property="twitter:title" content="DataSC - USC's Data Science Club" />
-        <meta property="twitter:description" content="USC's home for hands-on data science learning, built to be welcoming, practical, and career-relevant." />
-        <meta property="twitter:image" content="/logo.png" />
-
-        {/* Favicon */}
-        <link rel="icon" href="/logo.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/logo.png" />
-        <link rel="manifest" href="/manifest.json" />
-
-        {/* Theme (dark/light) - applied before paint to avoid a flash */}
-        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
-
-        {/* Title */}
-        <title>DataSC - USC's Data Science Club</title>
-      </head>
-      <body suppressHydrationWarning>
-        <ThemeProvider>
-          <Navbar />
-          {children}
-          <Footer />
-        </ThemeProvider>
+    <html lang="en" className={`${silkscreen.variable} ${hanken.variable} ${plexMono.variable}`}>
+      <body>
+        <Navbar />
+        {children}
+        <Footer />
       </body>
     </html>
   );

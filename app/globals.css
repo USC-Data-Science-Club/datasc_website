@@ -1,35 +1,18 @@
 @import "tailwindcss";
-@custom-variant dark (&:where(.dark, .dark *));
 
-:root {
-  --color-surface: #f7f6f2;
-  --color-ink: #141312;
-  --color-gold: #8a5a00;
-  --color-gold-raw: #ffc72c;
-  --color-maroon: #990000;
-  --color-maroon-dark: #7a0000;
-  --grid-line: rgba(20, 19, 18, 0.03);
-}
+/* DataSC style guide palette */
+@theme {
+  --color-paper: #f8f8f5;      /* off white */
+  --color-slate: #283036;      /* dark slate / black */
+  --color-gray: #3c4348;       /* gray */
+  --color-teal: #4fb3b6;       /* teal */
+  --color-teal-light: #c3f5f7; /* light teal */
+  --color-cyan: #0f545a;       /* dark cyan */
+  --color-mist: #dce6e8;       /* mist gray */
 
-.dark {
-  --color-surface: #050607;
-  --color-ink: #ffffff;
-  --color-gold: #ffc72c;
-  --color-gold-raw: #ffc72c;
-  --color-maroon: #990000;
-  --color-maroon-dark: #7a0000;
-  --grid-line: rgba(255, 255, 255, 0.03);
-}
-
-@theme inline {
-  --color-surface: var(--color-surface);
-  --color-ink: var(--color-ink);
-  --color-gold: var(--color-gold);
-  --color-gold-raw: var(--color-gold-raw);
-  --color-maroon: var(--color-maroon);
-  --color-maroon-dark: var(--color-maroon-dark);
-  --font-sans: var(--font-geist);
-  --font-mono: var(--font-jetbrains-mono);
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+  --font-display: var(--font-hanken), system-ui, sans-serif;
+  --font-pixel: var(--font-silkscreen), monospace;
 }
 
 @layer base {
@@ -38,21 +21,19 @@
   }
 
   body {
-    @apply bg-surface text-ink;
-    font-family: var(--font-sans), -apple-system, system-ui, sans-serif;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    @apply bg-paper text-slate font-mono;
+    font-size: 15px;
+    line-height: 1.65;
   }
 
-  ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+  a {
+    @apply text-cyan;
   }
-}
+  a:hover {
+    @apply text-slate;
+  }
 
-@layer utilities {
-  .bg-grid-pattern {
-    background-image: linear-gradient(var(--grid-line) 1px, transparent 1px),
-      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
-    background-size: 40px 40px;
+  summary {
+    cursor: pointer;
   }
 }

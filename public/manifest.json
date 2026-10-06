@@ -4,8 +4,8 @@
   "description": "USC's home for hands-on data science learning",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#990000",
+  "background_color": "#F8F8F5",
+  "theme_color": "#4FB3B6",
   "orientation": "portrait-primary",
   "icons": [
     {
