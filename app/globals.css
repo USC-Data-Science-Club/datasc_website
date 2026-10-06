@@ -1,14 +1,53 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
-/* DataSC style guide palette */
+/* DataSC style guide palette.
+   Light is the default; .dark on <html> swaps the semantic colors. */
+:root {
+  --paper: #f8f8f5;     /* off white: page background */
+  --ink: #283036;       /* dark slate: main text */
+  --muted: #3c4348;     /* gray: secondary text */
+  --line: #dce6e8;      /* mist gray: rules and borders */
+  --accent: #0f545a;    /* dark cyan: links, times, roles */
+  --band: #283036;      /* curriculum band + top bar */
+  --band-ink: #f8f8f5;
+  --band-muted: #dce6e8;
+  --band-line: #3c4348;
+  --footer: #4fb3b6;    /* teal */
+  --footer-ink: #283036;
+}
+
+.dark {
+  --paper: #283036;
+  --ink: #f8f8f5;
+  --muted: #dce6e8;
+  --line: #3c4348;
+  --accent: #4fb3b6;
+  --band: #1f262b;
+  --band-ink: #f8f8f5;
+  --band-muted: #dce6e8;
+  --band-line: #3c4348;
+  --footer: #0f545a;
+  --footer-ink: #f8f8f5;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-slate: var(--ink);
+  --color-gray: var(--muted);
+  --color-mist: var(--line);
+  --color-cyan: var(--accent);
+  --color-band: var(--band);
+  --color-band-ink: var(--band-ink);
+  --color-band-muted: var(--band-muted);
+  --color-band-line: var(--band-line);
+  --color-footer: var(--footer);
+  --color-footer-ink: var(--footer-ink);
+}
+
 @theme {
-  --color-paper: #f8f8f5;      /* off white */
-  --color-slate: #283036;      /* dark slate / black */
-  --color-gray: #3c4348;       /* gray */
-  --color-teal: #4fb3b6;       /* teal */
-  --color-teal-light: #c3f5f7; /* light teal */
-  --color-cyan: #0f545a;       /* dark cyan */
-  --color-mist: #dce6e8;       /* mist gray */
+  --color-teal: #4fb3b6;
+  --color-teal-light: #c3f5f7;
 
   --font-mono: var(--font-plex-mono), ui-monospace, monospace;
   --font-display: var(--font-hanken), system-ui, sans-serif;
@@ -24,6 +63,7 @@
     @apply bg-paper text-slate font-mono;
     font-size: 15px;
     line-height: 1.65;
+    transition: background-color 0.2s ease, color 0.2s ease;
   }
 
   a {

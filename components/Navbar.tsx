@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { links, semesterBanner } from "@/lib/content";
+import ThemeToggle from "./ThemeToggle";
 
 const nav = [
   { href: "/#wednesdays", label: "Wednesdays" },
@@ -12,7 +13,7 @@ const nav = [
 export default function Navbar() {
   return (
     <>
-      <div className="bg-slate text-xs tracking-[0.08em] text-mist">
+      <div className="bg-band text-xs tracking-[0.08em] text-band-muted">
         <div className="mx-auto flex max-w-[1180px] flex-wrap justify-between gap-2 px-7 py-2">
           <span className="uppercase">{semesterBanner}</span>
           <span>DATASC.ORG</span>
@@ -33,6 +34,7 @@ export default function Navbar() {
             <a href={`mailto:${links.email}`} className="underline underline-offset-4">
               {links.email}
             </a>
+            <ThemeToggle />
           </nav>
         </div>
       </header>

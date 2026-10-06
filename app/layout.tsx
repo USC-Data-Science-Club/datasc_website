@@ -3,6 +3,7 @@ import { Hanken_Grotesk, IBM_Plex_Mono, Silkscreen } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { THEME_INIT_SCRIPT } from "@/lib/theme";
 
 // Style guide: Minecraft (logo), Alte Haas Grotesk (headings), IBM Plex Mono (body).
 // Silkscreen and Hanken Grotesk are the closest free web fonts to the first two.
@@ -38,7 +39,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${silkscreen.variable} ${hanken.variable} ${plexMono.variable}`}>
+    <html
+      lang="en"
+      className={`${silkscreen.variable} ${hanken.variable} ${plexMono.variable}`}
+      suppressHydrationWarning
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+      </head>
       <body>
         <Navbar />
         {children}
