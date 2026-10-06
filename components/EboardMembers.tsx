@@ -2,7 +2,13 @@ import GridBackdrop from "./ui/GridBackdrop";
 import ScrollArrow from "./ui/ScrollArrow";
 
 export default function EboardMembers() {
-  const members = [
+  const members: {
+    name: string;
+    role: string;
+    image: string;
+    studying?: string;
+    linkedin?: string;
+  }[] = [
     {
       name:     "Natalie",
       role:     "Co-President",
@@ -74,13 +80,6 @@ export default function EboardMembers() {
       linkedin: "https://www.linkedin.com/in/lauren-lu-3a2b19276/",
     },
     {
-      name:     "Michelle",
-      role:     "Web Dev Lead",
-      image:    "/Board Headshots/cropped/Michelle.jpg",
-      studying: "Computer Science & Business Administration, AI",
-      linkedin: "https://www.linkedin.com/in/zhu-michelle/",
-    },
-    {
       name:     "Matthew",
       role:     "Senior Curriculum Lead",
       image:    "/Board Headshots/cropped/Matthew.jpg",
@@ -121,6 +120,36 @@ export default function EboardMembers() {
       image:    "/Board Headshots/cropped/Ian.jpg",
       studying: "Applied Math",
       linkedin: "https://www.linkedin.com/in/xinyan-x-aa5246327/",
+    },
+    {
+      name:     "Abhishek",
+      role:     "Project Lead",
+      image:    "/Board Headshots/cropped/Abhishek.jpg",
+    },
+    {
+      name:     "Allegra",
+      role:     "Project Lead",
+      image:    "/Board Headshots/cropped/Allegra.jpg",
+    },
+    {
+      name:     "Ananya",
+      role:     "Project Lead",
+      image:    "/Board Headshots/cropped/Ananya.jpg",
+    },
+    {
+      name:     "Edison",
+      role:     "Project Lead",
+      image:    "/Board Headshots/cropped/Edison.jpg",
+    },
+    {
+      name:     "Kyle",
+      role:     "Project Lead",
+      image:    "/Board Headshots/cropped/Kyle.jpg",
+    },
+    {
+      name:     "Trisha",
+      role:     "Project Lead",
+      image:    "/Board Headshots/cropped/Trisha.jpg",
     },
     {
       name:     "Colin",

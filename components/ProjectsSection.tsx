@@ -59,13 +59,77 @@ export default function ProjectsSection() {
       lead: "Colin Quan Leung & Nolen Johnson",
     },
   ];
-  const [semester, setSemester] = useState<"F25" | "S26" | "F26">("S26");
+  const fall26Projects: typeof fall25Projects = [
+    {
+      image: "",
+      title: "Sentiment Analysis on COVID-19 Over the Years",
+      description:
+        "Tracks how social-media sentiment, topics, and skepticism around COVID-19 shifted across lockdowns, vaccines, variants, and reopenings.",
+      lead: "Aaron Lo",
+    },
+    {
+      image: "",
+      title: "GridShift NYC",
+      description:
+        "Forecasts taxi and rideshare demand across NYC taxi zones, with interactive dashboards and an AI-driven web platform.",
+      lead: "Abhishek Sarepaka",
+    },
+    {
+      image: "",
+      title: "Predicting Deterioration in Bilateral Relations",
+      description:
+        "Looks for early warning signals in diplomatic, economic, and security interactions before relations between countries break down.",
+      lead: "Allegra Chen",
+    },
+    {
+      image: "",
+      title: "Influence of News Headlines on the Stock Market",
+      description:
+        "Scores the sentiment of news headlines about public companies and measures how it relates to subsequent stock price changes.",
+      lead: "Ananya Hari",
+    },
+    {
+      image: "",
+      title: "UMUD Challenge: Muscle Architecture in Ultrasound",
+      description:
+        "A Kaggle competition to automatically measure muscle thickness, pennation angle, and fascicle length from ultrasound video.",
+      lead: "Dominic Woetzel",
+    },
+    {
+      image: "",
+      title: "Business Marketing Strategy for USC Viterbi",
+      description: "A data-driven marketing strategy project for USC Viterbi.",
+      lead: "Edison Zhong",
+    },
+    {
+      image: "",
+      title: "SafeShift: Workplace Injury Early Warning",
+      description:
+        "Forecasts workplace injury burden from U.S. occupational safety data and classifies incident narratives to support prevention.",
+      lead: "Ian Xie",
+    },
+    {
+      image: "",
+      title: "Diabetes Risk Prediction",
+      description:
+        "Builds interpretable models on 253,000+ CDC survey responses to predict diabetes risk and identify its strongest predictors.",
+      lead: "Kyle Matsui",
+    },
+    {
+      image: "",
+      title: "Group-Based Restaurant Recommender",
+      description:
+        "Recommends restaurants that fit a whole group's combined taste, using Yelp review embeddings and an interactive dashboard.",
+      lead: "Trisha Tjokrosapoetro",
+    },
+  ];
+  const [semester, setSemester] = useState<"F25" | "S26" | "F26">("F26");
 
   const currentProjects =
-    semester === "S26" ? spring26Projects : semester === "F25" ? fall25Projects : [];
+    semester === "F26" ? fall26Projects : semester === "S26" ? spring26Projects : fall25Projects;
   const semesterTitle =
     semester === "S26" ? "Spring 2026" : semester === "F25" ? "Fall 2025" : "Fall 2026";
-  const isComingSoon = semester === "F26";
+  const isComingSoon = currentProjects.length === 0;
 
   return (
     <section id="projects" className="relative flex min-h-screen flex-col px-6 pt-24 pb-28">
@@ -118,8 +182,8 @@ export default function ProjectsSection() {
                     className="h-44 w-44 rounded-lg border border-gold-raw/25 object-cover"
                   />
                 ) : (
-                  <div className="flex h-44 w-44 items-center justify-center rounded-lg border border-ink/10 bg-ink/5 font-mono text-xs uppercase tracking-[0.2em] text-ink/50">
-                    Image
+                  <div className="flex h-44 w-44 items-center justify-center rounded-lg border border-gold-raw/25 bg-ink/5">
+                    <img src="/logo.png" alt="" className="h-20 w-20 object-contain opacity-60" />
                   </div>
                 )}
                 <div>

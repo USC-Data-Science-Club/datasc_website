@@ -1,45 +1,6 @@
 import GridBackdrop from "./ui/GridBackdrop";
 
 export default function GetInvolvedSection() {
-  const applicationForms = [
-    {
-      title: "Fall 2026 Interest Form",
-      description: "Receive updates about info sessions and our membership application form.",
-      link: "https://docs.google.com/forms/d/e/1FAIpQLSf8Oorg8FN5EMFNKU0a8o3HjBXTx_dDkUeSjhLUcKnqhOGeJQ/viewform?usp=header",
-      closedMessage: null,
-    },
-    {
-      title: "General Member Application",
-      description: "Join the community and get updates on events and projects.",
-      link: "https://docs.google.com/forms/d/e/1FAIpQLSfHdleGxTv9PgUR4K6v8fpkE4tjs5DPPLIJLlepkHUB1_9QKg/viewform?usp=header",
-      closedMessage: null,
-    },
-    {
-      title: "Grad Recruitment Chair/Curriculum Member Application",
-      description: "Apply for a curriculum position on our 2026-2027 E-Board team.",
-      link: "https://docs.google.com/forms/d/e/1FAIpQLSeqVll278BNkRIbC4vCR8h3WkW-oWb__bqpoJRAcqOD0nCTcg/viewform?usp=header",
-      closedMessage: null,
-    },
-    {
-      title: "Project Member Application",
-      description: "Apply to join a semesterly project team.",
-      link: "https://docs.google.com/forms/d/e/1FAIpQLSfTu3y1_t7ORF_7-UxcEvpAEwyQYl1sMvhQLFzjuwl_Vlb0cA/viewform?usp=dialog",
-      closedMessage: null,
-    },
-    {
-      title: "Project Lead Application",
-      description: "Apply to lead a hands-on, semester-long project team.",
-      link: "https://docs.google.com/forms/d/e/1FAIpQLScx5TqgnaDG-pumGWPg11zZ_2gg5OI8RQyfqRlcUImKzIoYmg/viewform?usp=header",
-      closedMessage: "applications closed",
-    },
-    {
-      title: "Returning Members Form",
-      description: "Fill out this form to update your information.",
-      link: "https://docs.google.com/forms/d/e/1FAIpQLScVvVmuDyqhKtylwMYdJF87hV85LK2VqW1J3qrBNelE_jkQ1g/viewform?usp=header",
-      closedMessage: null,
-    },
-  ];
-
   return (
     <section
       id="get-involved"
@@ -80,40 +41,6 @@ export default function GetInvolvedSection() {
           >
             [ linkedin ]
           </a>
-        </div>
-        <div className="mt-12">
-          <p className="font-mono text-xs uppercase tracking-[0.1em] text-ink/50">
-            {"// application forms"}
-          </p>
-          <div className="mt-4 grid gap-4 sm:grid-cols-2">
-            {applicationForms.map((form) => {
-              if (form.closedMessage) {
-                return (
-                  <div
-                    key={form.title}
-                    className="rounded-xl border border-ink/8 bg-ink/3 p-5 opacity-60"
-                  >
-                    <p className="text-lg font-semibold text-ink">{form.title}</p>
-                    <p className="mt-2 text-base text-ink/55">{form.description}</p>
-                    <p className="mt-3 font-mono text-xs text-gold-raw">{form.closedMessage}</p>
-                  </div>
-                );
-              }
-              
-              return (
-                <a
-                  key={form.title}
-                  href={form.link ?? undefined}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-xl border border-ink/8 bg-ink/3 p-5 transition hover:border-gold-raw/30 hover:bg-ink/5"
-                >
-                  <p className="text-lg font-semibold text-ink">{form.title}</p>
-                  <p className="mt-2 text-base text-ink/55">{form.description}</p>
-                </a>
-              );
-            })}
-          </div>
         </div>
       </div>
     </section>
