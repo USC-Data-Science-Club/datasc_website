@@ -61,62 +61,62 @@ export default function ProjectsSection() {
   ];
   const fall26Projects: typeof fall25Projects = [
     {
-      image: "",
+      image: "/projects/f26-aaron.jpg",
       title: "Sentiment Analysis on COVID-19 Over the Years",
       description:
         "Tracks how social-media sentiment, topics, and skepticism around COVID-19 shifted across lockdowns, vaccines, variants, and reopenings.",
       lead: "Aaron Lo",
     },
     {
-      image: "",
+      image: "/projects/f26-abhishek.jpg",
       title: "GridShift NYC",
       description:
         "Forecasts taxi and rideshare demand across NYC taxi zones, with interactive dashboards and an AI-driven web platform.",
       lead: "Abhishek Sarepaka",
     },
     {
-      image: "",
+      image: "/projects/f26-allegra.jpg",
       title: "Predicting Deterioration in Bilateral Relations",
       description:
         "Looks for early warning signals in diplomatic, economic, and security interactions before relations between countries break down.",
       lead: "Allegra Chen",
     },
     {
-      image: "",
+      image: "/projects/f26-ananya.jpg",
       title: "Influence of News Headlines on the Stock Market",
       description:
         "Scores the sentiment of news headlines about public companies and measures how it relates to subsequent stock price changes.",
       lead: "Ananya Hari",
     },
     {
-      image: "",
+      image: "/projects/f26-dominic.jpg",
       title: "UMUD Challenge: Muscle Architecture in Ultrasound",
       description:
         "A Kaggle competition to automatically measure muscle thickness, pennation angle, and fascicle length from ultrasound video.",
       lead: "Dominic Woetzel",
     },
     {
-      image: "",
+      image: "/projects/f26-edison.jpg",
       title: "Business Marketing Strategy for USC Viterbi",
       description: "A data-driven marketing strategy project for USC Viterbi.",
       lead: "Edison Zhong",
     },
     {
-      image: "",
+      image: "/projects/f26-ian.jpg",
       title: "SafeShift: Workplace Injury Early Warning",
       description:
         "Forecasts workplace injury burden from U.S. occupational safety data and classifies incident narratives to support prevention.",
       lead: "Ian Xie",
     },
     {
-      image: "",
+      image: "/projects/f26-kyle.jpg",
       title: "Diabetes Risk Prediction",
       description:
         "Builds interpretable models on 253,000+ CDC survey responses to predict diabetes risk and identify its strongest predictors.",
       lead: "Kyle Matsui",
     },
     {
-      image: "",
+      image: "/projects/f26-trisha.jpg",
       title: "Group-Based Restaurant Recommender",
       description:
         "Recommends restaurants that fit a whole group's combined taste, using Yelp review embeddings and an interactive dashboard.",

@@ -7,9 +7,6 @@ export default function Navbar() {
         <a href="/#about" className="flex items-center gap-3">
           <img src="/logo.png" alt="DataSC Logo" className="h-7 w-7" />
           <span className="text-lg font-semibold">DataSC</span>
-          <span className="rounded border border-gold-raw/30 px-1.5 py-0.5 font-mono text-[10px] text-gold/80">
-            v2.6
-          </span>
         </a>
         <div className="flex flex-wrap items-center gap-4 font-mono text-xs text-ink/70 sm:gap-8 sm:text-[13px]">
           <a href="/#about" className="transition hover:text-gold">about</a>

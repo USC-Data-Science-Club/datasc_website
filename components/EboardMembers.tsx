@@ -25,7 +25,7 @@ export default function EboardMembers() {
     },
     {
       name:     "Ojas",
-      role:     "External Vice President",
+      role:     "Vice President",
       image:    "/Board Headshots/cropped/Ojas.jpg",
       studying: "Mathematics & Computer Science",
       linkedin: "https://www.linkedin.com/in/ojasnimase/",
@@ -80,22 +80,8 @@ export default function EboardMembers() {
       linkedin: "https://www.linkedin.com/in/lauren-lu-3a2b19276/",
     },
     {
-      name:     "Matthew",
-      role:     "Senior Curriculum Lead",
-      image:    "/Board Headshots/cropped/Matthew.jpg",
-      studying: "Applied Mathematics",
-      linkedin: "https://www.linkedin.com/in/matthew-hall-350a19b1/",
-    },
-    {
-      name:     "Nathan",
-      role:     "Senior Curriculum Lead",
-      image:    "/Board Headshots/cropped/Nathan.jpg",
-      studying: "Health & Human Sciences, Mathematics",
-      linkedin: "https://www.linkedin.com/in/nathann3/",
-    },
-    {
       name:     "Emin",
-      role:     "Curriculum Lead",
+      role:     "Curriculum Director",
       image:    "/Board Headshots/cropped/Emin.jpg",
       studying: "Intelligence & Cyber Operations",
       linkedin: "https://www.linkedin.com/in/emin-cilingiroglu-843159361/",
@@ -150,6 +136,20 @@ export default function EboardMembers() {
       name:     "Trisha",
       role:     "Project Lead",
       image:    "/Board Headshots/cropped/Trisha.jpg",
+    },
+    {
+      name:     "Matthew",
+      role:     "Senior Curriculum Advisor",
+      image:    "/Board Headshots/cropped/Matthew.jpg",
+      studying: "Applied Mathematics",
+      linkedin: "https://www.linkedin.com/in/matthew-hall-350a19b1/",
+    },
+    {
+      name:     "Nathan",
+      role:     "Senior Curriculum Advisor",
+      image:    "/Board Headshots/cropped/Nathan.jpg",
+      studying: "Health & Human Sciences, Mathematics",
+      linkedin: "https://www.linkedin.com/in/nathann3/",
     },
     {
       name:     "Colin",
@@ -222,14 +222,6 @@ export default function EboardMembers() {
                   <p className="font-mono text-[10px] tracking-[0.05em] text-ink/70">
                     {member.studying}
                   </p>
-                )}
-                {member.linkedin && (
-                  <a
-                    href={member.linkedin}
-                    className="font-mono text-[10px] tracking-[0.05em] text-ink/50 underline decoration-ink/30 underline-offset-4 transition hover:text-gold-raw"
-                  >
-                    → linkedin
-                  </a>
                 )}
               </div>
             </div>
