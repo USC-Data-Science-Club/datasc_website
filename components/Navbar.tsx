@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <>
       <div className="border-b-2 border-gold bg-band text-xs tracking-[0.08em] text-band-muted">
-        <div className="mx-auto flex max-w-[1180px] justify-end px-7 py-2">
+        <div className="mx-auto flex max-w-[1180px] px-7 py-2">
           <span>DATASC.ORG</span>
         </div>
       </div>
