@@ -73,6 +73,11 @@ export default function EboardMembers() {
       linkedin: "https://www.linkedin.com/in/anh-phan-ka11/",
     },
     {
+      name:     "Nadeem",
+      role:     "Graduate Recruitment Chair",
+      image:    "/Board Headshots/cropped/Nadeem.jpg",
+    },
+    {
       name:     "Lauren",
       role:     "Marketing",
       image:    "/Board Headshots/cropped/Lauren.jpg",
