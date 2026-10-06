@@ -9,8 +9,6 @@ export const links = {
   linkedin: "https://www.linkedin.com/company/datasc/",
 };
 
-export const semesterBanner = "Fall 2026 · Project teams are underway";
-
 export const wednesdaySchedule = [
   {
     time: "7:00 – 7:45 PM",
