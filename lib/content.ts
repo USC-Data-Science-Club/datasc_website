@@ -245,6 +245,7 @@ export const board: { group: string; members: Member[] }[] = [
     members: [
       { name: "Matthew Hall", role: "Senior Curriculum Advisor", image: hs("Matthew.jpg") },
       { name: "Nathan Nguyen", role: "Senior Curriculum Advisor", image: hs("Nathan.jpg") },
+      { name: "Claire He", role: "Senior Advisor", image: hs("Claire.jpg") },
       { name: "Colin Quan Leung", role: "Senior Advisor", image: hs("Colin.jpeg") },
       { name: "Nolen Johnson", role: "Senior Advisor", image: hs("Nolen.jpeg") },
       { name: "Selina Hui", role: "Senior Advisor", image: hs("Selina.jpg") },
