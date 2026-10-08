@@ -224,6 +224,9 @@ export const board: { group: string; members: Member[] }[] = [
     group: "Curriculum",
     members: [
       { name: "Emin Cilingiroglu", role: "Curriculum Director", image: hs("Emin.jpg") },
+      { name: "Aditi Kelkar", role: "Curriculum Lead", image: hs("Aditi.jpg") },
+      { name: "Ryan Gaustad", role: "Curriculum Lead", image: hs("Ryan.jpg") },
+      { name: "Samarth Hiremath", role: "Curriculum Lead", image: hs("Samarth.jpg") },
     ],
   },
   {
